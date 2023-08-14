@@ -2,5 +2,7 @@
 
 ## feito por:
 Bryan Machado
+
 Thiago Inácio
+
 Richard Moreira
