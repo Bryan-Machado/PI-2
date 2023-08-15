@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    background-color: blue;
+    max-width: 600px;
+    padding: 0 50px;
+    height: 100%;
+    margin: auto;
+}
+
+img{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+figure{
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper > h1{
+    text-align: center;
+    margin: 200px 0px;
+}
+
+.seta{
+    margin-bottom: 100px;
+}
