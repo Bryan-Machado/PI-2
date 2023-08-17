@@ -1,13 +1,13 @@
 *{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
 .wrapper{
     background-color: blue;
-    max-width: 600px;
-    padding: 0 50px;
-    height: 100%;
+    width: 768px;
+    padding: 0 0px;
     margin: auto;
 }
 
@@ -21,11 +21,16 @@ figure{
     justify-content: center;
 }
 
+.cartao-icon img{
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+
 .wrapper > h1{
     text-align: center;
-    margin: 200px 0px;
+    margin: 40px 0px;
 }
 
 .seta{
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
