@@ -11,7 +11,6 @@
 
 
     O padrão de margin e padding usados são de 80px
-    com exceção da logo, que tem 240px (3 vezes 80px) de margin-bottom
 
     o font-size do h1 presente é de 34px, assim como no figma
 */
@@ -25,20 +24,18 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: blue;
+    background-color: #1A226F;
     width: 768px;
     max-height: 1024px;
     padding: 80px 0px;
     margin: auto auto;
 }
 
-.logo{
-    margin-bottom: 240px;
+.logo img{
+    margin-bottom: 80px;
+    border: black solid 2px;
 }
 
-img{
-    max-height: 150px; /* isso é só pra manter a imagem de teste num tamanho aceitavel */
-}
 
 figure{
     display: flex;
@@ -50,6 +47,7 @@ figure{
 }
 
 section  h1{
+    color: white;
     font-size: 34px;
     text-align: center;
     margin-bottom: 80px;
