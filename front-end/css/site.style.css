@@ -2,3 +2,65 @@
     padding: 0;
     margin: 0;
 }
+
+/* 
+    cores usadas no figma:
+
+    background-color: #0D116B;          AZUL ESCURO
+    background-color: #2429A6;          AZUL MAIS CLARO
+*/
+
+/* botoes */
+
+.botao{
+    background-color: #0D116B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+.inscrever{
+    color: #F2F2F2;
+    font-weight: bolder;
+}
+
+/* botoes */
+
+.linha-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imagens-botoes{
+    padding: 0px 10%;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.separador{
+    border-top: #0D116B solid 0.5px;
+}
+
+.menu ul{
+    padding: 0px 15%;
+    width: 60%;
+    background-color: #0D116B;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #fff;
+}
