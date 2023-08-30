@@ -22,6 +22,10 @@
 }
 
 .inscrever{
+    margin-right: -45px;
+}
+
+.inscrever{
     color: #F2F2F2;
     font-weight: bolder;
 }
@@ -50,7 +54,7 @@
 
 .menu ul{
     padding: 0px 15%;
-    width: 60%;
+    width: 90%;
     background-color: #0D116B;
     height: 50px;
     border-radius: 5px;
@@ -63,4 +67,11 @@
 .menu a{
     text-decoration: none;
     color: #fff;
+    
 }
+
+.linha li{
+    width: 92.47px;
+    text-align: center;
+}
+
