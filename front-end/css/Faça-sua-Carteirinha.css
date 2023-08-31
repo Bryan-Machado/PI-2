@@ -75,34 +75,3 @@
     text-align: center;
 }
 
-.carrossel{
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 1%;
-    
-}
-
-.carousel-item{
-    height: 500px;
-    align-items: center;
-    carousel-inner
-}
-
-
-
-.carousel-control-prev-icon{
-    color: #000000;
-}
-
-.carousel-control-next-icon{
-    color: #000000;
-}
-
-.seta{
-    color: #000000;
-}
-
-.carousel-inner{
-    border-radius: 5px;
-}
