@@ -75,6 +75,8 @@
     text-align: center;
 }
 
+/* css do carrosel, utilizei das classe do bootstrap para editar no css */
+
 .carrossel{
     width: 70%;
     margin-left: 15%;
@@ -88,8 +90,6 @@
     align-items: center;
     carousel-inner
 }
-
-
 
 .carousel-control-prev-icon{
     color: #000000;
