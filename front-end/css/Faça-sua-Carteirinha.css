@@ -75,3 +75,185 @@
     text-align: center;
 }
 
+.titulo{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.agendamento{
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(36, 41, 166, 0.12);
+    border-radius: 20px;
+}
+
+.media-425-agendamento{
+    width: 100%;
+    display: flex;
+}
+
+.titulo-carteirinha{
+    margin-bottom: 10%;
+}
+
+.formulario{
+    border: 1px solid black;
+}
+
+.carteirinha-forms{
+    width: 32%;
+    margin-left: 2%;
+    align-items: center;
+}
+
+.formulario-inteiro{
+    width: 76%;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+
+.formulario-inteiro h3{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.forms-1{
+    display: inline-flex;
+    width: 100%;
+    gap: 10%;
+}
+.f1{
+    width: 45%;
+}
+
+.f2{
+    width: 45%;
+}
+
+.forms-2 {
+    display: inline-flex;
+    width: 100%;
+    gap: 10%;
+}
+
+.f3 {
+    width: 45%;
+}
+
+.f4 {
+    width: 45%;
+}
+
+.botao-agen{
+    width: 100%;
+    text-align: center;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+ @media screen and (max-width: 1024px) {
+    
+    .titulo{
+        font-size: xx-large;
+    }
+    .carteirinha-forms img{
+        width: 256px;
+        height: 192px;
+    }
+
+    .titulo-forms{
+        font-size: x-large;
+    }
+
+    .titulo-carteirinha{
+        font-size: x-large;
+        margin-bottom: 15%;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .titulo {
+        font-size: xx-large;
+    }
+
+    .carteirinha-forms img {
+        width: 213px;
+        height: 160px;
+    }
+
+    .titulo-forms {
+        font-size: large;
+    }
+
+    .titulo-carteirinha {
+        font-size: large;
+        margin-bottom: 15%;
+    }
+
+
+}
+
+@media screen and (max-width: 425px) {
+
+    .agendamento {
+        display: flex ;
+       flex-direction: column;
+       align-items: first baseline;
+    }
+
+    .media-425-agendamento{
+        display: inline;
+        width: 70%;
+    }
+
+    .formulario-inteiro h3{
+        text-align: start;
+        }
+
+    .carteirinha-forms {
+        width: 140%;
+        margin-left: 2%;
+    }
+    
+    .formulario-inteiro {
+        width: 140%;
+        margin-left: 5%;
+        margin-right: 2%;
+    }
+
+    .forms-1 {
+        display: inline;
+    }
+
+    .forms-2{
+        display: inline;
+    }
+
+    .titulo {
+        font-size: x-large;
+    }
+
+    .carteirinha-forms img {
+        width: 213px;
+        height: 160px;
+    }
+
+    .titulo-forms {
+        font-size: medium;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .titulo-carteirinha {
+        font-size: medium;
+        margin-bottom: 15%;
+    }
+
+
+}
+
