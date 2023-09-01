@@ -23,7 +23,7 @@
 
         <div class="menu linha">
 
-            <ul class="linha">
+            <ul>
                 <li><a href="index.html">Página Inicial</a></li>
                 <li><a href="Faça-sua-Carteirinha.html">Seu Cartão</a></li>
                 <li><a href="Faça-sua-Carteirinha.html">Recarga</a></li>
@@ -41,16 +41,18 @@
 
         <!-- Um examplo do bootstrap, mas personalizado do jeito que a gente precisa no site -->
 
-        <div id="carouselExampleAutoplaying" class="carousel slide w-90 carrossel" data-bs-ride="carousel">
+        <!-- CARROSEL -->
+
+        <div id="carouselExampleAutoplaying" class="carousel slide w-90 carrossel carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <a href="#"><img src="/PI-2/front-end/img/Recarregue já.jpg" class="d-block w-100" alt="..."></a>
+                <a href="#"><img src="../img/Recarregue já.jpg" class="d-block w-100" alt="..."></a>
               </div>
               <div class="carousel-item">
-                <a href="Faça-sua-Carteirinha.html"><img src="/PI-2/front-end/img/Faça já sua carteirinha.jpg". class="d-block w-100" alt="..."></a>
+                <a href="./Faça-sua-Carteirinha.html"><img src="../img/Faça já sua carteirinha.jpg". class="d-block w-100" alt="..."></a>
               </div>
               <div class="carousel-item">
-                <a href="#"><img src="/PI-2/front-end/img/Tire suas dúvidas.jpg" class="d-block w-100" alt="..."></a>
+                <a href="#"><img src="../img/Tire suas dúvidas.jpg" class="d-block w-100" alt="..."></a>
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -61,7 +63,49 @@
               <span class="carousel-control-next-icon seta" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
+        </div>
+
+          <!-- Fim do Carrosel -->
+
+          <div class="separador"></div>
+
+          <!-- seção com tres icones -->
+
+          <section class="time-line-box">
+            <div class="swiper-container text-center">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide-first">
+                  
+                  <div class="swiper-content">
+                    <div class="timeline-icon">
+                      <img src="../img/timeline-icon1.jpg" alt="">
+                      <div class="timeline-bar"></div>
+                    </div>
+                    <span>Rapidez no Embarque</span>
+                  </div>
+                  
+                </div>
+                <div class="swiper-slide swiper-slide-middle">
+                    <div class="swiper-content">
+                      <div class="timeline-icon">
+                        <img src="../img/timeline-icon2.jpg" alt="">
+                        <div class="timeline-bar"></div>
+                      </div>
+                      <span>Recarga rápida e sem dificuldades</span>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide-last">
+                    <div class="swiper-content">
+                      <div class="timeline-icon">
+                        <img src="../img/timeline-icon3.jpg" alt="">
+                        <div class="timeline-bar"></div>
+                      </div>
+                      <span>Sem uso de notas</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
     </main>
 
