@@ -52,6 +52,12 @@
     border-top: #0D116B solid 0.5px;
 }
 
+.separador-pagina {
+    border-top: #0D116B solid 0.5px;
+    width: 90%;
+    margin-left: 5%;
+}
+
 .menu ul{
     display: flex;
     justify-content: space-around;
@@ -84,12 +90,13 @@
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
-    margin-top: 1%;
-    
+    margin-top: 2%;
+    margin-bottom: 4%;
+    height: auto;
 }
 
 .carousel-item{
-    height: 500px;
+
     align-items: center;
 }
 
@@ -114,7 +121,7 @@
 
 
 .time-line-box{
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 
@@ -196,11 +203,13 @@
         margin-right: 20px;
     }
 
+    /* menu ul apartir daqui começa a usar o hambuguerzinho */
     .menu ul{
         flex-wrap: wrap;
         height: auto;
         row-gap: 10px;
     }
+
 
     .carrossel{
         width: 90%;
