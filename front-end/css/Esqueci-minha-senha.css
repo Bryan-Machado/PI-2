@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
@@ -12,7 +12,7 @@
 
 /* botoes */
 
-.botao{
+.botao {
     background-color: #0D116B;
     color: #fff;
     padding: 10px 20px;
@@ -21,44 +21,44 @@
     margin-right: 40px;
 }
 
-.inscrever{
+.inscrever {
     margin-right: -45px;
 }
 
-.inscrever{
+.inscrever {
     color: #F2F2F2;
     font-weight: bolder;
 }
 
 /* botoes */
 
-.linha-between{
+.linha-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#imagens-botoes{
+#imagens-botoes {
     padding: 0px 10%;
 }
 
-.linha{
+.linha {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.separador{
+.separador {
     border-top: #0D116B solid 0.5px;
 }
 
-.menu ul{
+.menu ul {
     padding: 0px 15%;
     width: 90%;
     background-color: #0D116B;
     height: 50px;
     border-radius: 5px;
-    
+
 }
 
 .menu {
@@ -66,48 +66,48 @@
     z-index: 1;
 }
 
-.menu li{
+.menu li {
     list-style: none;
 }
 
-.menu a{
+.menu a {
     text-decoration: none;
     color: #fff;
-    
+
 }
 
-.linha li{
+.linha li {
     width: 92.47px;
     text-align: center;
 }
 
 /* Página de Login */
 
-.imagem-login{
+.imagem-login {
     width: 60%;
     height: 80vh;
 }
 
-.imagem-login img{
+.imagem-login img {
     width: 100%;
     height: 92vh;
     z-index: 0;
 }
 
-.login-forms{
+.esqueci-senha-forms {
     width: 40%;
     height: 92vh;
     background-color: rgba(13, 17, 107, 0.8);
-    
+
 }
 
-.pagina-login{
+.pagina-esqueci-senha {
     display: flex;
     position: relative;
     z-index: 0;
 }
 
-.formulario-login{
+.formulario-esqueci-senha {
     width: 75%;
     height: 60vh;
     background-color: #fff;
@@ -119,17 +119,17 @@
     align-items: center;
 }
 
-.formulario-login h2{
+.formulario-esqueci-senha h2 {
     margin: 0% 5% 10% 5%;
     text-align: center;
 }
 
-.botao-login{
+.botao-esqueci-senha {
     text-align: center;
     margin: 7%;
 }
 
-.botao-login-design{
+.botao-esqueci-senha-design {
     background-color: #0D116B;
     color: #fff;
     padding: 10px 20px;
@@ -137,34 +137,36 @@
     border-radius: 5px;
 }
 
-.separador-login{
+.separador-login {
     border-top: #0D116B solid 0.5px;
 }
 
-.esqueci-senha{
+.esqueci-senha {
     margin-top: 5%;
 }
 
-@media (max-width: 925px) {      /* era 768px, mas percebi que pode colocar já em 925px */
-    
-    .menu ul{
+@media (max-width: 925px) {
+    /* era 768px, mas percebi que pode colocar já em 925px */
+
+    .menu ul {
         padding: 0;
     }
 
 }
 
-@media (max-width: 617px) {   /* era 425px */
+@media (max-width: 617px) {
+    /* era 425px */
 
-    #imagens-botoes{
+    #imagens-botoes {
         padding: 0;
     }
 
-    .botao{
+    .botao {
         margin-right: 20px;
     }
 
     /* menu ul apartir daqui começa a usar o hambuguerzinho */
-    .menu ul{
+    .menu ul {
         flex-wrap: wrap;
         height: auto;
         row-gap: 10px;

@@ -121,6 +121,9 @@
 
 .time-line-box span{
     font-size: larger;
+    margin-top: 60px;
+    width: 90%;
+    margin-left: 5%;
 }
 
 
@@ -205,6 +208,10 @@
         padding: 0;
     }
 
+    .menu li{
+        font-size: small;
+    }
+
 }
 
 @media (max-width: 617px) {   /* era 425px */
@@ -227,8 +234,8 @@
 
     .carrossel{
         width: 90%;
+        margin-left: 5%;
     }
-
 }
 
 /* Fim da responsividade do HEADER */
