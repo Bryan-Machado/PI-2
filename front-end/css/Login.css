@@ -52,17 +52,24 @@
     border-top: #0D116B solid 0.5px;
 }
 
+.separador-menu{
+    border-top: #0D116B solid 0.5px;
+    position: relative;
+}
+
+.menu{
+    position: relative;
+}
+
 .menu ul{
     padding: 0px 15%;
     width: 90%;
     background-color: #0D116B;
     height: 50px;
     border-radius: 5px;
-    
-}
-
-.menu {
-    position: relative;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0px;
     z-index: 1;
 }
 
