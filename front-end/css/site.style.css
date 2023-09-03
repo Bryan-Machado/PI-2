@@ -30,6 +30,17 @@
     font-weight: bolder;
 }
 
+
+.botao-carteirinha{
+    width: 170px;
+}
+
+.botao-sobrenos{
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+}
+
 /* botoes */
 
 .linha-between{
@@ -48,7 +59,14 @@
     align-items: center;
 }
 
+.separador-menu{
+    width: 100%;
+    border-top: #0D116B solid 0.5px;
+}
+
 .separador{
+    width: 90%;
+    margin: auto;
     border-top: #0D116B solid 0.5px;
 }
 
@@ -183,6 +201,84 @@
     background-color: #2429A6;
 }
 
+/* seção de carteirinha */
+
+.section-carteirinha{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.linha-carteirinha{
+    margin: auto;
+}
+
+.carteirinha-img{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    padding: 10px 0px; 
+    margin: auto;
+    padding-right: 20px;
+}
+
+.texto-carteirinha{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    padding: 10px 0px; 
+    margin: auto;
+}
+
+
+/* fim de seção de carteirinha */
+
+.carteirinhas-disponiveis{
+    margin: 20px 0px;
+}
+
+/* cards */
+
+.section-espacamento{
+    margin-bottom: 20px;
+}
+
+.card-texto{
+    background-color: #2429A6; 
+    padding: 10px; 
+    border-radius: 10px; 
+    color: #fff; 
+    margin-top: 25px;
+}
+
+/* fim de cards */
+
+/* linhas do onibus */
+
+#linhas-onibus h3{
+    margin: 80px 0px 20px 0px;
+}
+
+#linhas-onibus img{
+    width: 90%;
+}
+
+.listas-das-linhas{
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    row-gap: 80px;
+    width: 90%;
+    margin: auto;
+}
+
+.lista-linha{
+    width: 32%; 
+    min-width: 300px;
+}
+
+.lista-linha li{
+    font-size: 14px;
+}
+
 #linhas-onibus ul{
     list-style: none;
     border-radius: 20px;
@@ -198,6 +294,31 @@
 
 .start-li{
     border-top: #000000 solid 0px;
+}
+
+/* fim das linhas de onibus */
+
+/* parte final */
+
+.final{
+    margin: 20px auto;
+    width: 90%;
+}
+
+.item-final{
+    margin-top: 80px;
+}
+
+/* fim da parte final */
+
+
+
+
+/* responsividade apenas da imagem da carteirinha */
+@media (max-width: 1199px){
+    .carteirinha-img{
+        padding-right: 0px;
+    }
 }
 
 /* Responsividade do HEADER */
