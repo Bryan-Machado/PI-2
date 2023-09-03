@@ -52,12 +52,6 @@
     border-top: #0D116B solid 0.5px;
 }
 
-.separador-pagina {
-    border-top: #0D116B solid 0.5px;
-    width: 90%;
-    margin-left: 5%;
-}
-
 .menu ul{
     display: flex;
     justify-content: space-around;
@@ -67,36 +61,32 @@
     background-color: #0D116B;
     height: 50px;
     border-radius: 5px;
+    margin-bottom: 0px;         /* porque o navegador continuava mudando o valor para 1 ou 0.5rem */
 }
 
 .menu li{
     list-style: none;
+    margin: 0px 10px;
+    padding: 0px;
+    text-align: center;
 }
 
 .menu a{
     text-decoration: none;
     color: #fff;
-    
-}
-
-.linha li{
-    margin: 10px;
-    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 /* css do carrosel, utilizei das classe do bootstrap para editar no css */
 
 .carrossel{
     width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 2%;
-    margin-bottom: 4%;
+    margin: 20px auto;
     height: auto;
 }
 
 .carousel-item{
-
     align-items: center;
 }
 
@@ -121,7 +111,16 @@
 
 
 .time-line-box{
-    margin-top: 60px;
+    margin-top: 20px;
+}
+
+.time-line-box h1{
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.time-line-box span{
+    font-size: larger;
 }
 
 
@@ -181,7 +180,22 @@
     background-color: #2429A6;
 }
 
+#linhas-onibus ul{
+    list-style: none;
+    border-radius: 20px;
+    border: #000000 solid 1px;
+    padding: 20px;
+}
 
+#linhas-onibus .middle-li{
+    margin-bottom: 5px;
+    overflow-x: hidden;
+    border-top: #000000 solid 1px;
+}
+
+.start-li{
+    border-top: #000000 solid 0px;
+}
 
 /* Responsividade do HEADER */
 
