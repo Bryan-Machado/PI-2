@@ -58,12 +58,14 @@
     background-color: #0D116B;
     height: 50px;
     border-radius: 5px;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
 
 }
 
 .menu {
     position: relative;
-    z-index: 1;
 }
 
 .menu li {
@@ -143,6 +145,59 @@
 
 .esqueci-senha {
     margin-top: 5%;
+}
+
+@media (max-width: 1417px) {
+
+    .formulario-esqueci-senha h2 {
+        font-size: x-large;
+    }
+
+}
+
+@media (max-width: 1300px) {
+
+    .imagem-login {
+        width: 50%;
+    }
+
+    .esqueci-senha-forms {
+        width: 50%;
+
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .imagem-login {
+        width: 40%;
+    }
+
+    .esqueci-senha-forms {
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .imagem-login {
+        width: 0%;
+    }
+
+    .esqueci-senha-forms {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    .formulario-esqueci-senha {
+        margin-top: 30%;
+    }
+
 }
 
 @media (max-width: 925px) {
