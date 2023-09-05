@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
@@ -12,7 +12,7 @@
 
 /* botoes */
 
-.botao{
+.botao {
     background-color: #0D116B;
     color: #fff;
     padding: 10px 20px;
@@ -21,34 +21,34 @@
     margin-right: 40px;
 }
 
-.inscrever{
+.inscrever {
     margin-right: -45px;
 }
 
-.inscrever{
+.inscrever {
     color: #F2F2F2;
     font-weight: bolder;
 }
 
 /* botoes */
 
-.linha-between{
+.linha-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#imagens-botoes{
+#imagens-botoes {
     padding: 0px 10%;
 }
 
-.linha{
+.linha {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.separador{
+.separador {
     border-top: #0D116B solid 0.5px;
 }
 
@@ -58,7 +58,7 @@
     margin-left: 5%;
 }
 
-.menu ul{
+.menu ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -69,40 +69,40 @@
     border-radius: 5px;
 }
 
-.menu li{
+.menu li {
     list-style: none;
 }
 
-.menu a{
+.menu a {
     text-decoration: none;
     color: #fff;
-    
+
 }
 
-.linha li{
+.linha li {
     margin: 10px;
     text-align: center;
 }
 
 /*Começo do formulario*/
 
-h3{
+h3 {
     font-size: 30px;
     margin: 60px 0px 60px 0px;
     text-align: center;
 }
 
-p{
+p {
     font-size: 30px;
 }
 
-.campo{
+.campo {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
-    
+
 
 }
 
@@ -112,12 +112,13 @@ p{
     width: 1296px;
     height: 400px;
     border-radius: 20px;
-    margin: 20px 0px 50px 0px;;
+    margin: 20px 0px 50px 0px;
+    ;
     align-items: center;
     justify-content: center;
 }
 
-.org{
+.org {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -126,22 +127,23 @@ p{
 }
 
 
-input{
+input {
     border-radius: 10px;
     width: 612px;
     height: 30px;
     margin: 0px 20px 25px 15px;
     display: flex;
     justify-content: center;
+    padding: 0px 0px 0px 10px;
 }
 
-.saldo{
+.saldo {
     margin: 10px;
     display: flex;
     justify-content: center;
 }
 
-#button-saldo{
+#button-saldo {
     height: 70px;
     width: 350px;
 
@@ -162,32 +164,32 @@ input{
 }
 
 
-.pagamento{
+.pagamento {
     display: flex;
     justify-content: space-between;
     width: 500px;
 }
 
-.metodos-pagamento img{
+.metodos-pagamento img {
     height: 40px;
     width: 40px;
     padding-inline: 40px;
 }
 
-#button-pag{
+#button-pag {
     width: 80px;
     height: 50px;
     border-radius: 20px;
 
 }
 
-label{
+label {
     font-size: 25px;
     float: left;
     margin: 0px 25px 0px 0px;
 }
 
-.number2{
+.number2 {
     width: 200px;
     height: 30px;
     display: flex;
@@ -195,12 +197,12 @@ label{
 
 }
 
-#number1{
+#number1 {
     width: 200px;
     height: 30px;
 }
 
-.enviar{
+.enviar {
     color: #fff;
     background-color: #0D116B;
     border-radius: 10px;
@@ -234,9 +236,9 @@ footer {
 }
 
 .footer-col {
-  padding: 0 15px;
-  width: 25%;
-    
+    padding: 0 15px;
+    width: 25%;
+
 }
 
 .footer-col h4 {
@@ -248,56 +250,59 @@ footer {
 }
 
 .footer-col ul {
-  list-style: none;
+    list-style: none;
 
 }
 
 .footer-col ul li {
-  margin: 10px 0;
- 
+    margin: 10px 0;
+
 }
 
 .footer-col ul li a {
-  color: #fff;
-  font-size: 15px;
-  text-transform: capitalize;
-  text-decoration: none;
-  transition: all 0.3s ease;
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.footer-col ul li a:hover{
-  color: #6e6c6c;
-  padding-left: 10px;
+.footer-col ul li a:hover {
+    color: #6e6c6c;
+    padding-left: 10px;
 
 }
 
 .footer-col .rede-social {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .footer-col .rede-social a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 50%;
-  border: 1px solid white;
-  transition: all 0.3s ease;
-  margin: 0 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    margin: 0 5px;
 }
 
-.footer-col .rede-social a:hover{
-  color: navy;
-  background-color: white;
+.footer-col .rede-social a:hover {
+    color: navy;
+    background-color: white;
 }
 
-.footer-col img{
+.footer-col img {
     height: 30px;
     width: 30px;
-    
+    margin: 25px;
+    filter: invert();
+
+
 }
 
 
@@ -305,25 +310,198 @@ footer {
 
 /*media query*/
 
-@media (max-width:850px){
-  .footer-col {
-      width: 50%;
-      margin-bottom: 30%;
+@media (max-width:850px) {
+    .footer-col {
+        width: 50%;
+        margin: 20px;
 
-  }
+    }
 }
 
-@media (max-width:600px){
-  .footer-col{
-      width: 100%;
-  }
+@media (max-width:925px) {
+    .footer-col {
+        width: 100%;
+        margin-top: 20px;
+        padding: 50px;
+    }
+}
+
+@media (max-width:925px) {
+    .footer-col img {
+        margin: 5px;
+      
+
+    }
 }
 
 
 
+/*menu*/
+
+
+@media (max-width: 925px) {
+    /* era 768px, mas percebi que pode colocar já em 925px */
+
+    .menu ul {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 617px) {
+    /* era 425px */
+
+    #imagens-botoes {
+        padding: 0;
+    }
+
+    .botao {
+        margin-right: 20px;
+    }
+
+    /* menu ul apartir daqui começa a usar o hambuguerzinho */
+    .menu ul {
+        flex-wrap: wrap;
+        height: auto;
+        row-gap: 10px;
+    }
+
+}
+
+/*reponsividade pagina recarga*/
+
+
+@media (max-width:768px) {
+    .container {
+
+        width: 100%;
+
+    }
+}
+
+@media (max-width:768px) {
+    input {
+        width: 400px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width:768px) {
+    .campo {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+}
+
+@media (max-width:425px) {
+       input {
+        width: 300px;
+        margin-top: 5px;
+
+       }
+}
+
+@media (max-width:425px) {
+    .container2{
+        height: 800px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+    }
+}
+
+@media (max-width:425px) {
+    p{
+        margin-left: 100px;
+        
+
+    }
+}
+
+@media (max-width:425px) {
+    .pagamento {
+        display: flex;
+        justify-content: center;
+        
+
+    }
+}
+
+@media (max-width:425px) {
+    .metodos-pagamento{
+        display: flex;
+        justify-content: center;
+        margin-left: 70px;
+
+
+    }
+}
+
+@media (max-width:425px) {
+     .cartao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 90px;
+        
+        
+
+    }
+}
+
+
+@media (max-width:425px) {
+    .number3 {
+        width: 200px;
+        height: 30px;
+        display: flex;
+        margin: 0px 0px 25px 0px;
+        flex-direction: column;
+        align-items: center;
+      
+       
+
+   }
+}
+
+
+@media (max-width:425px) {
+    .number2 {
+        width: 200px;
+        height: 30px;
+        display: flex;
+        margin: 0px 0px 120px 0px;
+        flex-direction: column;
+        align-items: center;
+      
+       
+
+   }
+}
 
 
 
+@media (max-width:425px) {
+    .org {
+      
+        margin: 0px 0px 220px 0px;
+       
 
-   
+    }
+}
+
+
+
+@media (max-width:425px) {
+    #vcv{
+        width: 200px;
+
+    }
+}
+
+
+
 
