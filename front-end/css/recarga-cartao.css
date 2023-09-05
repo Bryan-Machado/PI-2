@@ -1,0 +1,318 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+    cores usadas no figma:
+
+    background-color: #0D116B;          AZUL ESCURO
+    background-color: #2429A6;          AZUL MAIS CLARO
+*/
+
+/* botoes */
+
+.botao{
+    background-color: #0D116B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+.inscrever{
+    margin-right: -45px;
+}
+
+.inscrever{
+    color: #F2F2F2;
+    font-weight: bolder;
+}
+
+/* botoes */
+
+.linha-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imagens-botoes{
+    padding: 0px 10%;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.separador{
+    border-top: #0D116B solid 0.5px;
+}
+
+.separador-pagina {
+    border-top: #0D116B solid 0.5px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 15%;
+    width: 90%;
+    background-color: #0D116B;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.linha li{
+    margin: 10px;
+    text-align: center;
+}
+
+/*Começo do formulario*/
+
+h3{
+    font-size: 30px;
+    margin: 60px 0px 60px 0px;
+    text-align: center;
+}
+
+p{
+    font-size: 30px;
+}
+
+.campo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    
+
+}
+
+.container {
+    display: flex;
+    background: #2429A61F;
+    width: 1296px;
+    height: 400px;
+    border-radius: 20px;
+    margin: 20px 0px 50px 0px;;
+    align-items: center;
+    justify-content: center;
+}
+
+.org{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+
+input{
+    border-radius: 10px;
+    width: 612px;
+    height: 30px;
+    margin: 0px 20px 25px 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.saldo{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#button-saldo{
+    height: 70px;
+    width: 350px;
+
+}
+
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background: #2429A61F;
+    width: 1296px;
+    height: 620px;
+    margin: 90px 0px 140px 0px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+
+.pagamentoo{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+#button-pag{
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
+
+}
+
+label{
+    font-size: 25px;
+    float: left;
+    margin: 0px 25px 0px 0px;
+}
+
+.number2{
+    width: 200px;
+    height: 30px;
+    display: flex;
+    margin: 0px 0px 25px 0px;
+
+}
+
+#number1{
+    width: 200px;
+    height: 30px;
+}
+
+#enviar{
+    color: #fff;
+    background-color: #0D116B;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+}
+
+
+/*css footer*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+
+
+footer {
+    background: #0D116B;
+    padding: 50px 0;
+}
+
+
+.container-footer {
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.footer-col {
+  padding: 0 15px;
+  width: 25%;
+    
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+  list-style: none;
+
+}
+
+.footer-col ul li {
+  margin: 10px 0;
+ 
+}
+
+.footer-col ul li a {
+  color: #fff;
+  font-size: 15px;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+  color: #6e6c6c;
+  padding-left: 10px;
+
+}
+
+.footer-col .rede-social {
+  margin-top: 30px;
+}
+
+.footer-col .rede-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid white;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.footer-col .rede-social a:hover{
+  color: navy;
+  background-color: white;
+}
+
+
+
+
+
+/*media query*/
+
+@media (max-width:850px){
+  .footer-col {
+      width: 50%;
+      margin-bottom: 30%;
+
+  }
+}
+
+@media (max-width:600px){
+  .footer-col{
+      width: 100%;
+  }
+}
+
+
+
+
+
+
+
+   
+
