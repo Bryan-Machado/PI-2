@@ -157,15 +157,21 @@ input{
     width: 1296px;
     height: 620px;
     margin: 90px 0px 140px 0px;
-    border-radius: 20px;
+    border-radius: 15px;
     align-items: center;
 }
 
 
-.pagamentoo{
+.pagamento{
     display: flex;
     justify-content: space-between;
     width: 500px;
+}
+
+.metodos-pagamento img{
+    height: 40px;
+    width: 40px;
+    padding-inline: 40px;
 }
 
 #button-pag{
@@ -194,7 +200,7 @@ label{
     height: 30px;
 }
 
-#enviar{
+.enviar{
     color: #fff;
     background-color: #0D116B;
     border-radius: 10px;
@@ -288,6 +294,11 @@ footer {
   background-color: white;
 }
 
+.footer-col img{
+    height: 30px;
+    width: 30px;
+    
+}
 
 
 
