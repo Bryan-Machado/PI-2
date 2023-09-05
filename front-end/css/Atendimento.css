@@ -99,6 +99,8 @@
 
 .linha-atendimento {
     width: 100%;
+    display: flex;
+
 }
 
 .celular-img {
@@ -131,4 +133,102 @@
 
 .accordion-item{
     margin-bottom: 3%;
+}
+
+
+@media (max-width: 846px) {
+    .celular-img {
+    align-items: center;
+}
+
+.texto-atendimento h2 {
+    font-size: x-large;
+}
+
+.texto-atendimento h3 {
+    font-size: large;
+}
+
+.texto-atendimento p {
+    font-size: small;
+}
+
+}
+
+@media (max-width: 690px) {
+    .celular-img img{
+        margin-right: 50%;
+    }
+
+    .texto-atendimento h2 {
+        font-size: x-large;
+    }
+
+    .texto-atendimento h3 {
+        font-size: large;
+    }
+
+    .texto-atendimento p {
+        font-size: small;
+    }
+
+    .linha-atendimento {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .celular-img img {
+        width: 200px;
+        margin-right: 100%;
+    }
+
+        .texto-atendimento h2 {
+            font-size: larger;
+        }
+    
+        .texto-atendimento h3 {
+            font-size: medium;
+        }
+    
+        .texto-atendimento p {
+            font-size: smaller;
+        }
+}
+
+
+/* Responsividade do HEADER */
+
+@media (max-width: 925px) {
+    /* era 768px, mas percebi que pode colocar já em 925px */
+
+    .menu ul {
+        padding: 0;
+    }
+
+    .menu li {
+        font-size: small;
+    }
+
+}
+
+@media (max-width: 617px) {
+    /* era 425px */
+
+    #imagens-botoes {
+        padding: 0;
+    }
+
+    .botao {
+        margin-right: 20px;
+    }
+
+    /* menu ul apartir daqui começa a usar o hambuguerzinho */
+    .menu ul {
+        flex-wrap: wrap;
+        height: auto;
+        row-gap: 10px;
+    }
+
 }
