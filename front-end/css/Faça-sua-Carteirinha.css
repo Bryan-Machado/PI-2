@@ -177,22 +177,66 @@
 
 @media (max-width: 768px) {
 
-    .titulo {
-        font-size: xx-large;
+    .agendamento {
+        display: flex;
+        flex-direction: column;
+        align-items: first baseline;
+    }
+    
+    .media-425-agendamento {
+        display: inline;
+        width: 70%;
     }
 
-    .carteirinha-forms img {
-        width: 213px;
-        height: 160px;
+    .formulario-inteiro h3{
+    text-align: start;
     }
+
+    .form-select{
+        width: 222%;
+    }
+    
+    .form-control{
+        width: 100%;
+    }
+
+    .carteirinha-forms {
+        width: 140%;
+        margin-left: 2%;
+    }
+    
+    .formulario-inteiro {
+        width: 140%;
+        margin-left: 5%;
+        margin-right: 2%;
+    }
+
+    .forms-1 {
+        display: inline;
+    }
+
+    .forms-2{
+        display: inline;
+    }
+
 
     .titulo-forms {
-        font-size: large;
+        font-size: medium;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
 
     .titulo-carteirinha {
         font-size: large;
-        margin-bottom: 15%;
+        margin-bottom: 5%;
+    }
+
+    .titulo {
+        font-size: xx-large;
+    }
+
+    .titulo-forms {
+        font-size: large;
     }
 
 
@@ -240,16 +284,8 @@
 
     .formulario-inteiro h3{
         text-align: start;
-        }
-
-    .form-select{
-        width: 283px;
     }
     
-    .form-control{
-        width: 283px;
-    }
-
     .carteirinha-forms {
         width: 140%;
         margin-left: 2%;
@@ -279,13 +315,13 @@
     }
 
     .titulo-forms {
-        font-size: medium;
+        font-size: large;
         margin-top: 5%;
         margin-bottom: 5%;
     }
 
     .titulo-carteirinha {
-        font-size: medium;
+        font-size: large;
         margin-bottom: 15%;
     }
 
