@@ -1765,3 +1765,10 @@
   contentLoaded(window, Dropzone._autoDiscoverFunction);
 
 }).call(this);
+
+const botaoDeResetar = document.querySelector('#resetar');
+
+botaoDeResetar.addEventListener('click', () => {
+  const previewDeImagem = document.querySelector('.dz-preview.dz-processing.dz-error.dz-complete.dz-image-preview')
+  previewDeImagem.remove();
+})
