@@ -171,12 +171,18 @@
 @media (max-width: 1024px) {
 
     .imagem-login {
-        width: 40%;
+        width: 0%;
     }
 
     .esqueci-senha-forms {
-        width: 60%;
+        width: 100%;
     }
+
+    .formulario-esqueci-senha {
+        margin-top: 10%;
+        height: 630px;
+    }
+
 
 }
 
@@ -190,12 +196,19 @@
         width: 100%;
     }
 
+    .formulario-esqueci-senha {
+        margin-top: 20%;
+        height: 570px;
+    }
+
+
 }
 
 @media (max-width: 425px) {
 
     .formulario-esqueci-senha {
         margin-top: 30%;
+        height: 470px;
     }
 
 }

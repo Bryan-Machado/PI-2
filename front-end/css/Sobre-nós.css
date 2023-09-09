@@ -203,7 +203,7 @@
 
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
 
     .descrição-dev h4 {
         font-size: small;
@@ -219,7 +219,15 @@
     }
 
     .imagem-sobre-nos img{
-        height: 20vh;
+        height: 200px;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .dev{
+        width: 100%;
+        margin-left: 0;
     }
 }
 
