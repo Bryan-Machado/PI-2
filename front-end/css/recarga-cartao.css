@@ -38,50 +38,56 @@
     align-items: center;
 }
 
-#imagens-botoes {
+#imagens-botoes{
     padding: 0px 10%;
 }
 
-.linha {
+.linha{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.separador {
+.separador-menu{
+    width: 100%;
     border-top: #0D116B solid 0.5px;
 }
 
-.separador-pagina {
-    border-top: #0D116B solid 0.5px;
+.separador{
     width: 90%;
-    margin-left: 5%;
+    margin: auto;
+    border-top: #0D116B solid 0.5px;
 }
 
-.menu ul {
+.header-botoes{
+    position: relative;
+    right: 5px;
+}
+
+.menu-container{
+    width: 90%; 
+    margin: auto;
+}
+
+.menu-navbar{
+    background-color: #0D116B; 
+    border-radius: 5px; 
+    padding: 7px 10px;
+}
+
+.menu-flex{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0px 15%;
-    width: 90%;
-    background-color: #0D116B;
-    height: 50px;
-    border-radius: 5px;
+    justify-content: center;
 }
 
-.menu li {
-    list-style: none;
-}
-
-.menu a {
-    text-decoration: none;
+.menu-link{
     color: #fff;
-
+    margin-right: 80px;
 }
 
-.linha li {
-    margin: 10px;
-    text-align: center;
+.menu-hamburguer{
+    color: #fff;
+    border: #fff solid 1px;
 }
 
 /*Começo do formulario*/
@@ -336,37 +342,57 @@ footer {
 
 
 
-/*menu*/
+/* Responsividade do HEADER */
 
-
-@media (max-width: 925px) {
-    /* era 768px, mas percebi que pode colocar já em 925px */
-
-    .menu ul {
-        padding: 0;
+@media (max-width: 991px) {      /* o hamburguer do bootstrap aparece nessa dimensao */
+    
+    .menu-flex{
+        display: block;
     }
 
 }
 
-@media (max-width: 617px) {
-    /* era 425px */
+@media (max-width: 617px) {   /* era 425px */
 
-    #imagens-botoes {
+    #imagens-botoes{
         padding: 0;
     }
 
-    .botao {
+    .botao{
         margin-right: 20px;
     }
 
-    /* menu ul apartir daqui começa a usar o hambuguerzinho */
-    .menu ul {
-        flex-wrap: wrap;
-        height: auto;
-        row-gap: 10px;
+
+    .carrossel{
+        width: 100%;
     }
 
-}
+}   
+
+@media (max-width: 400px) {   
+
+    #imagens-botoes{
+        display: block;
+    }
+
+    #imagens-botoes .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-botoes{
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+
+    #inscrever-se{
+        margin-right: 0;
+    }
+
+}  
+
+/* Fim da responsividade do HEADER */
 
 /*reponsividade pagina recarga*/
 

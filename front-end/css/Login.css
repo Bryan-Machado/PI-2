@@ -48,45 +48,46 @@
     align-items: center;
 }
 
-.separador{
-    border-top: #0D116B solid 0.5px;
-}
-
 .separador-menu{
+    width: 100%;
     border-top: #0D116B solid 0.5px;
-    position: relative;
 }
 
-.menu{
-    position: relative;
-    
-}
-
-.menu ul{
-    padding: 0px 15%;
+.separador{
     width: 90%;
-    background-color: #0D116B;
-    height: 50px;
-    border-radius: 5px;
-    margin-bottom: 0;
-    position: absolute;
-    top: 0px;
-    z-index: 1;
+    margin: auto;
+    border-top: #0D116B solid 0.5px;
 }
 
-.menu li{
-    list-style: none;
+.header-botoes{
+    position: relative;
+    right: 5px;
 }
 
-.menu a{
-    text-decoration: none;
+.menu-container{
+    width: 90%; 
+    margin: auto;
+}
+
+.menu-navbar{
+    background-color: #0D116B; 
+    border-radius: 5px; 
+    padding: 7px 10px;
+}
+
+.menu-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-link{
     color: #fff;
-    
+    margin-right: 80px;
 }
 
-.linha li{
-    width: 92.47px;
-    text-align: center;
+.menu-hamburguer{
+    color: #fff;
+    border: #fff solid 1px;
 }
 
 /* Página de Login */
@@ -221,10 +222,12 @@
 
 }
 
-@media (max-width: 925px) {      /* era 768px, mas percebi que pode colocar já em 925px */
+/* Responsividade do HEADER */
+
+@media (max-width: 991px) {      /* o hamburguer do bootstrap aparece nessa dimensao */
     
-    .menu ul{
-        padding: 0;
+    .menu-flex{
+        display: block;
     }
 
 }
@@ -239,11 +242,34 @@
         margin-right: 20px;
     }
 
-    /* menu ul apartir daqui começa a usar o hambuguerzinho */
-    .menu ul{
-        flex-wrap: wrap;
-        height: auto;
-        row-gap: 10px;
+
+    .carrossel{
+        width: 100%;
     }
 
-}
+}   
+
+@media (max-width: 400px) {   
+
+    #imagens-botoes{
+        display: block;
+    }
+
+    #imagens-botoes .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-botoes{
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+
+    #inscrever-se{
+        margin-right: 0;
+    }
+
+}  
+
+/* Fim da responsividade do HEADER */

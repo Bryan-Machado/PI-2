@@ -14,29 +14,44 @@
 
     <header>
         <div class="linha-between" id="imagens-botoes">
-            <img src="../img/logo-site.png" alt="logo do Sistema de Transporte Público de São Paulo">
-
-            <div>
+            <div class="logo">
+              <img src="../img/logo-site.png" alt="logo do Sistema de Transporte Público de São Paulo">
+            </div>
+            
+            <div class="header-botoes">
                 <a href="./Login.html"><button class="botao login">Login</button></a>
-                <button class="botao inscrever">Adquira já</button>
+                <button class="botao inscrever" id="inscrever-se">Adquira já</button>
             </div>
         </div>
 
-        <div class="separador"></div>
+        <div class="separador-menu"></div>
 
-        <div class="menu linha">
-
-            <ul class="linha">
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="Faça-sua-Carteirinha.html">Seu Cartão</a></li>
-                <li><a href="Faça-sua-Carteirinha.html">Recarga</a></li>
-                <li><a href="#">Linhas</a></li>
-                <li><a href="Sobre-nos.html">Sobre Nós</a></li>
-                <li><a href="Atendimento.html">Atendimento</a></li>
-            </ul>
-
-        </div>
-
+        <nav class="navbar navbar-expand-lg bg-body-tertiary menu-container">
+          <div class="container-fluid menu-navbar">
+            <button class="navbar-toggler menu-hamburguer" type="button" data-bs-toggle="collapse" data-bs-theme="dark" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menu-flex" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link menu-link" aria-current="page" href="index.html">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="Faça-sua-Carteirinha.html">Seu Cartão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="recarga-cartao.html">Recarga</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="Sobre-nos.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="Atendimento.html">Atendimento</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
     </header>
 
 
