@@ -70,30 +70,30 @@
     border-top: #0D116B solid 0.5px;
 }
 
-.menu ul{
+.menu-container{
+    width: 90%; 
+    margin: auto;
+}
+
+.menu-navbar{
+    background-color: #0D116B; 
+    border-radius: 5px; 
+    padding: 7px 10px;
+}
+
+.menu-flex{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0px 15%;
-    width: 90%;
-    background-color: #0D116B;
-    height: 50px;
-    border-radius: 5px;
-    margin-bottom: 0px;         /* porque o navegador continuava mudando o valor para 1 ou 0.5rem */
+    justify-content: center;
 }
 
-.menu li{
-    list-style: none;
-    margin: 0px 10px;
-    padding: 0px;
-    text-align: center;
-}
-
-.menu a{
-    text-decoration: none;
+.menu-link{
     color: #fff;
-    padding: 0;
-    margin: 0;
+    margin-right: 80px;
+}
+
+.menu-hamburguer{
+    color: #fff;
+    border: #fff solid 1px;
 }
 
 /* css do carrosel, utilizei das classe do bootstrap para editar no css */
@@ -443,14 +443,10 @@ footer {
 
 /* Responsividade do HEADER */
 
-@media (max-width: 925px) {      /* era 768px, mas percebi que pode colocar já em 925px */
+@media (max-width: 991px) {      /* o hamburguer do bootstrap aparece nessa dimensao */
     
-    .menu ul{
-        padding: 0;
-    }
-
-    .menu li{
-        font-size: small;
+    .menu-flex{
+        display: block;
     }
 
 }
@@ -465,13 +461,6 @@ footer {
         margin-right: 20px;
     }
 
-    /* menu ul apartir daqui começa a usar o hambuguerzinho */
-    .menu ul{
-        flex-wrap: wrap;
-        height: auto;
-        row-gap: 10px;
-    }
-
 
     .carrossel{
         width: 100%;
@@ -480,6 +469,12 @@ footer {
 }   
 
 /* Fim da responsividade do HEADER */
+
+/* responsividade da time-line ou tres imagens seguidas sla */
+
+
+
+/* fim da responsividade da time-line ou tres imagens seguidas sla */
 
 
 /* continuar os outros media queries aqui */
