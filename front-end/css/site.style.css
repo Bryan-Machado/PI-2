@@ -70,6 +70,11 @@
     border-top: #0D116B solid 0.5px;
 }
 
+.header-botoes{
+    position: relative;
+    right: 5px;
+}
+
 .menu-container{
     width: 90%; 
     margin: auto;
@@ -467,6 +472,29 @@ footer {
     }
 
 }   
+
+@media (max-width: 400px) {   
+
+    #imagens-botoes{
+        display: block;
+    }
+
+    #imagens-botoes .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-botoes{
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+
+    #inscrever-se{
+        margin-right: 0;
+    }
+
+}  
 
 /* Fim da responsividade do HEADER */
 
