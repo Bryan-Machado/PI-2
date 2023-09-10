@@ -250,12 +250,21 @@
     margin-bottom: 5%;
 }
 
+.section-cards{
+    width: 90%;
+    margin: auto;
+}
+
 .card-texto{
     background-color: #2429A6; 
     padding: 10px; 
     border-radius: 10px; 
     color: #fff; 
     margin-top: 25px;
+    /* display: flex;
+    justify-content: center;             Caso queira centralizar o conteudo do texto sem usar text-align: center;
+    align-items: center; */
+    min-height: 188px; /* a quantidade de height to maior container de texto */
 }
 
 /* fim de cards */
