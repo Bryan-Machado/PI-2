@@ -208,6 +208,51 @@
     background-color: #2429A6;
 }
 
+
+
+.time-line-box-2{
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.swiper-responsive{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 60px;
+}
+
+.swiper-responsive span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 241px;
+}
+
+.swiper-responsive img{
+    /* border: #fff solid 1px;         caso adicionar a borda, recalcular as coisas */
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.swiper-responsive-com-linha{
+    padding: 0px 60px;
+    height: 100px;
+    position: relative;
+}
+
+.swiper-responsive-linha{
+    position: absolute;
+    top: -10px;
+    left: 95px;               /* left de 50px MENOS metade da width da linha MAIS o padding de 60px */
+    width: 30px;
+    height: 130px;
+    background-color: #2429A6;
+    z-index: 0;
+}
+
 /* seção de carteirinha */
 
 .section-carteirinha{
@@ -258,6 +303,7 @@
 .section-cards{
     width: 90%;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 .card-texto{
@@ -273,6 +319,23 @@
 }
 
 /* fim de cards */
+
+.map-responsive{
+    overflow:hidden;
+    position: relative;
+    height: 400px;
+}
+
+.map-responsive iframe{
+    left:0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    height:100%;
+    width:90%;
+    position:absolute;
+    margin: auto;
+}
 
 /* linhas do onibus */
 
@@ -500,7 +563,67 @@ footer {
 
 /* responsividade da time-line ou tres imagens seguidas sla */
 
+@media (max-width: 800px){
 
+    .time-line-box{
+        display: none;
+    }
+
+    .time-line-box-2{
+        display: block;
+    }
+}
+
+@media (max-width: 500px){
+
+    .time-line-box{
+        display: none;
+    }
+
+    .time-line-box-2{
+        display: block;
+    }
+
+    .swiper-responsive{
+        padding: 0px 20px;
+    }
+
+    .swiper-responsive-com-linha{
+        padding: 0px 20px;
+    }
+
+    .swiper-responsive-linha{
+        left: 55px;               /* left de 50px MENOS metade da width da linha MAIS o padding de 20px */
+    }
+}
+
+@media (max-width: 410px){
+
+    .time-line-box{
+        display: none;
+    }
+
+    .time-line-box-2{
+        display: block;
+    }
+
+    .swiper-responsive{
+        padding: 0px 5px;
+    }
+
+    .swiper-responsive span{
+        min-width: 0;
+        width: 200px;
+    }
+
+    .swiper-responsive-com-linha{
+        padding: 0px 5px;
+    }
+
+    .swiper-responsive-linha{
+        left: 40px;               /* left de 50px MENOS metade da width da linha MAIS o padding de 20px */
+    }
+}
 
 /* fim da responsividade da time-line ou tres imagens seguidas sla */
 
