@@ -96,6 +96,10 @@
     margin-top: 1.5%;
 }
 
+.imagem-atendimento-alternativa{
+    display: none;
+}
+
 .section-atendimento-whatsapp {
     width: 90%;
     margin-top: 4%;
@@ -184,6 +188,7 @@
     .celular-img img {
         width: 200px;
         margin-right: 100%;
+        margin-left: 0;
     }
 
         .texto-atendimento h2 {
@@ -198,12 +203,31 @@
             font-size: smaller;
         }
 
-        .imagem-atendimento img {
+        .imagem-atendimento {
+            display: none;
+        }
+
+        .imagem-atendimento-alternativa{
+            display: inline;
+        }
+
+        .imagem-atendimento-alternativa img {
+
             width: 100%;
             margin-left: 0;
-            height: 200px;
+        }
+
+        .section-atendimento-whatsapp{
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .accordion{
+            width: 100%;
+                margin-left: 0;
         }
 }
+                
 
 
 /* Responsividade do HEADER */

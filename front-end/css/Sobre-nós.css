@@ -97,6 +97,10 @@
     margin-bottom: 3%;
 }
 
+.imagem-sobre-nos-alternativa {
+    display: none;
+}
+
 .devs{
     display: flex;
     flex-direction: column;
@@ -191,7 +195,24 @@
         margin-top: 0;
     }
 
+    .imagem-sobre-nos {
+        display: none;
+    }
+
     .dev{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .devs{
+        width: 100%;
+    }
+
+    .imagem-sobre-nos-alternativa{
+        display: inline;
+    }
+
+    .imagem-sobre-nos-alternativa img{
         width: 100%;
         margin-left: 0;
     }
@@ -318,6 +339,9 @@ footer {
     }
 
 }   
+
+
+
 
 @media (max-width: 400px) {   
 
