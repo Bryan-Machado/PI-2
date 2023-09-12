@@ -323,7 +323,7 @@
 .map-responsive{
     overflow:hidden;
     position: relative;
-    height: 400px;
+    height: 600px;
 }
 
 .map-responsive iframe{
