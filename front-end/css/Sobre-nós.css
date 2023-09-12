@@ -394,4 +394,28 @@ footer {
     }
 }
 
+
+@media (max-width:925px) {
+    .footer-col .rede-social {
+        margin-top: 30px;
+        display: inline-flex;
+    }
+
+    
+}
+
+
+@media (min-width:768px){
+    
+.row-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+}
+
+
+
+
 /*fim da resposividade footer*/

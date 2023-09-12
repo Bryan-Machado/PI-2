@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STPSP</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../css/recarga-cartao.css">
 
@@ -16,9 +17,9 @@
     <header>
         <div class="linha-between" id="imagens-botoes">
             <div class="logo">
-              <img src="../img/logo-site.png" alt="logo do Sistema de Transporte Público de São Paulo">
+                <img src="../img/logo-site.png" alt="logo do Sistema de Transporte Público de São Paulo">
             </div>
-            
+
             <div class="header-botoes">
                 <a href="./Login.html"><button class="botao login">Login</button></a>
                 <button class="botao inscrever" id="inscrever-se">Adquira já</button>
@@ -28,168 +29,170 @@
         <div class="separador-menu"></div>
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary menu-container" style="padding: 0px;">
-          <div class="container-fluid menu-navbar">
-            <button class="navbar-toggler menu-hamburguer" type="button" data-bs-toggle="collapse" data-bs-theme="dark" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse menu-flex" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link menu-link" aria-current="page" href="index.html">Página Inicial</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link menu-link" href="Faça-sua-Carteirinha.html">Seu Cartão</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link menu-link" href="recarga-cartao.html">Recarga</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link menu-link" href="Sobre-nos.html">Sobre Nós</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link menu-link" href="Atendimento.html">Atendimento</a>
-                </li>
-              </ul>
+            <div class="container-fluid menu-navbar">
+                <button class="navbar-toggler menu-hamburguer" type="button" data-bs-toggle="collapse"
+                    data-bs-theme="dark" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse menu-flex" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" aria-current="page" href="index.html">Página Inicial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="Faça-sua-Carteirinha.html">Seu Cartão</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="recarga-cartao.html">Recarga</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="Sobre-nos.html">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="Atendimento.html">Atendimento</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </nav>
     </header>
 
-    <h3>Seu Cartão</h3>
-<div class="pai">
-    <div class="campo">
-        <div class="container">
+    <h3 id="centro">Seu Cartão</h3>
+    <div class="pai">
+        <div class="campo">
+            <div class="container">
 
-            <form>
-                <div>
-                    <label>Nome:</label>
-                    <input type="text" name="Nome" id="name">
-
-
-                    <br><br>
-
-                    <label>Ci:</label>
-                    <input type="number" name="Ci" id="Ci">
+                <form>
+                    <div>
+                        <label>Nome:</label>
+                        <input type="text" name="Nome" id="name">
 
 
+                        <br><br>
 
-
-                    <h3>Saldo</h3>
-
-                    <div class="saldo">
-                        <button id="button-saldo">******</button>
-                    </div>
+                        <label>Ci:</label>
+                        <input type="number" name="Ci" id="Ci">
 
 
 
-                </div>
-            </form>
-        </div>
 
+                        <h3 id="centro">Saldo</h3>
 
-        <h3>Quer recarregar o seu Cartão?</h3>
-
-
-
-        <div class="container2">
-            <div class="org">
-                <p>Métodos de pagamento</p><br>
-
-
-                <div class="pagamento">
-                    <button id="button-pag">Débito</button>
-                    <button id="button-pag">Crédito</button>
-                    <button id="button-pag">Pix</button>
-                    <button id="button-pag">Boleto</button>
-                </div><br>
-
-                <div class="metodos-pagamento">
-                    <img src="../img/visa.png" alt="">
-                    <img src="../img/mastercard.png" alt="">
-                    <img src="../img/elo 1.png" alt="">
-                </div><br>
-
-                <div class="cartao">
-
-                    <label>Número do Cartão:</label>
-                    <input type="number" name="number" id="number" required placeholder="Digite o número do Cartão">
-
-                    <label>Nome Completo:</label>
-                    <input type="text" name="Nome" 0 id="name" required placeholder="Digite o seu Nome Completo">
-
-
-                    <div class="number3">
-                        <div class="number2">
-                            <label>Validade:</label>
-                            <input type="number" name="number" id="vcv" required placeholder="00/00/0000">
-
-                            <label>CVV:</label>
-                            <input type="number" name="number" id="vcv" required placeholder="00/00">
+                        <div class="saldo">
+                            <button id="button-saldo">******</button>
                         </div>
 
-                        <label>Valor:</label>
-                        <input type="number" name="number" id="vcv" required required placeholder="00">
-                        <br>
-
-                        <button type="submit" class="enviar">Enviar</button>
 
 
+                    </div>
+                </form>
+            </div>
 
+
+            <h3>Quer recarregar o seu Cartão?</h3>
+
+
+
+            <div class="container2">
+                <div class="org">
+                    <p>Métodos de pagamento</p><br>
+
+
+                    <div class="pagamento">
+                        <button id="button-pag">Débito</button>
+                        <button id="button-pag">Crédito</button>
+                        <button id="button-pag">Pix</button>
+                        <button id="button-pag">Boleto</button>
+                    </div><br>
+
+                    <div class="metodos-pagamento">
+                        <img src="../img/visa.png" alt="">
+                        <img src="../img/mastercard.png" alt="">
+                        <img src="../img/elo.png" alt="">
+                    </div><br>
+
+                    <div class="cartao">
+
+                        <label>Número do Cartão:</label>
+                        <input type="number" name="number" id="number" required placeholder="Digite o número do Cartão">
+
+                        <label>Nome Completo:</label>
+                        <input type="text" name="Nome" 0 id="name" required placeholder="Digite o seu Nome Completo">
+
+
+                        <div class="number3">
+                            <div class="number2">
+                                <label>Validade:</label>
+                                <input type="number" name="number" id="vcv" required placeholder="00/00/0000">
+
+                                <label>CVV:</label>
+                                <input type="number" name="number" id="vcv" required placeholder="00/00">
+                            </div>
+
+                            <label>Valor:</label>
+                            <input type="number" name="number" id="vcv" required required placeholder="00">
+                            <br>
+
+                            <button type="submit" class="enviar">Enviar</button>
+
+
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <footer>
-        <div class="container-footer">
-            <div class="row-footer">
+        <footer>
+            <div class="container-footer">
+                <div class="row-footer">
 
-                <!--coluna 1-->
-                <div class="footer-col">
-                    <h4>Produtos</h4>
-                    <ul>
-                        <li><a href="#">Conta Digital</a></li>
-                        <li><a href="#">Cartão de transporte</a></li>
-                        <li><a href="#">Recarga</li>
-                    </ul>
-                </div>
-                <!--fim da coluna 1-->
-
-                <!--coluna 2-->
-                <div class="footer-col">
-                    <h4>Atendimento</h4>
-                    <ul>
-                        <li><a href="#">Atendimento whatsaap</a></li>
-                        <li><a href="#">Duvidas Frequentes</a></li>
-                        <li><a href="#">Contato institucional</a></li>
-                        <!--<li><a href="#">sadasfaf@gmail.com</a></li>-->
-                    </ul>
-                </div>
-                <!--fim da coluna 2-->
-
-                <!--coluna 4-->
-                <div class="footer-col">
-                    <h4>Nos siga nas redes socias</h4>
-                    <div class="rede-social">
-                        <img src="../img/instagram.png" alt="">
-                        <img src="../img/twitter.png" alt="">
-                        <img src="../img/facebook.png" alt="">
-
-
-
-
+                    <!--coluna 1-->
+                    <div class="footer-col">
+                        <h4>Produtos</h4>
+                        <ul>
+                            <li><a href="#">Conta Digital</a></li>
+                            <li><a href="#">Cartão de transporte</a></li>
+                            <li><a href="#">Recarga</li>
+                        </ul>
                     </div>
+                    <!--fim da coluna 1-->
+
+                    <!--coluna 2-->
+                    <div class="footer-col">
+                        <h4>Atendimento</h4>
+                        <ul>
+                            <li><a href="#">Atendimento whatsaap</a></li>
+                            <li><a href="#">Duvidas Frequentes</a></li>
+                            <li><a href="#">Contato institucional</a></li>
+                            <!--<li><a href="#">sadasfaf@gmail.com</a></li>-->
+                        </ul>
+                    </div>
+                    <!--fim da coluna 2-->
+
+                    <!--coluna 4-->
+                    <div class="footer-col">
+                        <h4>Nos siga nas redes socias</h4>
+                        <div class="rede-social">
+                            <img src="../img/instagram.png" alt="">
+                            <img src="../img/twitter.png" alt="">
+                            <img src="../img/facebook.png" alt="">
+
+
+
+
+                        </div>
+                    </div>
+                    <!--fim da coluna 4-->
                 </div>
-                <!--fim da coluna 4-->
             </div>
-        </div>
-    </footer>
+        </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
