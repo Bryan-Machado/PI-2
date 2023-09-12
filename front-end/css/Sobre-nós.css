@@ -55,9 +55,11 @@
 
 .separador{
     width: 90%;
-    margin: auto;
+    margin-top: 5%;
+    margin-left: 5%;
     border-top: #0D116B solid 0.5px;
 }
+
 
 .header-botoes{
     position: relative;
@@ -192,7 +194,6 @@
         height: 200px;
         width: 100%;
         margin-left: 0;
-        margin-top: 0;
     }
 
     .imagem-sobre-nos {
@@ -210,11 +211,13 @@
 
     .imagem-sobre-nos-alternativa{
         display: inline;
+
     }
 
     .imagem-sobre-nos-alternativa img{
         width: 100%;
         margin-left: 0;
+        margin-top: 5%;
     }
 }
 
