@@ -153,6 +153,12 @@
     gap: 10%;
 }
 
+label {
+    font-size: 25px;
+    float: left;
+    margin: -8px 25px 0px 0px;
+}
+
 .f3 {
     width: 45%;
 }
