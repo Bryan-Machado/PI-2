@@ -21,6 +21,11 @@
     margin-right: 40px;
 }
 
+.botao a{
+    text-decoration: none;
+    color: #fff;
+}
+
 .inscrever{
     margin-right: -45px;
 }
