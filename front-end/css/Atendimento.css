@@ -91,12 +91,27 @@
 }
 
 .imagem-atendimento img {
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 1.5%;
+    width: 100%;
 }
 
-.imagem-atendimento-alternativa{
+.imagem-atendimento{
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 1.5%;
+    width: 90%;
+    position: relative;
+}
+
+.texto-img {
+    display: flex;
+    position: absolute;
+    color: white;
+    left: 20%;
+    top: 35%;
+    font-size: 60px
+}
+
+.alternative-500px {
     display: none;
 }
 
@@ -275,7 +290,7 @@ footer {
 
 @media (max-width: 500px) {
     .celular-img img {
-        width: 200px;
+        width: 150px;
         margin-right: 100%;
         margin-left: 0;
     }
@@ -292,15 +307,7 @@ footer {
             font-size: smaller;
         }
 
-        .imagem-atendimento {
-            display: none;
-        }
-
-        .imagem-atendimento-alternativa{
-            display: inline;
-        }
-
-        .imagem-atendimento-alternativa img {
+        .imagem-atendimento{
             margin-top: 5%;
             width: 100%;
             margin-left: 0;
@@ -313,7 +320,7 @@ footer {
 
         .accordion{
             width: 100%;
-                margin-left: 0;
+            margin-left: 0;
         }
 }
                 
