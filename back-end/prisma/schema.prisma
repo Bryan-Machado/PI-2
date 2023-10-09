@@ -9,3 +9,88 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Cliente {
+  id              Int       @id @default(autoincrement())
+  cpf             String    @unique
+  nomeCompleto    String
+  acompanhante    String?
+  acompanha       String?
+  deficiencia     String?
+  email           String    @unique
+  nascimento      DateTime
+  senha           String
+  numeroTel       BigInt
+  tipoCarteirinha String
+  saldo           Float?    @default(0)
+  viagens         Viagem[]
+  viagem_has_cliente ViagemHasCliente[]
+}
+
+model Motorista {
+  id          Int      @id @default(autoincrement())
+  cpf         String   @unique
+  nomeCompleto String
+  email       String   @unique
+  nascimento  DateTime
+  numeroTel   BigInt
+  viagens     Viagem[]
+  motorista_onibus MotoristaOnibus[]
+}
+
+model Linha {
+  id           Int      @id
+  nome         String
+  localSaida   String
+  localDestino String
+  horaSaida    DateTime
+  horaChegada  DateTime
+  viagens      Viagem[]
+  onibus       Onibus[]
+}
+
+model Onibus {
+  numero   Int      @id @default(autoincrement())
+  placa    String   @unique
+  linha_id Int
+  linha    Linha    @relation(fields: [linha_id], references: [id])
+  viagens  Viagem[]
+
+  @@unique([numero, linha_id])
+  motorista_onibus MotoristaOnibus[]
+  
+}
+
+model MotoristaOnibus {
+  id            Int      @id @default(autoincrement())
+  data          DateTime
+  onibus_numero Int
+  motorista_id  Int
+  onibus        Onibus   @relation(fields: [onibus_numero], references: [numero])
+  motorista     Motorista @relation(fields: [motorista_id], references: [id])
+}
+
+model Viagem {
+  id              Int      @id @default(autoincrement())
+  data            DateTime
+  linha_id        Int
+  onibus_numero   Int
+  onibus_linha_id Int
+  motorista_id    Int
+  linha           Linha      @relation(fields: [linha_id], references: [id])
+  onibus          Onibus     @relation(fields: [onibus_numero, onibus_linha_id], references: [numero, linha_id])
+  motorista       Motorista  @relation(fields: [motorista_id], references: [id])
+  clientes        Cliente[]
+  viagem_has_cliente ViagemHasCliente[]
+}
+
+model ViagemHasCliente {
+  viagem_id  Int
+  cliente_id Int
+  tarifa     Float
+  data       DateTime
+  viagem     Viagem  @relation(fields: [viagem_id], references: [id])
+  cliente    Cliente @relation(fields: [cliente_id], references: [id])
+
+  @@id([viagem_id, cliente_id])
+}
