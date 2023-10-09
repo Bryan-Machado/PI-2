@@ -26,4 +26,74 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+/* POST api/linhas/cadastrar => cadastra uma linha */
+router.post('/cadastrar', async (req, res) => {
+
+  try {
+
+    const dados = req.body
+
+    const linha = await prisma.linha.create({
+      data: dados
+    })
+    res.status(200).json(linha)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+  
+});
+
+/* PUT api/linhas/atualizar/5 => atualiza TODOS OS DADOS da linha de id 5 */
+router.put('/atualizar/:id', async (req, res) => {
+  
+  try {
+    const id = req.params.id
+    const dados = req.body
+
+    const linha = await prisma.linha.update({
+      data: dados,
+      where: {
+        id: id
+      }
+    })
+    res.status(200).json(linha)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+
+});
+
+/* delete api/linhas/deletar/6 => deleta a linha de id 6 */
+router.delete('/deletar/:id', async (req, res) => {
+  try {
+    const id = req.params.id
+
+    const linha = await prisma.linha.delete({
+      where: {
+        id: id
+      }
+    })
+    res.status(200).json(linha)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+});
+
+// resposta pra rotas nao existentes
+router.all('*', (req, res) => { 
+  res.status(501).end()                     // codigo 501 = rota nao implementada
+});
+
 module.exports = router;
