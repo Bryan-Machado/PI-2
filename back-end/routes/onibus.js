@@ -21,9 +21,19 @@ function exceptionHandler(e) {
   return error
 }
 
-/* GET api/linhas => lista todas as linhas */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+/* GET api/onibus => lista todos os onibus */
+router.get('/', async (req, res) => {
+  try {
+    
+    const onibus = await prisma.onibus.findMany();
+    res.status(200).json(onibus)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
 });
 
 /* POST api/onibus/cadastrar => cadastra um onibus */

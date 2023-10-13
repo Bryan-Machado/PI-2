@@ -21,9 +21,47 @@ function exceptionHandler(e) {
   return error
 }
 
-/* GET api/linhas => lista todas as linhas */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+/* GET api/clientes => lista todos os clientes */
+router.get('/', async (req, res) => {
+  try {
+    
+    const clientes = await prisma.cliente.findMany();
+    res.status(200).json(clientes)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+});
+
+/* GET api/clientes/3 => mostra apenas o cliente de id 3 */
+router.get('/:id', async (req, res) => {
+  try {
+    
+    const id = req.params.id
+
+    const cliente = await prisma.cliente.findUnique({
+      where: {
+        id: id
+      },
+      select: {
+        saldo: true,
+        senha: false,
+        nomeCompleto: true,
+        nascimento: true,
+        tipoCarteirinha: true
+      }
+    });
+    res.status(200).json(cliente)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
 });
 
 /* POST api/clientes/cadastrar => cadastra um cliente */

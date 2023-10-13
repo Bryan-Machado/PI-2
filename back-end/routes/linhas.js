@@ -22,8 +22,38 @@ function exceptionHandler(e) {
 }
 
 /* GET api/linhas => lista todas as linhas */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/', async (req, res) => {
+  try {
+    
+    const linhas = await prisma.linha.findMany();
+    res.status(200).json(linhas)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+});
+
+/* GET api/linhas/3 => mostra apenas a linha de id 3 */
+router.get('/:id', async (req, res) => {
+  try {
+    const id = req.params.id
+
+    const linha = await prisma.linha.findUnique({
+      where: {
+        id: id
+      }
+    });
+    res.status(200).json(linha)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
 });
 
 /* POST api/linhas/cadastrar => cadastra uma linha */

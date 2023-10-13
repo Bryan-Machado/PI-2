@@ -21,12 +21,12 @@ function exceptionHandler(e) {
   return error
 }
 
-/* GET api/motoristas => lista todos os motoristas */
+/* GET api/viagens => lista todas as viagens */
 router.get('/', async (req, res) => {
   try {
-    
-    const motoristas = await prisma.motorista.findMany();
-    res.status(200).json(motoristas)
+
+    const viagens = await prisma.viagem.findMany();
+    res.status(200).json(viagens)
 
   } catch (exception) {
     let error = exceptionHandler(exception)
@@ -36,17 +36,60 @@ router.get('/', async (req, res) => {
   }
 });
 
-/* delete api/motoristas/deletar/6 => deleta o motorista de id 6 */
-router.delete('/deletar/:id', async (req, res) => {
+/* POST api/viagens/cadastrar => cadastra uma viagem */ 
+router.post('/', async (req, res) => {
+  try {
+    
+    const dados = req.body
+
+    const viagem = await prisma.viagem.create({
+      data: dados
+    })
+    res.status(201).json(viagem)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+});
+
+// PUT api/viagens/atualizar/5 => atualiza TODOS OS DADOS da viagem de id 5 
+router.put('/atualizar/:id', async (req, res) => {
+  
   try {
     const id = req.params.id
+    const dados = req.body
 
-    const motorista = await prisma.motorista.delete({
+    const viagem = await prisma.viagem.update({
+      data: dados,
       where: {
         id: id
       }
     })
-    res.status(200).json(motorista)
+    res.status(200).json(viagem)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+
+});
+
+/* delete api/viagens/deletar/6 => deleta a viagem de id 6 */
+router.delete('/deletar/:id', async (req, res) => {
+  try {
+    const id = req.params.id
+
+    const viagem = await prisma.viagem.delete({
+      where: {
+        id: id
+      }
+    })
+    res.status(200).json(viagem)
 
   } catch (exception) {
     let error = exceptionHandler(exception)
@@ -55,29 +98,5 @@ router.delete('/deletar/:id', async (req, res) => {
     })
   }
 });
-
-
-//                RELACIONAMENTO MOTORISTA E ONIBUS
-
-// GET /api/motoristas/7/onibus => pega todos os onibus que o motorista de id 7 já dirigiu
-router.get('/:id/onibus', async (req, res) => {
-  try {
-    
-    const id = req.params.id
-
-    const motoristaOnibus = await prisma.motoristaOnibus.findMany({
-      where: {
-        motorista: id
-      }
-    })
-    res.status(200).json(motoristaOnibus)
-
-  } catch (exception) {
-    let error = exceptionHandler(exception)
-    res.status(error.code).json({
-      error: error.message
-    })
-  }
-})
 
 module.exports = router;
