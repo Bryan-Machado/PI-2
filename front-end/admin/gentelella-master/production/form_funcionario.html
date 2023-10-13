@@ -21,6 +21,9 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+
+    <!-- foto do motorista -->
+    <link href="./css/input-foto.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -148,18 +151,16 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12  ">
-                                          <div class="x_panel">
-                                            <div class="x_content">
-                                              <p>Faça upload da sua foto de perfil</p>
-                                              <form action="form_upload.html" class="dropzone dz-clickable" style="max-width: 500px; margin: auto;"><div class="dz-default dz-message"><span>Arraste arquivos  ou clique para fazer o upload</span></div></form>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
 
                                     <form class="" action="" method="post" novalidate>
+
+                                        <div class="container-foto">
+                                            <label class="foto" for="foto-input">
+                                                <span class="foto-texto" id="foto-texto"></span>
+                                            </label>
+                                            <input class="foto-input" type="file" accept="image/*" id="foto-input">
+                                        </div>
+
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Nome completo<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
@@ -310,6 +311,37 @@
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
+
+    <script>
+        const foto = document.querySelector('#foto-input');
+        const imagem = document.querySelector('#foto-texto');
+        const imagemTxt = 'Escolha uma foto de perfil';
+        imagem.innerHTML = imagemTxt;
+
+        foto.addEventListener('change', (event) => {
+            const inputTarget = event.target;
+            const file = inputTarget.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.addEventListener('load', (event) => {
+                    const readerTarget = event.target;
+
+                    const img = document.createElement('img');
+                    img.src = readerTarget.result;
+                    img.classList.add('foto-em-si');
+                    imagem.innerHTML = '';
+
+                    imagem.appendChild(img)
+                })
+
+                reader.readAsDataURL(file);
+            } else {
+                imagem.innerHTML = imagemTxt;
+            }
+        })
+    </script>
 
 </body>
 
