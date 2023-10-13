@@ -99,4 +99,30 @@ router.delete('/deletar/:id', async (req, res) => {
   }
 });
 
+//          RELACIONAMENTO CLIENTE E VIAGEM
+
+/* GET /api/viagens/2/clientes => pega todos os clientes que embarcaram na viagem de id 2 */
+router.get('/:id/clientes', async (req, res) => {
+  
+
+  try {
+    const id = req.params.id
+
+    const viagemCliente = await prisma.viagemHasCliente.findMany({
+      where: {
+        viagem_id: id
+      }
+    });
+    res.status(200).json(viagemCliente)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+});
+
+
+
 module.exports = router;

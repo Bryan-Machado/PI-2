@@ -129,6 +129,28 @@ router.delete('/deletar/:id', async (req, res) => {
   }
 });
 
+//              RELACIONAMENTO CLIENTE E VIAGEM
+
+// GET /api/clientes/2/viagens => pega todas as viagens que o cliente de id 2 já embarcou
+router.get('/:id/viagens', async (req, res) => {
+  try {
+    const id = req.params.id
+
+    const clienteViagem = await prisma.viagemHasCliente.findMany({
+      where: {
+        cliente_id: id
+      }
+    });
+    res.status(200).json(clienteViagem)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+})
+
 // resposta pra rotas nao existentes
 router.all('*', (req, res) => { 
   res.status(501).end()                     // codigo 501 = rota nao implementada

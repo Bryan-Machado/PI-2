@@ -101,6 +101,29 @@ router.delete('/deletar/:id', async (req, res) => {
   }
 });
 
+//                RELACIONAMENTO MOTORISTA E ONIBUS
+
+// GET /api/onibus/7/motoristas => pega todos os motoristas que já dirigiram o onibus de id/numero 7
+router.get('/:id/motoristas', async (req, res) => {
+  try {
+    
+    const id = req.params.id
+
+    const onibusMotorista = await prisma.motoristaOnibus.findMany({
+      where: {
+        onibus_numero: id
+      }
+    })
+    res.status(200).json(onibusMotorista)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+})
+
 // resposta pra rotas nao existentes
 router.all('*', (req, res) => { 
   res.status(501).end()                     // codigo 501 = rota nao implementada

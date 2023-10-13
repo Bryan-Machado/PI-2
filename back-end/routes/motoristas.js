@@ -36,6 +36,78 @@ router.get('/', async (req, res) => {
   }
 });
 
+/* GET api/motoristas/3 => mostra apenas o motorista de id 3 */
+router.get('/:id', async (req, res) => {
+  try {
+    
+    const id = req.params.id
+
+    const motorista = await prisma.motorista.findUnique({
+      where: {
+        id: id
+      },
+      select: {
+        nomeCompleto: true,
+        email: true,
+        nascimento: true,
+        numeroTel: true
+      }
+    });
+    res.status(200).json(motorista)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+});
+
+/* POST api/motoristas/cadastrar => cadastra um motorista */
+router.post('/cadastrar', async (req, res) => {
+
+  try {
+
+    const dados = req.body
+
+    const motorista = await prisma.motorista.create({
+      data: dados
+    })
+    res.status(200).json(motorista)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+  
+});
+
+/* PUT api/motoristas/atualizar/5 => atualiza TODOS OS DADOS do motorista de id 5 */
+router.put('/atualizar/:id', async (req, res) => {
+  
+  try {
+    const id = req.params.id
+    const dados = req.body
+
+    const motorista = await prisma.motorista.update({
+      data: dados,
+      where: {
+        id: id
+      }
+    })
+    res.status(200).json(motorista)
+
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+
+});
+
 /* delete api/motoristas/deletar/6 => deleta o motorista de id 6 */
 router.delete('/deletar/:id', async (req, res) => {
   try {
@@ -67,7 +139,7 @@ router.get('/:id/onibus', async (req, res) => {
 
     const motoristaOnibus = await prisma.motoristaOnibus.findMany({
       where: {
-        motorista: id
+        motorista_id: id
       }
     })
     res.status(200).json(motoristaOnibus)

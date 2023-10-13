@@ -9,9 +9,7 @@ const clientesRouter = require('./routes/clientes');
 const motoristaRouter = require('./routes/motoristas');
 const linhasRouter = require('./routes/linhas');
 const onibusRouter = require('./routes/onibus');
-const motoristaOnibusRouter = require('./routes/motoristaOnibus');
 const viagemRouter = require('./routes/viagem');
-const viagemClienteRouter = require('./routes/viagemCliente');
 
 const dotenv = require('dotenv');
 dotenv.config({ path: './.env' });
@@ -33,13 +31,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/clientes', clientesRouter);
-app.use('/api/motoristas', motoristaRouter);         //preste atenção no S no final => cadastrar motoristas e apresentá-los
+app.use('/api/motoristas', motoristaRouter);         
 app.use('/api/linhas', linhasRouter);
 app.use('/api/onibus', onibusRouter);
-app.use('api/motorista', motoristaOnibusRouter);     //preste atenção na falta do S no final => cadastrar relacionamento motorista onibus
-app.use('/api/viagens', viagemRouter);               //preste atenção no S no final => cadastrar viagens e apresentá-las
-app.use('/api/viagem', viagemClienteRouter)          //embarque de cada cliente em uma viagem
-//os relacionamentos talvez poderiam estar no próprio arquivo da entidade, tipoo motoristaOnibus ficar dentro de motoristas.js
+app.use('/api/viagens', viagemRouter);               
+//os relacionamentos ficam dentro do próprios arquivos => exemplo: todos os clientes que uma viagem possui etá em viagem.js
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
