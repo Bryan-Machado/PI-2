@@ -1,0 +1,1 @@
+// colocar todas as rotas referentes ao sistema administrativo aqui
