@@ -13,6 +13,9 @@ router.get("/cadastrar-linha", function (req, res, next) {
   res.render("admim/cadastrar-linha");
 });
 
+router.get("/lista-cliente", function (req, res, next) {
+  res.render("admim/lista-cliente");
+});
 
 
 module.exports = router;
