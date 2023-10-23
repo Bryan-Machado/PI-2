@@ -16,17 +16,15 @@
     <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- Dropzone.js -->
-    <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
-
-    <!-- foto do motorista -->
-    <link href="./css/input-foto.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
+
+    <div id="flashMessageContainer"></div>
+
     <div class="container body">
         <div class="main_container">
             <div class="col-md-3 left_col">
@@ -123,7 +121,6 @@
                   </nav>
                 </div>
               </div>
-
             <!-- /top navigation -->
 
             <!-- page content -->
@@ -131,7 +128,7 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Cadastrar motorista</h3>
+                            <h3>Cadastrar cliente</h3>
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -140,7 +137,7 @@
                         <div class="col-md-12 col-sm-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>Formulário de cadastrar motoristas</h2>
+                                    <h2>Formulário de cadastrar clientes</h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
@@ -151,16 +148,10 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-
-                                    <form class="" action="" id="form" method="post" novalidate>
-
-                                        <div class="container-foto">
-                                            <label class="foto" for="foto-input">
-                                                <span class="foto-texto" id="foto-texto"></span>
-                                            </label>
-                                            <input class="foto-input" type="file" accept="image/*" id="foto-input">
-                                        </div>
-
+                                    <form class="needs-validation" action="" method="post" id="form" novalidate>
+                                        <p>Cadastre novos clientes aqui!
+                                        </p>
+                                        <span class="section">Informação</span>
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Nome completo<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
@@ -171,14 +162,14 @@
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">CPF<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" data-validate-length-range="6" id="CPF" data-validate-words="2" name="name" required="required" />
+                                                <input class="form-control" name="cpf" id="cpf" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" maxlength="14" required="required" />
                                             </div>
                                         </div>
 
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Email<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" name="email" class='email' id="email" required="required" type="email" /></div>
+                                                <input class="form-control" name="email" id="email" class='email' required="required" type="email" /></div>
                                         </div>
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Confirme endereço de email<span class="required">*</span></label>
@@ -196,7 +187,7 @@
                                         <div class="field item form-group">
 											<label class="col-form-label col-md-3 col-sm-3  label-align">Senha<span class="required">*</span></label>
 											<div class="col-md-6 col-sm-6">
-												<input class="form-control" type="senha" id="senha1" name="senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Minimum 8 Characters Including An Upper And Lower Case Letter, A Number And A Unique Character" required />
+												<input class="form-control" type="password" id="senha1" name="senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Minimum 8 Characters Including An Upper And Lower Case Letter, A Number And A Unique Character" required />
 												
 												<span style="position: absolute;right:15px;top:7px;" onclick="hideshow()" >
 													<i id="slash" class="fa fa-eye-slash"></i>
@@ -208,19 +199,19 @@
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Repita sua senha<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" type="senha" name="senha2" data-validate-linked='senha' required='required' /></div>
+                                                <input class="form-control" type="password" name="senha2" data-validate-linked='senha' required='required' /></div>
                                         </div>
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Número de telefone<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" type="tel" class='tel' name="phone" id="numeroTel" required='required' data-validate-length-range="8,20" /></div>
+                                                <input class="form-control" type="tel" class='tel' name="phone" required='required' data-validate-length-range="8,20" /></div>
                                         </div>
                                         
                                         <div class="ln_solid">
                                             <div class="form-group">
                                                 <div class="col-md-6 offset-md-3">
                                                     <button type='submit' class="btn btn-primary">Enviar</button>
-                                                    <button type='reset' class="btn btn-success" id="resetar">Resetar</button>
+                                                    <button type='reset' class="btn btn-success">Resetar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -256,13 +247,13 @@
 			var slash = document.getElementById("slash");
 			var eye = document.getElementById("eye");
 			
-			if(senha.type === 'senha'){
+			if(senha.type === 'password'){
 				senha.type = "text";
 				slash.style.display = "block";
 				eye.style.display = "none";
 			}
 			else{
-				senha.type = "senha";
+				senha.type = "password";
 				slash.style.display = "none";
 				eye.style.display = "block";
 			}
@@ -304,47 +295,14 @@
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- Dropzone.js -->
-    <script src="../vendors/dropzone/dist/dropzone.js"></script>
     <!-- validator -->
     <!-- <script src="../vendors/validator/validator.js"></script> -->
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
 
-    <script>
-        const foto = document.querySelector('#foto-input');
-        const imagem = document.querySelector('#foto-texto');
-        const imagemTxt = 'Escolha uma foto de perfil';
-        imagem.innerHTML = imagemTxt;
-
-        foto.addEventListener('change', (event) => {
-            const inputTarget = event.target;
-            const file = inputTarget.files[0];
-
-            if (file) {
-                const reader = new FileReader();
-
-                reader.addEventListener('load', (event) => {
-                    const readerTarget = event.target;
-
-                    const img = document.createElement('img');
-                    img.src = readerTarget.result;
-                    img.classList.add('foto-em-si');
-                    imagem.innerHTML = '';
-
-                    imagem.appendChild(img)
-                })
-
-                reader.readAsDataURL(file);
-            } else {
-                imagem.innerHTML = imagemTxt;
-            }
-        })
-    </script>
-
-    <script src="/javascripts/flashMessage.js"></script>
-    <script src="/javascripts/admim/cadastrar-motorista.js"></script>
+    <script src="../src/js/flashMessage.js"></script>
+    <script src="../src/js/cadastrar-cliente.js"></script>
 
 </body>
 

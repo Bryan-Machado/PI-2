@@ -2848,7 +2848,6 @@ input.parsley-error, textarea.parsley-error, select.parsley-error {
   color: #FFF;
   border-radius: 3px 4px 4px 3px;
   background-color: #CE5454;
-  max-width: 170px;
   white-space: pre;
   position: relative;
   left: -15px;
