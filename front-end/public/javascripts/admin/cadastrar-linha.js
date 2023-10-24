@@ -16,11 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = { nome, localSaida, localDestino, horaSaida, horaChegada };
 
       try {
-        const response = await axios.post("http://localhost:3000/api/linhas/cadastrar", data);
+        const response = await axios.post("http://localhost:5000/api/linhas/cadastrar", data);
       
         storeFlashMessage("success", "Cadastro realizado sucesso");
 
-        const id = response.data.id;
       } catch (error) {
         triggerFlashMessage("danger", error.message);
       }

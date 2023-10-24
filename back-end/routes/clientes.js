@@ -29,6 +29,8 @@ router.get('/', async (req, res) => {
     res.status(200).json(clientes)
 
   } catch (exception) {
+    console.log(exception.message)
+    console.log(exception)
     let error = exceptionHandler(exception)
     res.status(error.code).json({
       error: error.message
@@ -70,6 +72,7 @@ router.post('/cadastrar', async (req, res) => {
   try {
 
     const dados = req.body
+    console.log(req.body)
 
     const cliente = await prisma.cliente.create({
       data: dados
@@ -77,6 +80,8 @@ router.post('/cadastrar', async (req, res) => {
     res.status(200).json(cliente)
 
   } catch (exception) {
+    console.log(exception.message)
+    console.log(exception)
     let error = exceptionHandler(exception)
     res.status(error.code).json({
       error: error.message

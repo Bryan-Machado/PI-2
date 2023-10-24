@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
   try {
     const tableBody = document.querySelector("tbody");
-    const response = await axios.get("http://localhost:3000/api/clientes");
+    const response = await axios.get("http://localhost:5000/api/clientes");
     response.data.forEach((linha) => {
       const row = tableBody.insertRow(-1);
       row.insertCell(0).innerHTML = linha.nomeCompleto;

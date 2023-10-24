@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = { nomeCompleto, cpf, email, nascimento, senha, numeroTel };
 
       try {
-        const response = await axios.post("http://localhost:3000/api/clientes/cadastrar", data);
+        const response = await axios.post("http://localhost:5000/api/clientes/cadastrar", data);
       
         storeFlashMessage("success", "Cadastro realizado sucesso");
 
