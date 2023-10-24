@@ -26,7 +26,7 @@ router.get('/logar', function(req, res, next) {
   res.render('site/pages/login', {  layout: 'layouts/layout1.ejs'  });
 });
 
-routget('/recaregar', function(req, res, next) {
+router.get('/recaregar', function(req, res, next) {
   res.render('site/pages/recarga-cartao', {  layout: 'layouts/layout.ejs'  });
 });
 
