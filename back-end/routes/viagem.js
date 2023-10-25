@@ -59,7 +59,7 @@ router.post('/', async (req, res) => {
 router.put('/atualizar/:id', async (req, res) => {
   
   try {
-    const id = req.params.id
+    const id = parseInt(req.params.id)
     const dados = req.body
 
     const viagem = await prisma.viagem.update({
@@ -82,7 +82,7 @@ router.put('/atualizar/:id', async (req, res) => {
 /* delete api/viagens/deletar/6 => deleta a viagem de id 6 */
 router.delete('/deletar/:id', async (req, res) => {
   try {
-    const id = req.params.id
+    const id = parseInt(req.params.id)
 
     const viagem = await prisma.viagem.delete({
       where: {
@@ -106,7 +106,7 @@ router.get('/:id/clientes', async (req, res) => {
   
 
   try {
-    const id = req.params.id
+    const id = parseInt(req.params.id)
 
     const viagemCliente = await prisma.viagemHasCliente.findMany({
       where: {

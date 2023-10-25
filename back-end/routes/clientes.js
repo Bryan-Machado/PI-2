@@ -4,6 +4,8 @@ var router = express.Router();
 const { PrismaClient, Prisma } = require('@prisma/client');
 const prisma = new PrismaClient({errorFormat: 'minimal'});
 
+console.log('o prisma não funciona pois o @prisma/client nos node_modules não está atualizado. Antes de rodar o servidor, rode o comando "npx prisma generate" para atualizar os arquivos no node_modules')
+
 function exceptionHandler(e) {
   let error = {
     code: 500,
@@ -42,7 +44,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     
-    const id = req.params.id
+    const id = parseInt(req.params.id)
 
     const cliente = await prisma.cliente.findUnique({
       where: {
@@ -77,6 +79,7 @@ router.post('/cadastrar', async (req, res) => {
     const cliente = await prisma.cliente.create({
       data: dados
     })
+    console.log(cliente)
     res.status(200).json(cliente)
 
   } catch (exception) {
@@ -94,7 +97,7 @@ router.post('/cadastrar', async (req, res) => {
 router.put('/atualizar/:id', async (req, res) => {
   
   try {
-    const id = req.params.id
+    const id = parseInt(req.params.id)
     const dados = req.body
 
     const cliente = await prisma.cliente.update({
@@ -117,7 +120,7 @@ router.put('/atualizar/:id', async (req, res) => {
 /* delete api/clientes/deletar/6 => deleta o cliente de id 6 */
 router.delete('/deletar/:id', async (req, res) => {
   try {
-    const id = req.params.id
+    const id = parseInt(req.params.id)
 
     const cliente = await prisma.cliente.delete({
       where: {
@@ -139,7 +142,7 @@ router.delete('/deletar/:id', async (req, res) => {
 // GET /api/clientes/2/viagens => pega todas as viagens que o cliente de id 2 já embarcou
 router.get('/:id/viagens', async (req, res) => {
   try {
-    const id = req.params.id
+    const id = parseInt(req.params.id)
 
     const clienteViagem = await prisma.viagemHasCliente.findMany({
       where: {

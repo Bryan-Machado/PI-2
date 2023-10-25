@@ -40,7 +40,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     
-    const id = req.params.id
+    const id = parseInt(req.params.id)
 
     const motorista = await prisma.motorista.findUnique({
       where: {
@@ -88,7 +88,7 @@ router.post('/cadastrar', async (req, res) => {
 router.put('/atualizar/:id', async (req, res) => {
   
   try {
-    const id = req.params.id
+    const id = parseInt(req.params.id)
     const dados = req.body
 
     const motorista = await prisma.motorista.update({
@@ -111,7 +111,7 @@ router.put('/atualizar/:id', async (req, res) => {
 /* delete api/motoristas/deletar/6 => deleta o motorista de id 6 */
 router.delete('/deletar/:id', async (req, res) => {
   try {
-    const id = req.params.id
+    const id = parseInt(req.params.id)
 
     const motorista = await prisma.motorista.delete({
       where: {
@@ -135,7 +135,7 @@ router.delete('/deletar/:id', async (req, res) => {
 router.get('/:id/onibus', async (req, res) => {
   try {
     
-    const id = req.params.id
+    const id = parseInt(req.params.id)
 
     const motoristaOnibus = await prisma.motoristaOnibus.findMany({
       where: {

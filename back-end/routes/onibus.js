@@ -61,7 +61,7 @@ router.post('/cadastrar', async (req, res) => {
 router.put('/atualizar/:id', async (req, res) => {
   
   try {
-    const id = req.params.id
+    const id = parseInt(req.params.id)
     const dados = req.body
 
     const onibus = await prisma.onibus.update({
@@ -84,7 +84,7 @@ router.put('/atualizar/:id', async (req, res) => {
 /* delete api/onibus/deletar/6 => deleta o onibus de id 6 */
 router.delete('/deletar/:id', async (req, res) => {
   try {
-    const id = req.params.id
+    const id = parseInt(req.params.id)
 
     const onibus = await prisma.onibus.delete({
       where: {
@@ -107,7 +107,7 @@ router.delete('/deletar/:id', async (req, res) => {
 router.get('/:id/motoristas', async (req, res) => {
   try {
     
-    const id = req.params.id
+    const id = parseInt(req.params.id)
 
     const onibusMotorista = await prisma.motoristaOnibus.findMany({
       where: {
