@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    event.stopPropagation()
+    event.stopPropagation();
     //coleta dos dados do form
     if (form.checkValidity()) {
       const nomeCompleto = document.querySelector("#nomeCompleto").value;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       //forma de guarda-los em um array
       const data = { nomeCompleto, cpf, email, nascimento, senha, numeroTel, tipoCarteirinha };
 
-      console.log("quase que foi")
+      console.log("quase que foi");
       console.log(data);
 
       try {
@@ -41,5 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     form.classList.add("was-validated");
+    window.location.href = 'http://localhost:3000/admin/cadastrar-cliente'
+    
   });
 });
