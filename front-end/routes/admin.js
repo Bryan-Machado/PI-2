@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get("/cadastrar-cliente", function (req, res, next) {
-  res.render("admin/cadastrar-cliente");
+  res.render("admin/form_validation");
 });
 
 router.get("/cadastrar-motorista", function (req, res, next) {

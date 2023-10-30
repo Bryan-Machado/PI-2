@@ -180,14 +180,14 @@
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Nascimento<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" class='date' type="date" id="nascimento" name="date" required='required'></div>
+                                                <input class="form-control" class='date' type="date" id="nascimento" name="nascimento" required='required'></div>
                                         </div>
                                         
                                         
                                         <div class="field item form-group">
 											<label class="col-form-label col-md-3 col-sm-3  label-align">Senha<span class="required">*</span></label>
 											<div class="col-md-6 col-sm-6">
-												<input class="form-control" type="password" id="senha1" name="senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Minimum 8 Characters Including An Upper And Lower Case Letter, A Number And A Unique Character" required />
+												<input class="form-control" type="password" id="senha" name="senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Minimum 8 Characters Including An Upper And Lower Case Letter, A Number And A Unique Character" required />
 												
 												<span style="position: absolute;right:15px;top:7px;" onclick="hideshow()" >
 													<i id="slash" class="fa fa-eye-slash"></i>
@@ -204,7 +204,7 @@
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Número de telefone<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" type="tel" class='tel' name="phone" required='required' data-validate-length-range="8,20" /></div>
+                                                <input class="form-control" type="tel" class='tel' id="numeroTel" name="numeroTel" required='required' data-validate-length-range="8,20" /></div>
                                         </div>
                                         
                                         <div class="ln_solid">
@@ -301,7 +301,7 @@
     <!-- Custom Theme Scripts -->
     <script src="/build/js/custom.min.js"></script>
 
-    <script src="/javascripts/admin/flashMessage.js"></script>
+    <script src="/javascripts/admin/flashMenssage.js"></script>
     <script src="/javascripts/admin/cadastrar-cliente.js"></script>
 
 </body>

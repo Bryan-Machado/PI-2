@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.querySelector("#form");
 
+  console.log("foi + ou -")
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     //coleta dos dados do form
@@ -18,10 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
       //forma de guarda-los em um array
       const data = { nomeCompleto, cpf, email, nascimento, senha, numeroTel };
 
+      console.log("quase que foi")
+
       try {
+        console.log("quase laaaa")
         const response = await axios.post("http://localhost:5000/api/clientes/cadastrar", data);
       
         storeFlashMessage("success", "Cadastro realizado sucesso");
+        console.log("foi ebaaaa")
 
         const id = response.data.id;
       } catch (error) {
