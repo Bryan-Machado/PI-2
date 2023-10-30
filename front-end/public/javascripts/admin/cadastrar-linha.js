@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   displayFlashMessage();
 
   const form = document.querySelector("#form");
+  const axios = require('axios').default;
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();

@@ -17,7 +17,8 @@ const cors = require('cors');
 
 var app = express();
 
-app.use(cors({origin: process.env.CLIENT_ORIGIN_URL}));
+// app.use(cors({origin: process.env.CLIENT_ORIGIN_URL}));
+app.use(cors())
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

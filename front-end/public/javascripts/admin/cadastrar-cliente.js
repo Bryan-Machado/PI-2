@@ -1,4 +1,5 @@
 
+
 document.addEventListener("DOMContentLoaded", () => {
   
   displayFlashMessage();
@@ -9,18 +10,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    event.stopPropagation()
     //coleta dos dados do form
     if (form.checkValidity()) {
       const nomeCompleto = document.querySelector("#nomeCompleto").value;
       const cpf = document.querySelector("#cpf").value;
       const email = document.querySelector("#email").value;
-      const nascimento = document.querySelector("#nascimento").value;
+      let nascimento = document.querySelector("#nascimento").value;
+      nascimento = `${nascimento}T00:00:00Z`;
       const senha = document.querySelector("#senha").value;
       const numeroTel = document.querySelector("#numeroTel").value;
+      const tipoCarteirinha = document.querySelector('#tipoCarteirinha').value;
       //forma de guarda-los em um array
-      const data = { nomeCompleto, cpf, email, nascimento, senha, numeroTel };
+      const data = { nomeCompleto, cpf, email, nascimento, senha, numeroTel, tipoCarteirinha };
 
       console.log("quase que foi")
+      console.log(data);
 
       try {
         console.log("quase laaaa")

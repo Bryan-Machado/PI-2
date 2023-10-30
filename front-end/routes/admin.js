@@ -10,23 +10,23 @@ router.get("/cadastrar-cliente", function (req, res, next) {
 });
 
 router.get("/cadastrar-motorista", function (req, res, next) {
-  res.render("admin/cadastrar-motorista");
+  res.render("admin/form_funcionario");
 });
 
 router.get("/cadastrar-linha", function (req, res, next) {
-  res.render("admin/cadastrar-linha");
+  res.render("admin/form_linhas");
 });
 
 router.get("/lista-cliente", function (req, res, next) {
-  res.render("admin/lista-cliente");
+  res.render("admin/tables");
 });
 
 router.get("/lista-motorista", function (req, res, next) {
-  res.render("admin/lista-motorista");
+  res.render("admin/tables_dynamic");
 });
 
 router.get("/lista-linha", function (req, res, next) {
-  res.render("admin/lista-linha");
+  res.render("admin/tables_linhas");
 });
 
 
