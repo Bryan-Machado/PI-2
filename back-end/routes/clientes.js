@@ -4,7 +4,7 @@ var router = express.Router();
 const { PrismaClient, Prisma } = require('@prisma/client');
 const prisma = new PrismaClient({errorFormat: 'minimal'});
 
-console.log('o prisma não funciona pois o @prisma/client nos node_modules não está atualizado. Antes de rodar o servidor, rode o comando "npx prisma generate" para atualizar os arquivos no node_modules')
+
 
 function exceptionHandler(e) {
   let error = {
