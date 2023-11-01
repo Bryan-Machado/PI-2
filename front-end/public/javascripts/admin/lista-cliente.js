@@ -12,24 +12,24 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       row.insertCell(1).innerHTML = clientes.email;
       row.insertCell(2).innerHTML = clientes.nascimento;
       row.insertCell(3).innerHTML = clientes.numeroTel;
-      row.insertCell(4).innerHTML = clientes.cpf; 
+      row.insertCell(4).innerHTML = clientes.tipoCarteirinha; 
 
       const showLink = document.createElement("a");
       showLink.innerHTML = "Exibir";
       showLink.classList.add("btn", "btn-info", "btn-sm", "mx-1");
-      showLink.href = `http://localhost:3001/admin/exibir/${clientes.id}`;
+      showLink.href = `http://localhost:3000/admin/exibir/${clientes.id}`;
       row.insertCell(5).appendChild(showLink);
 
       const editLink = document.createElement("a");
       editLink.innerHTML = "Editar";
       editLink.classList.add("btn", "btn-success", "btn-sm", "mx-1");
-      editLink.href = `http://localhost:3001/admin/editar/${clientes.id}`;
+      editLink.href = `http://localhost:3000/admin/editar/${clientes.id}`;
       row.insertCell(6).appendChild(editLink);
 
       const deleteLink = document.createElement("a");
       deleteLink.innerHTML = "Excluir";
       deleteLink.classList.add("btn", "btn-danger", "btn-sm", "mx-1");
-      deleteLink.href = `http://localhost:3001/admin/excluir/${clientes.id}`;
+      deleteLink.href = `http://localhost:3000/admin/excluir/${clientes.id}`;
       row.insertCell(7).appendChild(deleteLink);
       });
   } catch (error) {

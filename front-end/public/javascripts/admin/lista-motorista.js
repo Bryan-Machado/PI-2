@@ -16,19 +16,19 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             const showLink = document.createElement("a");
       showLink.innerHTML = "Exibir";
       showLink.classList.add("btn", "btn-info", "btn-sm", "mx-1");
-      showLink.href = `http://localhost:3001/admin/exibir/${motoristas.id}`;
+      showLink.href = `http://localhost:3000/admin/exibir/${motoristas.id}`;
       row.insertCell(6).appendChild(showLink);
 
       const editLink = document.createElement("a");
       editLink.innerHTML = "Editar";
       editLink.classList.add("btn", "btn-success", "btn-sm", "mx-1");
-      editLink.href = `http://localhost:3001/admin/editar/${motoristas.id}`;
+      editLink.href = `http://localhost:3000/admin/editar/${motoristas.id}`;
       row.insertCell(7).appendChild(editLink);
 
       const deleteLink = document.createElement("a");
       deleteLink.innerHTML = "Excluir";
       deleteLink.classList.add("btn", "btn-danger", "btn-sm", "mx-1");
-      deleteLink.href = `http://localhost:3001/admin/excluir/${motoristas.id}`;
+      deleteLink.href = `http://localhost:3000/admin/excluir/${motoristas.id}`;
       row.insertCell(8).appendChild(deleteLink);
       });
   } catch (error) {
