@@ -1,6 +1,8 @@
 var express = require("express");
 var router = express.Router();
 
+
+// http://localhost:3000/admin   ||   http://localhost:3000/admin/
 router.get('/', function(req, res, next) {
   res.render('admin/index', { title: 'Express' });
 });

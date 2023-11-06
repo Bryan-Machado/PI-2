@@ -1,4 +1,3 @@
-const axios = require('axios').default;
 
 document.addEventListener("DOMContentLoaded", () => {
   displayFlashMessage();

@@ -31,12 +31,15 @@
   </head>
 
   <body class="nav-md">
+
+    <div id="flashMessageContainer"></div>
+
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><span>STPSP</span></a>
+              <a href="http://localhost:3000/admin" class="site_title"><span>STPSP</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -44,7 +47,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -60,7 +63,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="index.html"><i class="fa fa-home"></i>Página Inicial</a>
+                  <li><a href="http://localhost:3000/admin"><i class="fa fa-home"></i>Página Inicial</a>
           
                   </li>
                   <li><a><i class="fa fa-edit"></i> Cadastrar <span class="fa fa-chevron-down"></span></a>
@@ -114,7 +117,7 @@
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">John Doe
+                    <img src="/images/img.jpg" alt="">John Doe
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                     
@@ -164,103 +167,13 @@
                                 <th>Email</th>
                                 <th>Nascimento</th>
                                 <th>Telefone</th>
-                                <th>CPF</th>
-                                <th>Exibir</th>
-                                <th>Editar</th>
-                                <th>Excluir</th>
+                                <th>Ações</th>
                               </tr>
                             </thead>
 
 
                             <tbody>
-                              <tr>
-                                <td>Tiger Nixon</td>
-                                <td>Exemplo@gmail.com</td>
-                                <td>01/01/2000</td>
-                                <td>+55 (12) 12345-6789</td>
-                                <td>123.456.789-10</td>
-                                
-                              </tr>
-                              <tr>
-                                <td>Garrett Winters</td>
-                                <td>Exemplo2@gmail.com</td>
-                                <td>02/01/2000</td>
-                                <td>+55 (12) 12345-6789</td>
-                                <td>123.456.789-10</td>
-                                
-                              </tr>
-                              <tr>
-                                <td>Ashton Cox</td>
-                                <td>Exemplo3@gmail.com</td>
-                                <td>03/01/2000</td>
-                                <td>+55 (12) 12345-6789</td>
-                                <td>123.456.789-10</td>
-                               
-                              </tr>
-                              <tr>
-                                <td>Cedric Kelly</td>
-                                <td>Exemplo4@gmail.com</td>
-                                <td>04/01/2000</td>
-                                <td>+55 (12) 12345-6789</td>
-                                <td>123.456.789-10</td>
-                                
-                              </tr>
-                              <tr>
-                                <td>Airi Satou</td>
-                                <td>Exemplo5@gmail.com</td>
-                                <td>05/01/2000</td>
-                                <td>+55 (12) 12345-6789</td>
-                                <td>123.456.789-10</td>
-                                
-                              </tr>
-                              <tr>
-                                <td>Brielle Williamson</td>
-                                <td>Exemplo6@gmail.com</td>
-                                <td>06/01/2000</td>
-                                <td>+55 (12) 12345-6789</td>
-                                <td>123.456.789-10</td>
-                                
-                              </tr>
-                              <tr>
-                                <td>Herrod Chandler</td>
-                                <td>Exemplo7@gmail.com</td>
-                                <td>07/01/2000</td>
-                                <td>+55 (12) 12345-6789</td>
-                                <td>123.456.789-10</td>
-                           
-                              </tr>
-                              <tr>
-                                <td>Rhona Davidson</td>
-                                <td>Exemplo8@gmail.com</td>
-                                <td>08/01/2000</td>
-                                <td>+55 (12) 12345-6789</td>
-                                <td>123.456.789-10</td>
-                                
-                              </tr>
-                              <tr>
-                                <td>Colleen Hurst</td>
-                                <td>Exemplo9@gmail.com</td>
-                                <td>09/01/2000</td>
-                                <td>+55 (12) 12345-6789</td>
-                                <td>123.456.789-10</td>
-                                
-                              </tr>
-                              <tr>
-                                <td>Sonya Frost</td>
-                                <td>Exemplo10@gmail.com</td>
-                                <td>10/01/2000</td>
-                                <td>+55 (12) 12345-6789</td>
-                                <td>123.456.789-10</td>
                               
-                              </tr>
-                              <tr>
-                                <td>Jena Gaines</td>
-                                <td>Exemplo11@gmail.com</td>
-                                <td>11/01/2000</td>
-                                <td>+55 (12) 12345-6789</td>
-                                <td>123.456.789-10</td>
-                               
-                              </tr>
                               
                             </tbody>
                           </table>
@@ -319,8 +232,11 @@
 
   </body>
 
-  <script src="/javascripts/admin/flashMessage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/javascripts/admin/flashMenssage.js"></script>
   <script src="/javascripts/admin/lista-motorista.js"></script>
+
+  
 
 
   <!-- imagem de funcionario caso decida colocar
