@@ -47,19 +47,40 @@
 
 
 $(document).ready(function() {
-  $('#table-clientes').DataTable({
+  $('#table-linhas').DataTable({
     "ajax": {
-      "url": "http://localhost:5000/api/clientes",
+      "url": "http://localhost:5000/api/linhas",
       "dataSrc": ""
     },
     "columns": [{
         "data": "nome"
       },
       {
-        "data": "horaSaida"
+        "data": "horaSaida",
+        "render": function(data) {
+          var date = new Date(data);
+          var formattedTime = date.toLocaleTimeString('pt-BR', {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+            timeZone: "UTC"
+          });
+          return formattedTime;
+        }
       },
       {
-        "data": "horaChegada"
+        "data": "horaChegada",
+          "render": function(data) {
+            var date = new Date(data);
+            var formattedTime = date.toLocaleTimeString('pt-BR', {
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: false,
+              timeZone: "UTC"
+            });
+            return formattedTime;
+          }
+        
       },
       {
         "data": "localSaida"

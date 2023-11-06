@@ -23,7 +23,7 @@ model cliente {
 }
 
 model linha {
-  id           Int      @id
+  id           Int      @id @default(autoincrement())
   nome         String   @db.VarChar(45)
   localSaida   String   @db.VarChar(45)
   localDestino String   @db.VarChar(45)
@@ -41,47 +41,50 @@ model motorista {
 }
 
 model motorista_onibus {
-  id             Int
+  id             Int      @id @default(autoincrement())
   data           DateTime @db.DateTime(0)
   onibus_numero1 Int
   motorista_id   Int
 
-  @@id([id, onibus_numero1, motorista_id])
   @@index([motorista_id], map: "fk_motorista_onibus_motorista1_idx")
   @@index([onibus_numero1], map: "fk_motorista_onibus_onibus2_idx")
 }
 
 model onibus {
-  numero   Int    @default(autoincrement())
+  numero   Int    @id @default(autoincrement())
   placa    String @unique(map: "placa_UNIQUE") @db.Char(7)
   linha_id Int
 
-  @@id([numero, linha_id])
   @@index([linha_id], map: "fk_onibus_linha1_idx")
 }
 
 model viagem {
-  id              Int      @default(autoincrement())
-  data            DateTime @db.DateTime(0)
-  linha_id        Int
-  onibus_numero   Int
-  onibus_linha_id Int
-  motorista_id    Int
+  id            Int      @id @default(autoincrement())
+  data          DateTime @db.DateTime(0)
+  linha_id      Int
+  motorista_id  Int
+  onibus_numero Int
 
-  @@id([id, linha_id, onibus_numero, onibus_linha_id, motorista_id])
   @@index([linha_id], map: "fk_viagem_linha1_idx")
   @@index([motorista_id], map: "fk_viagem_motorista1_idx")
-  @@index([onibus_numero, onibus_linha_id], map: "fk_viagem_onibus1_idx")
+  @@index([onibus_numero], map: "fk_viagem_onibus1_idx")
 }
 
 model viagem_has_cliente {
-  id         Int      @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   viagem_id  Int
   cliente_id Int
   tarifa     Decimal  @db.Decimal(10, 2)
   data       DateTime @db.DateTime(0)
 
-  @@id([id, viagem_id, cliente_id])
   @@index([cliente_id], map: "fk_viagem_has_cliente_cliente1_idx")
   @@index([viagem_id], map: "fk_viagem_has_cliente_viagem1_idx")
+}
+
+model admin {
+  id    Int    @id @default(autoincrement())
+  nome  String @db.VarChar(200)
+  email String @db.VarChar(200)
+  senha String @db.VarChar(45)
+  token String @db.VarChar(45)
 }
