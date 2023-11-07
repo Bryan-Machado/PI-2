@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const id = response.data.id;
       } catch (error) {
-        triggerFlashMessage("danger", error.message);
+        storeFlashMessage("danger", error.message);
       }
     }
     

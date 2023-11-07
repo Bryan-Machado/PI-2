@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const nome = document.querySelector("#nome").value;
       const localSaida = document.querySelector("#localSaida").value;
       const localDestino = document.querySelector("#localDestino").value;
-      const horaSaida = document.querySelector("#horaSaida").value;
-      const horaChegada = document.querySelector("#horaChegada").value;
+      let horaSaida = document.querySelector("#horaSaida").value;
+      horaSaida = `0001-01-01T${horaSaida}:00.000Z`
+      let horaChegada = document.querySelector("#horaChegada").value;
+      horaChegada = `0001-01-01T${horaChegada}:00.000Z`
       //forma de guarda-los em um array
       const data = { nome, localSaida, localDestino, horaSaida, horaChegada };
 
@@ -21,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         storeFlashMessage("success", "Cadastro realizado sucesso");
 
       } catch (error) {
-        triggerFlashMessage("danger", error.message);
+        storeFlashMessage("danger", error.message);
       }
     }
     

@@ -23,10 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
         storeFlashMessage("success", "Cadastro realizado sucesso");
 
       } catch (error) {
-        triggerFlashMessage("danger", error.message);
+        storeFlashMessage("danger", error.message);
       }
     }
     
     form.classList.add("was-validated");
+    window.location.href = 'http://localhost:3000/admin/cadastrar-motorista';
   });
 });
