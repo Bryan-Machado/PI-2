@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("quase laaaa")
         const response = await axios.post("http://localhost:5000/api/clientes/cadastrar", data);
       
-        storeFlashMessage("success", "Cadastro realizado sucesso");
+        triggerFlashMessage("success", "Cadastro realizado sucesso");
         console.log("foi ebaaaa")
 
         const id = response.data.id;
       } catch (error) {
-        storeFlashMessage("danger", error.message);
+        triggerFlashMessage("danger", error.message);
       }
     }
     
