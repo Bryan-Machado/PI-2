@@ -23,11 +23,6 @@ router.get('/carterinha', function(req, res, next) {
   res.render('site/pages/Faça-sua-carterinha', {  layout: 'layouts/layout.ejs'  });
 });
 
-// http://localhost:3000/home
-router.get('/home', function(req, res, next) {
-  res.render('site/pages/index', {  layout: 'layouts/layout.ejs'  });
-});
-
 // http://localhost:3000/logar
 router.get('/logar', function(req, res, next) {
   res.render('site/pages/login', {  layout: 'layouts/layout1.ejs'  });
