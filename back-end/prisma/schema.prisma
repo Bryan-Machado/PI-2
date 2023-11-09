@@ -7,6 +7,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model admin {
+  id    Int    @id @default(autoincrement())
+  nome  String @db.VarChar(200)
+  email String @db.VarChar(200)
+  senha String @db.VarChar(45)
+  token String @db.VarChar(45)
+}
+
 model cliente {
   id              Int      @id @default(autoincrement())
   cpf             String   @unique(map: "cpf_UNIQUE") @db.Char(14)
@@ -79,12 +87,4 @@ model viagem_has_cliente {
 
   @@index([cliente_id], map: "fk_viagem_has_cliente_cliente1_idx")
   @@index([viagem_id], map: "fk_viagem_has_cliente_viagem1_idx")
-}
-
-model admin {
-  id    Int    @id @default(autoincrement())
-  nome  String @db.VarChar(200)
-  email String @db.VarChar(200)
-  senha String @db.VarChar(45)
-  token String @db.VarChar(45)
 }

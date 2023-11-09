@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     form.classList.add("was-validated");
-    window.location.href = 'http://localhost:3000/admin/cadastrar-cliente'
+    // window.location.href = 'http://localhost:3000/admin/cadastrar-cliente'
     
   });
 });
