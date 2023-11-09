@@ -30,6 +30,16 @@ router.get("/lista-motorista", function (req, res, next) {
 router.get("/lista-linha", function (req, res, next) {
   res.render("admin/tables_linhas");
 });
+// http://localhost:3000/admin/vizualizar-cliente/:id
+router.get("/vizualizar-cliente/:id", function (req, res, next) {
+  res.render("admin/vizualizar_cliente");
+});
+
+// http://localhost:3000/admin/editar-cliente/:id
+router.get("/editar-cliente/:id", function (req, res, next) {
+  res.render("admin/editar_cliente");
+});
+
 
 
 module.exports = router;

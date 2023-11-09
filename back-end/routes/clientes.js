@@ -51,11 +51,14 @@ router.get('/:id', async (req, res) => {
         id: id
       },
       select: {
-        saldo: true,
         senha: false,
         nomeCompleto: true,
+        cpf: true,
+        email: true,
         nascimento: true,
-        tipoCarteirinha: true
+        numeroTel: true,
+        tipoCarteirinha: true,
+        saldo: true
       }
     });
     res.status(200).json(cliente)

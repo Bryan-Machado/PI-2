@@ -23,8 +23,8 @@ $(document).ready(function() {
       {
         "data": "ações",
         "render": function(data, type, row, meta) {
-          return '<a href="http://localhost:3000/admin/vizualizar_cliente' + row.id + '">Visualizar</a> / ' +
-            '<a href="http://localhost:3000/linhas/editar/' + row.id + '">Editar</a> / ' +
+          return '<a href="http://localhost:3000/admin/vizualizar-cliente/' + row.id + '">Visualizar</a> / ' +
+            '<a href="http://localhost:3000/admin/editar-cliente/' + row.id + '">Editar</a> / ' +
             '<a href="http://localhost:3000/linhas/excluir/' + row.id + '">Excluir</a>';
         }
       }

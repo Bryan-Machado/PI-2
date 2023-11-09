@@ -155,21 +155,21 @@
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Nome completo<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" disabled data-validate-length-range="6" id="nomeCompleto" data-validate-words="2" name="nomeCompleto" required="required" type="text" />
+                                                <input class="form-control" data-validate-length-range="6" id="nomeCompleto" data-validate-words="2" name="nomeCompleto" required="required" type="text" />
                                             </div>
                                         </div>
 
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">CPF<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" disabled name="cpf" id="cpf" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" maxlength="14" required="required" />
+                                                <input class="form-control" name="cpf" id="cpf" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" maxlength="14" required="required" />
                                             </div>
                                         </div>
 
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Email<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" disabled name="email" id="email" class='email' required="required" type="email" /></div>
+                                                <input class="form-control" name="email" id="email" class='email' required="required" type="email" /></div>
                                         </div>
                                         <!-- <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Confirme endereço de email<span class="required">*</span></label>
@@ -180,14 +180,14 @@
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Nascimento<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" disabled class='date' type="date" id="nascimento" name="nascimento" required='required'></div>
+                                                <input class="form-control" class='date' type="date" id="nascimento" name="nascimento" required='required'></div>
                                         </div>
                                         
                                         
                                         <!-- <div class="field item form-group">
 											<label class="col-form-label col-md-3 col-sm-3  label-align">Senha<span class="required">*</span></label>
 											<div class="col-md-6 col-sm-6">
-												<input class="form-control" disabled type="password" id="senha" name="senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Minimum 8 Characters Including An Upper And Lower Case Letter, A Number And A Unique Character" required /> -->
+												<input class="form-control" type="password" id="senha" name="senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Minimum 8 Characters Including An Upper And Lower Case Letter, A Number And A Unique Character" required /> -->
 												
 												<!-- <span style="position: absolute;right:15px;top:7px;" onclick="hideshow()" >
 													<i id="slash" class="fa fa-eye-slash"></i>
@@ -204,13 +204,13 @@
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Número de telefone<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" disabled type="text" id="numeroTel" name="numeroTel" required='required' data-validate-length-range="8,20" /></div>
+                                                <input class="form-control" type="text" id="numeroTel" name="numeroTel" required='required' data-validate-length-range="8,20" /></div>
                                         </div>
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Tipo de Carteirinha<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
                                                 <!-- <input class="form-control" id="tipoCarteirinha" name="tipoCarteirinha" required="required" type="text" /> -->
-                                                <select class="form-control" disabled id="tipoCarteirinha" name="tipoCarteirinha" class="form-select formulario " required="required" type="text">
+                                                <select class="form-control" id="tipoCarteirinha" name="tipoCarteirinha" class="form-select formulario " required="required" type="text">
                                                     <option selected>Nenhum</option>
                                                     <option value="PDC">PCD</option>
                                                     <option value="Estudante">Estudante</option>
@@ -225,7 +225,8 @@
                                         <div class="ln_solid">
                                             <div class="form-group">
                                                 <div class="col-md-6 offset-md-3">
-                                                    <button type='submit' class="btn btn-primary" onclick="voltar()">Voltar</button>
+                                                    <button type='button' class="btn btn-primary" onclick="voltar()">Voltar</button>
+                                                    <button type='submit' class="btn btn-info">Alterar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -322,7 +323,7 @@
     <script src="/build/js/custom.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/javascripts/admin/vizualizar-cliente.js"></script>
+    <script src="/javascripts/admin/editar-cliente.js"></script>
     <script src="/javascripts/admin/flashMenssage.js"></script>
 
 </body>
