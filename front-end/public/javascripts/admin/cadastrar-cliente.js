@@ -15,26 +15,26 @@ document.addEventListener("DOMContentLoaded", () => {
       let nascimento = document.querySelector("#nascimento").value;
       nascimento = `${nascimento}T00:00:00Z`;
       const senha = document.querySelector("#senha").value;
-      const numeroTel = document.querySelector("#numeroTel").value;
+      const numeroTel = document.querySelector("#numeroTel").value; console.log(numeroTel);
       const tipoCarteirinha = document.querySelector('#tipoCarteirinha').value;
       //forma de guarda-los em um array
       const data = { nomeCompleto, cpf, email, nascimento, senha, numeroTel, tipoCarteirinha };
-
+      console.log(data)
       try {
         console.log("quase laaaa")
         const response = await axios.post("http://localhost:5000/api/clientes/cadastrar", data);
       
-        triggerFlashMessage("success", "Cadastro realizado sucesso");
+        storeFlashMessage("success", "Cadastro realizado sucesso");
         console.log("foi ebaaaa")
 
         const id = response.data.id;
       } catch (error) {
-        triggerFlashMessage("danger", error.message);
+        storeFlashMessage("danger", error.message);
       }
     }
     
     form.classList.add("was-validated");
-    // window.location.href = 'http://localhost:3000/admin/cadastrar-cliente'
+    window.location.href = 'http://localhost:3000/admin/cadastrar-cliente'
     
   });
 });
