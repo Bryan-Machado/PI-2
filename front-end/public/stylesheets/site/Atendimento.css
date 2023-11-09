@@ -60,11 +60,9 @@
 
 .separador{
     width: 90%;
-    margin-top: 5%;
-    margin-left: 5%;
+    margin: auto;
     border-top: #0D116B solid 0.5px;
 }
-
 
 .header-botoes{
     position: relative;
@@ -97,11 +95,11 @@
     border: #fff solid 1px;
 }
 
-.imagem-sobre-nos img{
+.imagem-atendimento img {
     width: 100%;
 }
 
-.imagem-sobre-nos{
+.imagem-atendimento{
     display: inline-block;
     margin-left: 5%;
     margin-top: 1.5%;
@@ -123,136 +121,53 @@
     display: none;
 }
 
-.devs{
+.section-atendimento-whatsapp {
+    width: 90%;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+.linha-atendimento {
+    width: 100%;
+    display: flex;
+
+}
+
+.celular-img {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 0px;
+    margin: auto;
+    padding-right: 5%;
 }
 
-.dev{
-    width: 80%;
+.texto-atendimento {
+    padding: 10px 0px;
+    margin: auto;
+}
+
+.texto-atendimento h3 {
+    margin-bottom: 5%;
+}
+
+.texto-atendimento p {
+    margin-bottom: 5%;
+}
+
+.accordion {
+    width: 90%;
+    margin-left: 5%;
     margin-top: 5%;
-    display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 
-.foto{
-    margin-right: 2.5%;
-    width: 20%;
-}
-
-.descrição-dev{
-    width: 80%;
-    background-color: rgba(36, 41, 166, 0.12);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.descrição-dev h4 {
+.accordion-item{
     margin-bottom: 3%;
 }
-
-@media (max-width: 1024px) {
-    .descrição-dev h4 {
-        font-size: large;
-    }
-
-    .descrição-dev p{
-        font-size: smaller;
-    }
-
-    .foto img{
-        width: 150px;
-    }
-
-
-    .texto-img{
-        font-size: 50px;
-        left: 10%;
-    }
-}
-
-@media (max-width: 768px) {
-    
-    .dev{
-        width: 90%;
-        margin-left: 5%;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .descrição-dev h4 {
-        font-size: medium;
-    }
-
-    .descrição-dev p {
-        font-size: x-small;
-    }
-
-    .foto img {
-        width: 120px;
-    }
-
-    .foto {
-        margin-bottom: 5%;
-        margin-right: 0;
-    }
-
-    .texto-img{
-        display: none;
-    }
-
-    .alternative-500px {
-        display: inline;
-        text-align: center;
-    }
-
-    .alternative-500px h1 {
-        margin-top: 4%;
-    }
-}
-
-
-
-
-@media (max-width: 500px) {
-
-    .descrição-dev h4 {
-        font-size: small;
-        text-align: center;
-    }
-
-    .descrição-dev p {
-        font-size: xx-small;
-    }
-
-    .foto img {
-        width: 80px;
-    }
-
-    .imagem-sobre-nos img{
-        width: 100%;
-        margin-left: 0;
-        margin-top: 5%;
-    }
-    .dev{
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .devs{
-        width: 100%;
-    }
-
-}
-
-/*css do footer*/
-
 
 footer {
     background: #0D116B;
     padding: 50px 0;
-    margin-top: 15%;
 }
 
 
@@ -339,7 +254,105 @@ footer {
 
 }
 
-/*fim do css do footer*/
+@media (max-width: 1024px) {
+    .texto-img{
+        font-size: 50px;
+        left: 10%;
+    }
+}
+
+
+@media (max-width: 846px) {
+
+.texto-atendimento h2 {
+    font-size: x-large;
+}
+
+.texto-atendimento h3 {
+    font-size: large;
+}
+
+.texto-atendimento p {
+    font-size: small;
+}
+
+@media (max-width: 768px) {
+    .texto-img{
+        display: none;
+    }
+
+    .alternative-500px {
+        display: inline;
+        text-align: center;
+    }
+
+    .alternative-500px h1 {
+        margin-top: 4%;
+    }
+}
+
+}
+
+@media (max-width: 690px) {
+    .celular-img{
+        margin-right: 50%;
+    }
+
+    .texto-atendimento h2 {
+        font-size: x-large;
+    }
+
+    .texto-atendimento h3 {
+        font-size: large;
+    }
+
+    .texto-atendimento p {
+        font-size: small;
+    }
+
+    .linha-atendimento {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .celular-img img {
+        width: 150px;
+        margin-right: 100%;
+        margin-left: 0;
+    }
+
+        .texto-atendimento h2 {
+            font-size: larger;
+        }
+    
+        .texto-atendimento h3 {
+            font-size: medium;
+        }
+    
+        .texto-atendimento p {
+            font-size: smaller;
+        }
+
+        .imagem-atendimento{
+            margin-top: 5%;
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .section-atendimento-whatsapp{
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .accordion{
+            width: 100%;
+            margin-left: 0;
+        }
+}
+                
+
 
 /* Responsividade do HEADER */
 
@@ -368,9 +381,6 @@ footer {
 
 }   
 
-
-
-
 @media (max-width: 400px) {   
 
     #imagens-botoes{
@@ -393,11 +403,6 @@ footer {
     }
 
 }  
-
-/* Fim da responsividade do HEADER */
-
-/*resposividade footer */
-
 
 @media (max-width:850px) {
     .footer-col {
@@ -429,21 +434,19 @@ footer {
         display: inline-flex;
     }
 
-    
-}
-
-
-@media (min-width:768px){
-    
-.row-footer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-}
 
 }
 
 
+@media (min-width:768px) {
 
+    .row-footer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        margin-top: 100px;
+    }
 
-/*fim da resposividade footer*/
+}
+
+/* Fim da responsividade do HEADER */

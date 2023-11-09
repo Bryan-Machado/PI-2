@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
 // http://localhost:3000/atendimento
 router.get('/atendimento', function(req, res, next) {
-  res.render('site/pages/Atendimento', {  layout: 'layouts/layout.ejs'  });
+  res.render('site/pages/Atendimento', {  layout: 'views/site/layouts/layout.ejs', hrefcss: 'Atendimento'  });
 });
 
 // http://localhost:3000/esquecisenha
