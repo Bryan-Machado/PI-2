@@ -40,6 +40,11 @@ router.get("/editar-cliente/:id", function (req, res, next) {
   res.render("admin/editar_cliente");
 });
 
+// http://localhost:3000/admin/deletar-cliente/:id
+router.get("/deletar-cliente/:id", function (req, res, next) {
+  res.render("admin/deletar_cliente");
+});
+
 
 
 module.exports = router;

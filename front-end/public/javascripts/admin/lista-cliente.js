@@ -25,7 +25,7 @@ $(document).ready(function() {
         "render": function(data, type, row, meta) {
           return '<a href="http://localhost:3000/admin/vizualizar-cliente/' + row.id + '">Visualizar</a> / ' +
             '<a href="http://localhost:3000/admin/editar-cliente/' + row.id + '">Editar</a> / ' +
-            '<a href="http://localhost:3000/linhas/excluir/' + row.id + '">Excluir</a>';
+            '<a href="http://localhost:3000/admin/deletar-cliente/' + row.id + '">Excluir</a>';
         }
       }
     ],

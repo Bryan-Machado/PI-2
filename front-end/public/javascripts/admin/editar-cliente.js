@@ -22,9 +22,6 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     }
 
     
-  
-      displayFlashMessage();
-    
       const form = document.querySelector("#form");
     
       form.addEventListener("submit", async (event2) => {
@@ -43,14 +40,15 @@ document.addEventListener("DOMContentLoaded", async (event) => {
           const data = { nomeCompleto, cpf, email, nascimento, numeroTel, tipoCarteirinha };
 
           try {
-            console.log("quase laaaa")
-            const response = await axios.put(`http://localhost:5000/api/clientes/atualizar/${cliente.id}`, data);
+            console.log(cliente)
+            const response = await axios.patch(`http://localhost:5000/api/clientes/atualizar/${urlId}`, data);
           
             console.log("foi ebaaaa")
     
             const id = response.data.id;    
-            // window.location.href = `http://localhost:3000/admin/vizualizar-cliente/${id}`;
+            window.location.href = `http://localhost:3000/admin/vizualizar-cliente/${urlId}`;
           } catch (error) {
+            console.log(error)
             storeFlashMessage("danger", error.message);
           }
         }

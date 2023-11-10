@@ -184,7 +184,7 @@
                                         </div>
                                         
                                         
-                                        <div class="field item form-group">
+                                        <!-- <div class="field item form-group">
 											<label class="col-form-label col-md-3 col-sm-3  label-align">Senha<span class="required">*</span></label>
 											<div class="col-md-6 col-sm-6">
 												<input class="form-control" disabled type="password" id="senha" name="senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Minimum 8 Characters Including An Upper And Lower Case Letter, A Number And A Unique Character" required />
@@ -194,7 +194,7 @@
 													<i id="eye" class="fa fa-eye"></i>
 												</span>
 											</div>
-										</div>
+										</div> -->
                                         
                                         <!-- <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Repita sua senha<span class="required">*</span></label>
@@ -225,7 +225,8 @@
                                         <div class="ln_solid">
                                             <div class="form-group">
                                                 <div class="col-md-6 offset-md-3">
-                                                    <button type='submit' class="btn btn-primary" onclick="voltar()">Voltar</button>
+                                                    <button type='button' class="btn btn-primary" onclick="voltar()">Voltar</button>
+                                                    <button type='submit' class="btn btn-danger" onclick="voltar()">Deletar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -322,7 +323,7 @@
     <script src="/build/js/custom.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/javascripts/admin/vizualizar-cliente.js"></script>
+    <script src="/javascripts/admin/deletar-cliente.js"></script>
     <script src="/javascripts/admin/flashMenssage.js"></script>
 
 </body>
