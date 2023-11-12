@@ -1,91 +1,205 @@
-<main>
+<html lang="pt-br">
 
-    <div class="imagem-atendimento">
-        <img src="/images/Imagem Atendimento.png" alt="">
-        <h1 class="texto-img">Atendimento</h1>
-    </div>
-    <div class="alternative-500px">
-        <h1>Atendimento</h1>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STPSP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/site/Atendimento.css">
+</head>
 
+<body>
 
-    <div class="separador-pagina"></div>
     
-    <section class="container-fluid section-atendimento-whatsapp">
-        <div class=" linha-atendimento">
-            <figure class="col-6 col-xl-3 celular-img">
-                <img src="/images/Img atendimento whatsapp.jpg" class="">
-            </figure>
-    
-            <div class="col-13 col-xl-7 texto-atendimento">
-                <h2>Atendimento via Whatsapp</h2>
-                <h3>simples, rápido e prático</h3>
-                <p>Para você ter uma conversa mais confortavel sem ter que precisar ficar ligando para aqueles números chatos de
-                telemarketing, clique no botão abaixo para ir para nosso whatsapp.</p>
-                <button class="botao botao-atendimento">Clique aqui</button>
+    <header>
+        <div class="linha-between" id="imagens-botoes">
+            <div class="logo">
+              <img src="/images/logo-site.png" alt="logo do Sistema de Transporte Público de São Paulo">
+            </div>
+            
+            <div class="header-botoes">
+              <button class="botao login"><a href="http://localhost:3000/logar">Login</a></button>
+                <button class="botao inscrever" id="inscrever-se">Adquira já</button>
             </div>
         </div>
-    </section>
-
-    <div class="separador-pagina"></div>
     
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                    aria-controls="panelsStayOpen-collapseOne">
-                    Onde fica nossa sede?
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                <div class="accordion-body">
-                    <p>A sede fisica da STPSP fica na rua ..... Nº ..., lá você pode ir para marcar um agendamento, ou marcar ele pelo proprio site e so ir lá fazer a carteirinha</p>
+        <div class="separador-menu"></div>
+    
+        <nav class="navbar navbar-expand-lg bg-body-tertiary menu-container" style="padding: 0px;">
+          <div class="container-fluid menu-navbar">
+            <button class="navbar-toggler menu-hamburguer" type="button" data-bs-toggle="collapse" data-bs-theme="dark" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menu-flex" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link menu-link" aria-current="page" href="http://localhost:3000">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="http://localhost:3000/carteirinha">Seu Cartão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="http://localhost:3000/recarregar">Recarga</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="http://localhost:3000/sobre">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="http://localhost:3000/atendimento">Atendimento</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+    
+
+    <main>
+
+        <div class="imagem-atendimento">
+            <img src="/images/Imagem Atendimento.png" alt="">
+            <h1 class="texto-img">Atendimento</h1>
+        </div>
+        <div class="alternative-500px">
+            <h1>Atendimento</h1>
+        </div>
+    
+    
+        <div class="separador-pagina"></div>
+        
+        <section class="container-fluid section-atendimento-whatsapp">
+            <div class=" linha-atendimento">
+                <figure class="col-6 col-xl-3 celular-img">
+                    <img src="/images/Img atendimento whatsapp.jpg" class="">
+                </figure>
+        
+                <div class="col-13 col-xl-7 texto-atendimento">
+                    <h2>Atendimento via Whatsapp</h2>
+                    <h3>simples, rápido e prático</h3>
+                    <p>Para você ter uma conversa mais confortavel sem ter que precisar ficar ligando para aqueles números chatos de
+                    telemarketing, clique no botão abaixo para ir para nosso whatsapp.</p>
+                    <button class="botao botao-atendimento">Clique aqui</button>
+                </div>
+            </div>
+        </section>
+    
+        <div class="separador-pagina"></div>
+        
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        Onde fica nossa sede?
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <p>A sede fisica da STPSP fica na rua ..... Nº ..., lá você pode ir para marcar um agendamento, ou marcar ele pelo proprio site e so ir lá fazer a carteirinha</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        Como funciona a carteirinha STPSP
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Nossa Carteirinha foi vissada para facilitar e agilizar seu tempo nos onibus aqui do litoral norte, ela tem recarga online, sem precisar ir pessoalmente, além de termos agendamento da carteirinha.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        Como funciona nossa recarga
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>A recarga da nossa carteirinha pode ser feita aqui no site mesmo, log apos você fazer o login no site, na aba recarga, você poderá ver seu saldo, e tambem poderá recarregar a sua carteirinha, temos 4 tipos de pagamento, credito, debito, pix e boleto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFour">
+                        Onde nossa carteirinha é aceita
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Nossa carteirinha é aceita nas 3 principais cidades do litoral norte, sendo elas São Sebastião, Caraguatatuba e Ubatuba.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseTwo">
-                    Como funciona a carteirinha STPSP
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <p>Nossa Carteirinha foi vissada para facilitar e agilizar seu tempo nos onibus aqui do litoral norte, ela tem recarga online, sem precisar ir pessoalmente, além de termos agendamento da carteirinha.</p>
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseThree">
-                    Como funciona nossa recarga
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <p>A recarga da nossa carteirinha pode ser feita aqui no site mesmo, log apos você fazer o login no site, na aba recarga, você poderá ver seu saldo, e tambem poderá recarregar a sua carteirinha, temos 4 tipos de pagamento, credito, debito, pix e boleto.</p>
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseFour">
-                    Onde nossa carteirinha é aceita
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <p>Nossa carteirinha é aceita nas 3 principais cidades do litoral norte, sendo elas São Sebastião, Caraguatatuba e Ubatuba.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+        
+    </main>
+   
+
+    <footer>
+        <div class="container-footer">
+            <div class="row-footer">
     
-</main>
+                <!--coluna 1-->
+                <div class="footer-col">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="#">Conta Digital</a></li>
+                        <li><a href="#">Cartão de transporte</a></li>
+                        <li><a href="#">Recarga</li>
+                    </ul>
+                </div>
+                <!--fim da coluna 1-->
+    
+                <!--coluna 2-->
+                <div class="footer-col">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><a href="#">Atendimento whatsaap</a></li>
+                        <li><a href="#">Duvidas Frequentes</a></li>
+                        <li><a href="#">Contato institucional</a></li>
+                        <!--<li><a href="#">sadasfaf@gmail.com</a></li>-->
+                    </ul>
+                </div>
+                <!--fim da coluna 2-->
+    
+                <!--coluna 4-->
+                <div class="footer-col">
+                    <h4>Nos siga nas redes socias</h4>
+                    <div class="rede-social">
+                        <img src="/images/instagram.png" alt="">
+                        <img src="/images/twitter.png" alt="">
+                        <img src="/images/facebook.png" alt="">
+    
+    
+    
+    
+                    </div>
+                </div>
+                <!--fim da coluna 4-->
+            </div>
+        </div>
+    </footer>
+
+
+
+
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+</html>

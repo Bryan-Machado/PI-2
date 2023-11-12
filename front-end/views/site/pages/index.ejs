@@ -1,4 +1,61 @@
+<html lang="pt-br">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STPSP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/site/index-style.css">
+</head>
+
+<body>
+
+    
+    <header>
+        <div class="linha-between" id="imagens-botoes">
+            <div class="logo">
+              <img src="/images/logo-site.png" alt="logo do Sistema de Transporte Público de São Paulo">
+            </div>
+            
+            <div class="header-botoes">
+              <button class="botao login"><a href="http://localhost:3000/logar">Login</a></button>
+                <button class="botao inscrever" id="inscrever-se">Adquira já</button>
+            </div>
+        </div>
+      
+        <div class="separador-menu"></div>
+      
+        <nav class="navbar navbar-expand-lg bg-body-tertiary menu-container" style="padding: 0px;">
+          <div class="container-fluid menu-navbar">
+            <button class="navbar-toggler menu-hamburguer" type="button" data-bs-toggle="collapse" data-bs-theme="dark" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menu-flex" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link menu-link" aria-current="page" href="http://localhost:3000">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="http://localhost:3000/carteirinha">Seu Cartão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="http://localhost:3000/recarregar">Recarga</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="http://localhost:3000/sobre">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="http://localhost:3000/atendimento">Atendimento</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      
 
     <main>
 
@@ -9,13 +66,13 @@
         <div id="carouselExampleAutoplaying" class="carousel slide w-90 carrossel carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <a href="#"><img src="../img/Recarregue já.png" class="d-block w-100 h-auto" alt="..."></a>
+                <a href="#"><img src="/images/Recarregue já.png" class="d-block w-100 h-auto" alt="..."></a>
               </div>
               <div class="carousel-item">
-                <a href="./Faça-sua-Carteirinha.html"><img src="../img/Faça já sua carteirinha.png". class="d-block w-100" alt="..."></a>
+                <a href="http://localhost:3000/carteirinha"><img src="/images/Faça já sua carteirinha.png". class="d-block w-100" alt="..."></a>
               </div>
               <div class="carousel-item">
-                <a href="#"><img src="../img/Tire suas dúvidas.png" class="d-block w-100" alt="..."></a>
+                <a href="#"><img src="/images/Tire suas dúvidas.png" class="d-block w-100" alt="..."></a>
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -44,7 +101,7 @@
                   
                   <div class="swiper-content">
                     <div class="timeline-icon">
-                      <img src="../img/timeline-icon1.jpg" alt="">
+                      <img src="/images/timeline-icon1.jpg" alt="">
                       <div class="timeline-bar"></div>
                     </div>
                     <span>Rapidez no Embarque</span>
@@ -54,7 +111,7 @@
                 <div class="swiper-slide swiper-slide-middle">
                     <div class="swiper-content">
                       <div class="timeline-icon">
-                        <img src="../img/timeline-icon2.jpg" alt="">
+                        <img src="/images/timeline-icon2.jpg" alt="">
                         <div class="timeline-bar"></div>
                       </div>
                       <span>Recarga rápida e sem dificuldades</span>
@@ -63,7 +120,7 @@
                 <div class="swiper-slide swiper-slide-last">
                     <div class="swiper-content">
                       <div class="timeline-icon">
-                        <img src="../img/timeline-icon3.jpg" alt="">
+                        <img src="/images/timeline-icon3.jpg" alt="">
                         <div class="timeline-bar"></div>
                       </div>
                       <span>Sem uso de notas</span>
@@ -75,7 +132,7 @@
 
           <section class="time-line-box-2">      <!-- seção com tres icones responsiva -->
             <div class="swiper-responsive">
-              <div><img src="../img/timeline-icon1.jpg" alt=""></div>
+              <div><img src="/images/timeline-icon1.jpg" alt=""></div>
               <span>Rapidez no Embarque</span>
             </div>
 
@@ -84,7 +141,7 @@
             </div>
 
             <div class="swiper-responsive">
-              <div><img src="../img/timeline-icon2.jpg" alt=""></div>
+              <div><img src="/images/timeline-icon2.jpg" alt=""></div>
               <span>Recarga rápida e sem dificuldades</span>
             </div>
 
@@ -93,7 +150,7 @@
             </div>
 
             <div class="swiper-responsive">
-              <div><img src="../img/timeline-icon3.jpg" alt=""></div>
+              <div><img src="/images/timeline-icon3.jpg" alt=""></div>
               <span>Sem uso de notas</span>
             </div>
           </section>
@@ -103,7 +160,7 @@
           <section class="container-fluid section-carteirinha"> 
             <div class="row linha-carteirinha">
               <figure class="col-12 col-xl-5 carteirinha-img">
-                <img src="../img/faça-sua-carteira.png" class="img-fluid">
+                <img src="/images/faça-sua-carteira.png" class="img-fluid">
               </figure>
 
               <div class="col-12 col-xl-7 texto-carteirinha">
@@ -123,14 +180,14 @@
           </div>
 
 
-<!--                           CARDS DOS CARTÔES        -->
+          <!--           CARDS DOS CARTÔES        -->
 
 
           <section class="section-espacamento section-cards">
             <div class="row row-cols-1 row-cols-md-3 g-4 cards-carteirinhas">
               <div class="col">
                 <div class="card h-100">
-                  <img src="../img/card-img1.svg" class="card-img-top" height="210px">
+                  <img src="/images/card-img1.svg" class="card-img-top" height="210px">
                   <div class="card-body">
                     <h5 class="card-title text-center">Comum</h5>
                     <p class="card-text card-texto">O Cartão Comum oferece a conveniência de viajar sem a necessidade de usar dinheiro a cada viagem. Basta recarregá-lo e embarcar de forma rápida e fácil em nossos ônibus.</p>
@@ -140,7 +197,7 @@
 
               <div class="col">
                 <div class="card h-100">
-                  <img src="../img/card-img2.svg" class="card-img-top" height="210px">
+                  <img src="/images/card-img2.svg" class="card-img-top" height="210px">
                   <div class="card-body">
                     <h5 class="card-title text-center">Estudante</h5>
                     <p class="card-text card-texto">O Cartão Estudante é uma escolha inteligente para alunos, proporcionando tarifas com desconto que aliviam o custo das viagens diárias para a escola ou a universidade. Uma maneira econômica de se locomover.</p>
@@ -150,7 +207,7 @@
 
               <div class="col">
                 <div class="card h-100">
-                  <img src="../img/card-img3.svg" class="card-img-top" height="210px">
+                  <img src="/images/card-img3.svg" class="card-img-top" height="210px">
                   <div class="card-body">
                     <h5 class="card-title text-center" style="text-align: center;">Empresas</h5>
                     <p class="card-text card-texto">O Cartão Empresa simplifica as viagens de negócios, oferecendo às empresas a capacidade de gerenciar os gastos de transporte de seus funcionários de maneira eficiente. Relatórios detalhados e opções de pagamento flexíveis tornam tudo mais conveniente.</p>
@@ -160,7 +217,7 @@
 
               <div class="col">
                 <div class="card h-100">
-                  <img src="../img/card-img4.svg" class="card-img-top" height="210px">
+                  <img src="/images/card-img4.svg" class="card-img-top" height="210px">
                   <div class="card-body">
                     <h5 class="card-title text-center">Idoso</h5>
                     <p class="card-text card-texto">Para cidadãos com mais de 60 anos, o Cartão Idoso oferece tarifas reduzidas, permitindo que nossos idosos viajem com economia e conforto, reconhecendo a valiosa contribuição deles para a comunidade.</p>
@@ -170,7 +227,7 @@
 
               <div class="col">
                 <div class="card h-100">
-                  <img src="../img/card-img5.svg" class="card-img-top" height="210px">
+                  <img src="/images/card-img5.svg" class="card-img-top" height="210px">
                   <div class="card-body">
                     <h5 class="card-title text-center">PCD</h5>
                     <p class="card-text card-texto">O Cartão PCD é projetado para garantir que pessoas com deficiência tenham acesso facilitado ao transporte público, com descontos e recursos especiais que atendem às suas necessidades específicas de mobilidade.</p>
@@ -180,7 +237,7 @@
 
               <div class="col">
                 <div class="card h-100">
-                  <img src="../img/card-img4.svg" class="card-img-top" height="210px">
+                  <img src="/images/card-img4.svg" class="card-img-top" height="210px">
                   <div class="card-body">
                     <h5 class="card-title text-center">Acompanhante</h5>
                     <p class="card-text card-texto">O Cartão de Acompanhante é uma opção conveniente que permite que você viaje junto com um titular de Cartão PCD em nossos serviços de transporte. Garanta viagens juntos de forma eficiente e econômica, apoiando a acessibilidade e inclusão.</p>
@@ -258,12 +315,64 @@
               <h1 class="text-center">STPSP</h1>
               <h3 class="text-center item-final">Buscamos agilidade e facilidade para nosso cliente</h3>
               <div class="botao-sobrenos">
-                <button class="botao botao-sobrenos item-final"><a href="./Sobre-nos.html">Sobre nós</a></button>
+                <button class="botao botao-sobrenos item-final"><a href="http://localhost:3000/sobre">Sobre nós</a></button>
               </div>
           </section>
           
     </main>
+   
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <footer>
+        <div class="container-footer">
+            <div class="row-footer">
+    
+                <!--coluna 1-->
+                <div class="footer-col">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="#">Conta Digital</a></li>
+                        <li><a href="#">Cartão de transporte</a></li>
+                        <li><a href="#">Recarga</li>
+                    </ul>
+                </div>
+                <!--fim da coluna 1-->
+    
+                <!--coluna 2-->
+                <div class="footer-col">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><a href="#">Atendimento whatsaap</a></li>
+                        <li><a href="#">Duvidas Frequentes</a></li>
+                        <li><a href="#">Contato institucional</a></li>
+                        <!--<li><a href="#">sadasfaf@gmail.com</a></li>-->
+                    </ul>
+                </div>
+                <!--fim da coluna 2-->
+    
+                <!--coluna 4-->
+                <div class="footer-col">
+                    <h4>Nos siga nas redes socias</h4>
+                    <div class="rede-social">
+                        <img src="/images/instagram.png" alt="">
+                        <img src="/images/twitter.png" alt="">
+                        <img src="/images/facebook.png" alt="">
+    
+    
+    
+    
+                    </div>
+                </div>
+                <!--fim da coluna 4-->
+            </div>
+        </div>
+    </footer>
+
+
+
+
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </body>
 </html>

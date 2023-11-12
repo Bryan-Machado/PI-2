@@ -5,37 +5,37 @@ var router = express.Router();
 
 // http://localhost:3000     OU     http://localhost:3000/
 router.get('/', function(req, res, next) {
-  res.render('site/pages/index', { title: 'Express' });
+  res.render('site/pages/index');
 });
 
 // http://localhost:3000/atendimento
 router.get('/atendimento', function(req, res, next) {
-  res.render('site/pages/Atendimento', {  layout: 'views/site/layouts/layout.ejs', hrefcss: 'Atendimento'  });
+  res.render('site/pages/Atendimento');
 });
 
 // http://localhost:3000/esquecisenha
 router.get('/esquecisenha', function(req, res, next) { 
-  res.render('site/pages/Esqueci-minha-senha', {  layout: 'layouts/layout1.ejs'  });
+  res.render('site/pages/Esqueci-minha-senha');
 });
 
 // http://localhost:3000/carteirinha
-router.get('/carterinha', function(req, res, next) {
-  res.render('site/pages/Faça-sua-carterinha', {  layout: 'layouts/layout.ejs'  });
+router.get('/carteirinha', function(req, res, next) {
+  res.render('site/pages/Faça-sua-carteirinha');
 });
 
 // http://localhost:3000/logar
 router.get('/logar', function(req, res, next) {
-  res.render('site/pages/login', {  layout: 'layouts/layout1.ejs'  });
+  res.render('site/pages/login');
 });
 
 // http://localhost:3000/recarregar
 router.get('/recarregar', function(req, res, next) {
-  res.render('site/pages/recarga-cartao', {  layout: 'layouts/layout.ejs'  });
+  res.render('site/pages/recarga-cartao');
 });
 
 // http://localhost:3000/sobre
 router.get('/sobre', function(req, res, next) {
-  res.render('site/pages/Sobre-nos', {  layout: 'layouts/layout.ejs'  });
+  res.render('site/pages/Sobre-nos');
 });
 
 

@@ -1,0 +1,449 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+    cores usadas no figma:
+
+    background-color: #0D116B;          AZUL ESCURO
+    background-color: #2429A6;          AZUL MAIS CLARO
+*/
+
+/* botoes */
+
+.botao {
+    background-color: #0D116B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+.botao a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.inscrever {
+    margin-right: -45px;
+}
+
+.inscrever {
+    color: #F2F2F2;
+    font-weight: bolder;
+}
+
+/* botoes */
+
+.linha-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imagens-botoes{
+    padding: 0px 10%;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.separador-menu{
+    width: 100%;
+    border-top: #0D116B solid 0.5px;
+}
+
+.separador{
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    border-top: #0D116B solid 0.5px;
+}
+
+
+.header-botoes{
+    position: relative;
+    right: 5px;
+}
+
+.menu-container{
+    width: 90%; 
+    margin: auto;
+}
+
+.menu-navbar{
+    background-color: #0D116B; 
+    border-radius: 5px; 
+    padding: 7px 10px;
+}
+
+.menu-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-link{
+    color: #fff;
+    margin-right: 80px;
+}
+
+.menu-hamburguer{
+    color: #fff;
+    border: #fff solid 1px;
+}
+
+.imagem-sobre-nos img{
+    width: 100%;
+}
+
+.imagem-sobre-nos{
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 1.5%;
+    width: 90%;
+    position: relative;
+    height: auto;
+}
+
+.texto-img {
+    display: flex;
+    position: absolute;
+    color: white;
+    left: 20%;
+    top: 35%;
+    font-size: 60px
+}
+
+.alternative-500px {
+    display: none;
+}
+
+.devs{
+    display: flex;
+    flex-direction: column;
+}
+
+.dev{
+    width: 80%;
+    margin-top: 5%;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.foto{
+    margin-right: 2.5%;
+    width: 20%;
+}
+
+.descrição-dev{
+    width: 80%;
+    background-color: rgba(36, 41, 166, 0.12);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.descrição-dev h4 {
+    margin-bottom: 3%;
+}
+
+@media (max-width: 1024px) {
+    .descrição-dev h4 {
+        font-size: large;
+    }
+
+    .descrição-dev p{
+        font-size: smaller;
+    }
+
+    .foto img{
+        width: 150px;
+    }
+
+
+    .texto-img{
+        font-size: 50px;
+        left: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .dev{
+        width: 90%;
+        margin-left: 5%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .descrição-dev h4 {
+        font-size: medium;
+    }
+
+    .descrição-dev p {
+        font-size: x-small;
+    }
+
+    .foto img {
+        width: 120px;
+    }
+
+    .foto {
+        margin-bottom: 5%;
+        margin-right: 0;
+    }
+
+    .texto-img{
+        display: none;
+    }
+
+    .alternative-500px {
+        display: inline;
+        text-align: center;
+    }
+
+    .alternative-500px h1 {
+        margin-top: 4%;
+    }
+}
+
+
+
+
+@media (max-width: 500px) {
+
+    .descrição-dev h4 {
+        font-size: small;
+        text-align: center;
+    }
+
+    .descrição-dev p {
+        font-size: xx-small;
+    }
+
+    .foto img {
+        width: 80px;
+    }
+
+    .imagem-sobre-nos img{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5%;
+    }
+    .dev{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .devs{
+        width: 100%;
+    }
+
+}
+
+/*css do footer*/
+
+
+footer {
+    background: #0D116B;
+    padding: 50px 0;
+    margin-top: 15%;
+}
+
+
+.container-footer {
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.footer-col {
+    padding: 0 15px;
+    width: 25%;
+
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+    margin: 0px 0px 0px -33px;
+
+}
+
+.footer-col ul li {
+    margin: 10px 0;
+
+}
+
+.footer-col ul li a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #6e6c6c;
+    padding-left: 10px;
+
+}
+
+.footer-col .rede-social {
+    margin-top: 30px;
+}
+
+.footer-col .rede-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.footer-col .rede-social a:hover {
+    color: navy;
+    background-color: white;
+}
+
+.footer-col img {
+    height: 30px;
+    width: 30px;
+    margin: 17px;
+    filter: invert();
+
+
+}
+
+/*fim do css do footer*/
+
+/* Responsividade do HEADER */
+
+@media (max-width: 991px) {      /* o hamburguer do bootstrap aparece nessa dimensao */
+    
+    .menu-flex{
+        display: block;
+    }
+
+}
+
+@media (max-width: 617px) {   /* era 425px */
+
+    #imagens-botoes{
+        padding: 0;
+    }
+
+    .botao{
+        margin-right: 20px;
+    }
+
+
+    .carrossel{
+        width: 100%;
+    }
+
+}   
+
+
+
+
+@media (max-width: 400px) {   
+
+    #imagens-botoes{
+        display: block;
+    }
+
+    #imagens-botoes .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-botoes{
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+
+    #inscrever-se{
+        margin-right: 0;
+    }
+
+}  
+
+/* Fim da responsividade do HEADER */
+
+/*resposividade footer */
+
+
+@media (max-width:850px) {
+    .footer-col {
+        width: 50%;
+        margin: 20px;
+
+    }
+}
+
+@media (max-width:925px) {
+    .footer-col {
+        width: 100%;
+        margin-top: 20px;
+        padding: 50px;
+    }
+}
+
+@media (max-width:925px) {
+    .footer-col img {
+        margin: 5px;
+
+    }
+}
+
+
+@media (max-width:925px) {
+    .footer-col .rede-social {
+        margin-top: 30px;
+        display: inline-flex;
+    }
+
+    
+}
+
+
+@media (min-width:768px){
+    
+.row-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+}
+
+
+
+
+/*fim da resposividade footer*/

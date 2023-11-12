@@ -1,0 +1,528 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+    cores usadas no figma:
+
+    background-color: #0D116B;          AZUL ESCURO
+    background-color: #2429A6;          AZUL MAIS CLARO
+*/
+
+/* botoes */
+
+.botao{
+    background-color: #0D116B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+.botao a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.inscrever{
+    margin-right: -45px;
+}
+
+.inscrever{
+    color: #F2F2F2;
+    font-weight: bolder;
+}
+
+/* botoes */
+
+.linha-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imagens-botoes{
+    padding: 0px 10%;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.separador-menu{
+    width: 100%;
+    border-top: #0D116B solid 0.5px;
+}
+
+.separador{
+    width: 90%;
+    margin: auto;
+    border-top: #0D116B solid 0.5px;
+}
+
+.header-botoes{
+    position: relative;
+    right: 5px;
+}
+
+.menu-container{
+    width: 90%; 
+    margin: auto;
+}
+
+.menu-navbar{
+    background-color: #0D116B; 
+    border-radius: 5px; 
+    padding: 7px 10px;
+}
+
+.menu-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-link{
+    color: #fff;
+    margin-right: 80px;
+}
+
+.menu-hamburguer{
+    color: #fff;
+    border: #fff solid 1px;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.agendamento{
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(36, 41, 166, 0.12);
+    border-radius: 20px;
+}
+
+.media-425-agendamento{
+    width: 100%;
+    display: flex;
+}
+
+.titulo-carteirinha{
+    margin-bottom: 10%;
+}
+
+.formulario{
+    border: 1px solid black;
+}
+
+.carteirinha-forms{
+    width: 32%;
+    margin-left: 2%;
+    align-items: center;
+}
+
+.formulario-inteiro{
+    width: 76%;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+
+.formulario-inteiro h3{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.forms-1{
+    display: inline-flex;
+    width: 100%;
+    gap: 10%;
+}
+.f1{
+    width: 45%;
+}
+
+.f2{
+    width: 45%;
+}
+
+.forms-2 {
+    display: inline-flex;
+    width: 100%;
+    gap: 10%;
+}
+
+label {
+    font-size: 25px;
+    float: left;
+    margin: -8px 25px 0px 0px;
+}
+
+.f3 {
+    width: 45%;
+}
+
+.f4 {
+    width: 45%;
+}
+
+.botao-agen{
+    width: 100%;
+    text-align: center;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+ @media (max-width: 1024px) {
+    
+    .titulo{
+        font-size: xx-large;
+    }
+    .carteirinha-forms img{
+        width: 256px;
+        height: 192px;
+    }
+
+    .titulo-forms{
+        font-size: x-large;
+    }
+
+    .titulo-carteirinha{
+        font-size: x-large;
+        margin-bottom: 15%;
+    }
+
+
+}
+
+@media (max-width: 853px) {
+
+    .agendamento {
+        display: flex;
+        flex-direction: column;
+        align-items: first baseline;
+    }
+    
+    .media-425-agendamento {
+        display: inline;
+        width: 70%;
+    }
+
+    .formulario-inteiro h3{
+    text-align: start;
+    }
+
+    .form-select{
+        width: 222%;
+    }
+    
+    .form-control{
+        width: 100%;
+    }
+
+    .carteirinha-forms {
+        width: 140%;
+        margin-left: 2%;
+    }
+    
+    .formulario-inteiro {
+        width: 140%;
+        margin-left: 5%;
+        margin-right: 2%;
+    }
+
+    .forms-1 {
+        display: inline;
+    }
+
+    .forms-2{
+        display: inline;
+    }
+
+
+    .titulo-forms {
+        font-size: medium;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .titulo-carteirinha {
+        font-size: large;
+        margin-bottom: 5%;
+    }
+
+    .titulo {
+        font-size: xx-large;
+    }
+
+    .titulo-forms {
+        font-size: large;
+    }
+
+
+}
+
+/*css do footer*/
+
+
+footer {
+    background: #0D116B;
+    padding: 50px 0;
+    margin-top: 15%;
+}
+
+
+.container-footer {
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.footer-col {
+    padding: 0 15px;
+    width: 25%;
+
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+    margin: 0px 0px 0px -33px;
+
+}
+
+.footer-col ul li {
+    margin: 10px 0;
+
+}
+
+.footer-col ul li a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #6e6c6c;
+    padding-left: 10px;
+
+}
+
+.footer-col .rede-social {
+    margin-top: 30px;
+}
+
+.footer-col .rede-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.footer-col .rede-social a:hover {
+    color: navy;
+    background-color: white;
+}
+
+.footer-col img {
+    height: 30px;
+    width: 30px;
+    margin: 17px;
+    filter: invert();
+
+
+}
+
+/*fim do css do footer*/
+
+/* Responsividade do HEADER */
+
+@media (max-width: 991px) {      /* o hamburguer do bootstrap aparece nessa dimensao */
+    
+    .menu-flex{
+        display: block;
+    }
+
+}
+
+@media (max-width: 617px) {   /* era 425px */
+
+    #imagens-botoes{
+        padding: 0;
+    }
+
+    .botao{
+        margin-right: 20px;
+    }
+
+
+    .carrossel{
+        width: 100%;
+    }
+
+}   
+
+@media (max-width: 400px) {   
+
+    #imagens-botoes{
+        display: block;
+    }
+
+    #imagens-botoes .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-botoes{
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+
+    #inscrever-se{
+        margin-right: 0;
+    }
+
+}  
+
+/* Fim da responsividade do HEADER */
+
+@media (max-width: 425px) {
+
+    .agendamento {
+        display: flex ;
+       flex-direction: column;
+       align-items: first baseline;
+    }
+
+    .media-425-agendamento{
+        display: inline;
+        width: 70%;
+    }
+
+    .formulario-inteiro h3{
+        text-align: start;
+    }
+    
+    .carteirinha-forms {
+        width: 140%;
+        margin-left: 2%;
+    }
+    
+    .formulario-inteiro {
+        width: 140%;
+        margin-left: 5%;
+        margin-right: 2%;
+    }
+
+    .forms-1 {
+        display: inline;
+    }
+
+    .forms-2{
+        display: inline;
+    }
+
+    .titulo {
+        font-size: x-large;
+    }
+
+    .carteirinha-forms img {
+        width: 213px;
+        height: 160px;
+    }
+
+    .titulo-forms {
+        font-size: large;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .titulo-carteirinha {
+        font-size: large;
+        margin-bottom: 15%;
+    }
+
+
+}
+
+/*resposividade footer */
+
+
+@media (max-width:850px) {
+    .footer-col {
+        width: 50%;
+        margin: 20px;
+
+    }
+}
+
+@media (max-width:925px) {
+    .footer-col {
+        width: 100%;
+        margin-top: 20px;
+        padding: 50px;
+    }
+}
+
+@media (max-width:925px) {
+    .footer-col img {
+        margin: 5px;
+
+    }
+}
+
+
+@media (max-width:925px) {
+    .footer-col .rede-social {
+        margin-top: 30px;
+        display: inline-flex;
+    }
+
+    
+}
+
+
+@media (min-width:768px){
+    
+.row-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+}
+
+
+
+
+/*fim da resposividade footer*/
+

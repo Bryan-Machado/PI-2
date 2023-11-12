@@ -1,0 +1,283 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+    cores usadas no figma:
+
+    background-color: #0D116B;          AZUL ESCURO
+    background-color: #2429A6;          AZUL MAIS CLARO
+*/
+
+/* botoes */
+
+.botao{
+    background-color: #0D116B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+.botao a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.inscrever{
+    margin-right: -45px;
+}
+
+.inscrever{
+    color: #F2F2F2;
+    font-weight: bolder;
+}
+
+/* botoes */
+
+.linha-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imagens-botoes{
+    padding: 0px 10%;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.separador-menu{
+    width: 100%;
+    border-top: #0D116B solid 0.5px;
+}
+
+.separador{
+    width: 90%;
+    margin: auto;
+    border-top: #0D116B solid 0.5px;
+}
+
+.header-botoes{
+    position: relative;
+    right: 5px;
+}
+
+.menu-container{
+    width: 90%; 
+    margin: auto;
+}
+
+.menu-navbar{
+    background-color: #0D116B; 
+    border-radius: 5px; 
+    padding: 7px 10px;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+}
+
+.menu-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-link{
+    color: #fff;
+    margin-right: 80px;
+}
+
+.menu-hamburguer{
+    color: #fff;
+    border: #fff solid 1px;
+}
+
+/* Página de Login */
+
+.imagem-login{
+    width: 60%;
+    height: 80vh;
+}
+
+.imagem-login img{
+    width: 100%;
+    height: 92vh;
+    z-index: 0;
+}
+
+.login-forms{
+    width: 40%;
+    height: 92vh;
+    background-color: rgba(13, 17, 107, 0.8);
+    align-items: center;
+}
+
+.pagina-login{
+    display: flex;
+    position: relative;
+    z-index: 0;
+}
+
+.formulario-login{
+    width: 75%;
+    height: 60vh;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 20%;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10%;
+    align-items: center;
+}
+
+.formulario-login h2{
+    margin: 0% 5% 10% 5%;
+    text-align: center;
+}
+
+.botao-login{
+    text-align: center;
+    margin: 7%;
+}
+
+.botao-login-design{
+    background-color: #0D116B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.separador-login{
+    border-top: #0D116B solid 0.5px;
+}
+
+.esqueci-senha{
+    margin-top: 5%;
+}
+
+@media (max-width: 1300px) {
+
+    .imagem-login{
+    width: 50%;
+    height: 80vh;
+}
+
+    .login-forms {
+        width: 50%;
+        height: 92vh;
+        background-color: rgba(13, 17, 107, 0.8);
+    }
+
+
+
+}
+
+@media (max-width: 1024px) {
+
+    .imagem-login {
+        width: 0;
+        height: 80vh;
+    }
+
+    .login-forms {
+        width: 100%;
+        height: 92vh;
+        background-color: rgba(13, 17, 107, 0.8);
+
+    }
+
+    .formulario-login {
+        margin-top: 10%;
+        height: 630px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .imagem-login {
+            width: 0%;
+            height: 80vh;
+        }
+    
+        .login-forms {
+            width: 100%;
+            height: 92vh;
+            background-color: rgba(13, 17, 107, 0.8);
+            
+        }
+
+    .formulario-login {
+        margin-top: 20%;
+        height: 570px;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    .formulario-login {
+        margin-top: 30%;
+        height: 470px;
+    }
+
+}
+
+/* Responsividade do HEADER */
+
+@media (max-width: 991px) {      /* o hamburguer do bootstrap aparece nessa dimensao */
+    
+    .menu-flex{
+        display: block;
+    }
+
+}
+
+@media (max-width: 617px) {   /* era 425px */
+
+    #imagens-botoes{
+        padding: 0;
+    }
+
+    .botao{
+        margin-right: 20px;
+    }
+
+
+    .carrossel{
+        width: 100%;
+    }
+
+}   
+
+@media (max-width: 400px) {   
+
+    #imagens-botoes{
+        display: block;
+    }
+
+    #imagens-botoes .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-botoes{
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+
+    #inscrever-se{
+        margin-right: 0;
+    }
+
+}  
+
+/* Fim da responsividade do HEADER */

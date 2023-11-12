@@ -1,0 +1,508 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+    cores usadas no figma:
+
+    background-color: #0D116B;          AZUL ESCURO
+    background-color: #2429A6;          AZUL MAIS CLARO
+*/
+
+/* botoes */
+
+.botao {
+    background-color: #0D116B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+.botao a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.inscrever {
+    margin-right: -45px;
+}
+
+.inscrever {
+    color: #F2F2F2;
+    font-weight: bolder;
+}
+
+/* botoes */
+
+.linha-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imagens-botoes {
+    padding: 0px 10%;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.separador-menu {
+    width: 100%;
+    border-top: #0D116B solid 0.5px;
+}
+
+.separador {
+    width: 90%;
+    margin: auto;
+    border-top: #0D116B solid 0.5px;
+}
+
+.header-botoes {
+    position: relative;
+    right: 5px;
+}
+
+.menu-container {
+    width: 90%;
+    margin: auto;
+}
+
+.menu-navbar {
+    background-color: #0D116B;
+    border-radius: 5px;
+    padding: 7px 10px;
+}
+
+.menu-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-link {
+    color: #fff;
+    margin-right: 80px;
+}
+
+.menu-hamburguer {
+    color: #fff;
+    border: #fff solid 1px;
+}
+
+/*Começo do formulario*/
+
+h3 {
+    font-size: 30px;
+    margin: 60px 0px 60px 0px;
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+}
+
+.campo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.container-info-cartao {
+    display: flex;
+    background: #2429A61F;
+    width: 90%;
+    border-radius: 20px;
+
+}
+
+.forms-dados{
+    height: auto;
+}
+
+.seus-dados {
+    margin: 3% 20% 3% 20%;
+    width: 60%;
+}
+
+.org {
+    display: flex;
+    flex-direction: column;
+    margin: 3% 20% 3% 20%;
+    width: 60%;
+}
+
+
+input {
+    border-radius: 10px;
+}
+
+.saldo {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#button-saldo {
+    height: 70px;
+    width: 350px;
+}
+
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background: #2429A61F;
+    width: 90%;
+    margin: 90px 0px 140px 0px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+
+.pagamento {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.metodos-pagamento img {
+    height: 40px;
+    width: 40px;
+    padding-inline: 40px;
+}
+
+#button-pag {
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+label {
+    font-size: 25px;
+    float: left;
+    margin: -8px 25px 0px 0px;
+}
+
+#number1 {
+    width: 200px;
+    height: 30px;
+}
+
+.btn {
+    color: #fff;
+    background-color: #0D116B;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    
+}
+
+.btn:hover {
+    background-color: rgb(13, 110, 253)
+}
+
+
+/*css footer*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+
+
+footer {
+    background: #0D116B;
+    padding: 50px 0;
+}
+
+
+.container-footer {
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.footer-col {
+    padding: 0 15px;
+    width: 25%;
+
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+
+}
+
+.footer-col ul li {
+    margin: 10px 0;
+
+}
+
+.footer-col ul li a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #6e6c6c;
+    padding-left: 10px;
+
+}
+
+.footer-col .rede-social {
+    margin-top: 30px;
+    display: inline-flex;
+}
+
+.footer-col .rede-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.footer-col .rede-social a:hover {
+    color: navy;
+    background-color: white;
+}
+
+.footer-col img {
+    height: 30px;
+    width: 30px;
+    margin: 25px;
+    filter: invert();
+
+
+}
+
+#centro {
+    display: flex;
+    justify-content: center;
+
+}
+
+#vcv {
+    width: 200px;
+
+}
+
+
+/*media query*/
+
+
+
+
+/* Responsividade do HEADER */
+
+@media (max-width: 991px) {
+    /* o hamburguer do bootstrap aparece nessa dimensao */
+
+    .menu-flex {
+        display: block;
+    }
+
+}
+
+@media (max-width: 617px) {
+    /* era 425px */
+
+    #imagens-botoes {
+        padding: 0;
+    }
+
+    .botao {
+        margin-right: 20px;
+    }
+
+
+    .carrossel {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    #imagens-botoes {
+        display: block;
+    }
+
+    #imagens-botoes .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-botoes {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+
+    #inscrever-se {
+        margin-right: 0;
+    }
+
+}
+
+/* Fim da responsividade do HEADER */
+
+/*reponsividade pagina recarga*/
+
+
+@media (max-width:768px) {
+    .container {
+
+        width: 100%;
+
+    }
+}
+
+@media (max-width:768px) {
+    input {
+        width: 400px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width:768px) {
+    .campo {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+}
+
+@media (max-width:1024px) {
+    .campo {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+
+}
+
+@media (max-width:1300px) {
+    .pagamento {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width:425px) {
+
+    .container2 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+    }
+
+    p {
+        margin-bottom: 10%;
+    }
+
+
+    .pagamento {
+        display: flex;
+    }
+
+
+    .metodos-pagamento {
+        display: flex;
+    }
+
+    .cartao {
+        display: flex;
+        flex-direction: column;
+    }
+    .org {
+    margin: 3% 5% 3% 5%;
+    width: 90%;
+    }
+    
+    .seus-dados{
+        margin: 3% 5% 3% 5%;
+        width: 90%;
+    }
+}
+
+
+
+@media (max-width:850px) {
+    .footer-col {
+        width: 50%;
+        margin: 20px;
+
+    }
+}
+
+@media (max-width:925px) {
+    .footer-col {
+        width: 100%;
+        margin-top: 20px;
+        padding: 50px;
+    }
+}
+
+@media (max-width:925px) {
+    .footer-col img {
+        margin: 5px;
+
+
+    }
+}
+
+
+@media (max-width:925px) {
+    ul {
+        padding-left: 0px;
+    }
+}
+
+@media (min-width:768px) {
+
+    .row-footer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+
+}

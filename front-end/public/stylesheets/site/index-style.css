@@ -1,0 +1,686 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+    cores usadas no figma:
+
+    background-color: #0D116B;          AZUL ESCURO
+    background-color: #2429A6;          AZUL MAIS CLARO
+*/
+
+/* botoes */
+
+.botao{
+    background-color: #0D116B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+.botao a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.inscrever{
+    margin-right: -45px;
+}
+
+.inscrever{
+    color: #F2F2F2;
+    font-weight: bolder;
+}
+
+
+.botao-carteirinha{
+    width: 170px;
+}
+
+.botao-sobrenos{
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+}
+
+/* botoes */
+
+.linha-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imagens-botoes{
+    padding: 0px 10%;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.separador-menu{
+    width: 100%;
+    border-top: #0D116B solid 0.5px;
+}
+
+.separador{
+    width: 90%;
+    margin: auto;
+    border-top: #0D116B solid 0.5px;
+}
+
+.header-botoes{
+    position: relative;
+    right: 5px;
+}
+
+.menu-container{
+    width: 90%; 
+    margin: auto;
+}
+
+.menu-navbar{
+    background-color: #0D116B; 
+    border-radius: 5px; 
+    padding: 7px 10px;
+}
+
+.menu-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-link{
+    color: #fff;
+    margin-right: 80px;
+}
+
+.menu-hamburguer{
+    color: #fff;
+    border: #fff solid 1px;
+}
+
+/* css do carrosel, utilizei das classe do bootstrap para editar no css */
+
+.carrossel{
+    width: 90%;
+    margin: 40px auto;
+    height: auto;
+}
+
+.carousel-item{
+    align-items: center;
+}
+
+.carousel-control-prev-icon{
+    color: #000000;
+}
+
+.carousel-control-next-icon{
+    color: #000000;
+}
+
+.seta{
+    color: #000000;
+}
+
+.carousel-inner{
+    border-radius: 5px;
+}
+
+
+
+
+
+.time-line-box{
+    margin-top: 20px;
+}
+
+.time-line-box h1{
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-weight: 500;
+}
+
+.time-line-box span{
+    font-size: larger;
+    margin-top: 60px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+
+.swiper-wrapper{
+    display: inline-flex;
+    width: 100%;
+}
+
+
+.swiper-slide{
+    width: 33.33%;
+    position: relative;
+}
+
+.swiper-slide span{
+    display: block;
+    margin-bottom: 8%;
+}
+
+.swiper-slide img{
+    position: relative;            /* esse position é só pq o z-index n funciona com static */
+    display: block;
+    margin: auto;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+.swiper-slide-first .timeline-bar{
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    left: 50%;
+    top: 15%;
+    z-index: 0;
+    background-color: #2429A6;
+}
+
+.swiper-slide-middle .timeline-bar{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    left: 0px;
+    top: 15%;
+    z-index: 0;
+    background-color: #2429A6;
+}
+
+.swiper-slide-last .timeline-bar{
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    left: 0px;
+    top: 15%;
+    z-index: 0;
+    background-color: #2429A6;
+}
+
+
+
+.time-line-box-2{
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.swiper-responsive{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 60px;
+}
+
+.swiper-responsive span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 241px;
+}
+
+.swiper-responsive img{
+    /* border: #fff solid 1px;         caso adicionar a borda, recalcular as coisas */
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.swiper-responsive-com-linha{
+    padding: 0px 60px;
+    height: 100px;
+    position: relative;
+}
+
+.swiper-responsive-linha{
+    position: absolute;
+    top: -10px;
+    left: 95px;               /* left de 50px MENOS metade da width da linha MAIS o padding de 60px */
+    width: 30px;
+    height: 130px;
+    background-color: #2429A6;
+    z-index: 0;
+}
+
+/* seção de carteirinha */
+
+.section-carteirinha{
+    width: 90%;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+.linha-carteirinha{
+    width: 100%;
+}
+
+.carteirinha-img{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    padding: 10px 0px; 
+    margin: auto;
+    padding-right: 5%;
+}
+
+.texto-carteirinha{
+    padding: 10px 0px; 
+    margin: auto;
+}
+
+.texto-carteirinha h2{
+    margin-bottom: 5%;
+}
+
+.texto-carteirinha p {
+    margin-bottom: 5%;
+}
+
+
+/* fim de seção de carteirinha */
+
+.carteirinhas-disponiveis{
+    margin: 5% 0 5% 0
+}
+
+/* cards */
+
+.section-espacamento{
+    margin-bottom: 5%;
+}
+
+.section-cards{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.card-texto{
+    background-color: #2429A6; 
+    padding: 10px; 
+    border-radius: 10px; 
+    color: #fff; 
+    margin-top: 25px;
+    /* display: flex;
+    justify-content: center;             Caso queira centralizar o conteudo do texto sem usar text-align: center;
+    align-items: center; */
+    min-height: 188px; /* a quantidade de height to maior container de texto */
+}
+
+/* fim de cards */
+
+.map-responsive{
+    overflow:hidden;
+    position: relative;
+    height: 600px;
+}
+
+.map-responsive iframe{
+    left:0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    height:100%;
+    width:90%;
+    position:absolute;
+    margin: auto;
+}
+
+/* linhas do onibus */
+
+#linhas-onibus h3{
+    margin: 80px 0px 20px 0px;
+}
+
+#linhas-onibus img{
+    width: 90%;
+}
+
+.listas-das-linhas{
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    row-gap: 80px;
+    width: 90%;
+    margin: auto;
+}
+
+.lista-linha{
+    width: 32%; 
+    min-width: 300px;
+}
+
+.lista-linha li{
+    font-size: 14px;
+}
+
+#linhas-onibus ul{
+    list-style: none;
+    border-radius: 20px;
+    border: #000000 solid 1px;
+    padding: 20px;
+}
+
+#linhas-onibus .middle-li{
+    margin-bottom: 5px;
+    overflow-x: hidden;
+    border-top: #000000 solid 1px;
+}
+
+.start-li{
+    border-top: #000000 solid 0px;
+}
+
+/* fim das linhas de onibus */
+
+/* parte final */
+
+.final{
+    margin: 20px auto;
+    width: 90%;
+}
+
+.item-final{
+    margin-top: 80px;
+}
+
+
+/* fim da parte final */
+
+/*inicio do footer*//*css footer*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+
+
+footer {
+    background: #0D116B;
+    padding: 50px 0;
+}
+
+
+.container-footer {
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.footer-col {
+    padding: 0 15px;
+    width: 25%;
+
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+    margin: 0px 0px 0px -33px;
+
+}
+
+.footer-col ul li {
+    margin: 10px 0;
+
+}
+
+.footer-col ul li a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #6e6c6c;
+    padding-left: 10px;
+
+}
+
+.footer-col .rede-social {
+    margin-top: 30px;
+}
+
+.footer-col .rede-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.footer-col .rede-social a:hover {
+    color: navy;
+    background-color: white;
+}
+
+.footer-col img {
+    height: 30px;
+    width: 30px;
+    margin: 17px;
+    filter: invert();
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* responsividade apenas da imagem da carteirinha */
+@media (max-width: 1199px){
+    .carteirinha-img{
+        padding-right: 0px;
+    }
+}
+
+/* Responsividade do HEADER */
+
+@media (max-width: 991px) {      /* o hamburguer do bootstrap aparece nessa dimensao */
+    
+    .menu-flex{
+        display: block;
+    }
+
+}
+
+@media (max-width: 617px) {   /* era 425px */
+
+    #imagens-botoes{
+        padding: 0;
+    }
+
+    .botao{
+        margin-right: 20px;
+    }
+
+
+    .carrossel{
+        width: 100%;
+    }
+
+}   
+
+@media (max-width: 400px) {   
+
+    #imagens-botoes{
+        display: block;
+    }
+
+    #imagens-botoes .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-botoes{
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+
+    #inscrever-se{
+        margin-right: 0;
+    }
+
+}  
+
+/* Fim da responsividade do HEADER */
+
+/* responsividade da time-line ou tres imagens seguidas sla */
+
+@media (max-width: 800px){
+
+    .time-line-box{
+        display: none;
+    }
+
+    .time-line-box-2{
+        display: block;
+    }
+}
+
+@media (max-width: 500px){
+
+    .time-line-box{
+        display: none;
+    }
+
+    .time-line-box-2{
+        display: block;
+    }
+
+    .swiper-responsive{
+        padding: 0px 20px;
+    }
+
+    .swiper-responsive-com-linha{
+        padding: 0px 20px;
+    }
+
+    .swiper-responsive-linha{
+        left: 55px;               /* left de 50px MENOS metade da width da linha MAIS o padding de 20px */
+    }
+}
+
+@media (max-width: 410px){
+
+    .time-line-box{
+        display: none;
+    }
+
+    .time-line-box-2{
+        display: block;
+    }
+
+    .swiper-responsive{
+        padding: 0px 5px;
+    }
+
+    .swiper-responsive span{
+        min-width: 0;
+        width: 200px;
+    }
+
+    .swiper-responsive-com-linha{
+        padding: 0px 5px;
+    }
+
+    .swiper-responsive-linha{
+        left: 40px;               /* left de 50px MENOS metade da width da linha MAIS o padding de 20px */
+    }
+}
+
+/* fim da responsividade da time-line ou tres imagens seguidas sla */
+
+
+/* continuar os outros media queries aqui */
+
+/*inicio resposividade footer*/
+
+@media (max-width:850px) {
+    .footer-col {
+        width: 50%;
+        margin: 20px;
+
+    }
+}
+
+@media (max-width:925px) {
+    .footer-col {
+        width: 100%;
+        margin-top: 20px;
+        padding: 50px;
+    }
+}
+
+@media (max-width:925px) {
+    .footer-col img {
+        margin: 5px;
+
+    }
+}
+
+
+@media (max-width:925px) {
+    .footer-col .rede-social {
+        margin-top: 30px;
+        display: inline-flex;
+    }
+
+    
+}
+
+
+@media (min-width:768px){
+    
+.row-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-top: 100px;
+}
+
+}
+
+
+/*fim da resoponsividade do footer*/
