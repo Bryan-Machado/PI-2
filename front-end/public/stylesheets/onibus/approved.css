@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* cores usadas no figma: 
+        background-color: #1A226F;    AZUL
+        background-color: #F15249;    VERMELHO
+        background-color: #54C147;    VERDE
+
+
+    O padrão de margin e padding usados são de 80px
+
+    o font-size do h1 presente é de 34px, assim como no figma
+*/
+
+body{
+    display: flex;
+    align-items: center;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #54c147;
+    width: 768px;
+    max-height: 1024px;
+    padding: 80px 0px;
+    margin: auto auto;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    margin-bottom: 80px;
+    border: black solid 2px;
+}
+
+.errorpng{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+section  h1{
+    color: white;
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+section h2{
+    margin-bottom: 50px;           /* só o h2 tem margin bottom */
+}
+
+section h2, h3{
+    font-size: 25px;
+    text-align: center;            /* se aplica ao h2 e h3 */
+    color: white;
+}
+
+section var{
+    font-style: normal;       /* o elemento var tem o font-style: italic; como padrão */
+}
