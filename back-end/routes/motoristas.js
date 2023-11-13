@@ -85,7 +85,7 @@ router.post('/cadastrar', async (req, res) => {
 });
 
 /* PUT api/motoristas/atualizar/5 => atualiza TODOS OS DADOS do motorista de id 5 */
-router.put('/atualizar/:id', async (req, res) => {
+router.patch('/atualizar/:id', async (req, res) => {
   
   try {
     const id = parseInt(req.params.id)
