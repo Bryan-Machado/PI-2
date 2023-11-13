@@ -12,7 +12,6 @@
 
 <body>
 
-    
     <header>
         <div class="linha-between" id="imagens-botoes">
             <div class="logo">
@@ -20,45 +19,47 @@
             </div>
             
             <div class="header-botoes">
-              <button class="botao login"><a href="http://localhost:3000/logar">Login</a></button>
+              <button class="botao login"><a href="./Login.html">Login</a></button>
                 <button class="botao inscrever" id="inscrever-se">Adquira já</button>
             </div>
         </div>
-      
+
         <div class="separador-menu"></div>
-      
-        <nav class="navbar navbar-expand-lg bg-body-tertiary menu-container" style="padding: 0px;">
-          <div class="container-fluid menu-navbar">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary menu-container" style="padding: 0px; position: relative;">
+          <div class="container-fluid menu-navbar" style="position: absolute; z-index: 1; top: 0px;">
             <button class="navbar-toggler menu-hamburguer" type="button" data-bs-toggle="collapse" data-bs-theme="dark" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse menu-flex" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link menu-link" aria-current="page" href="http://localhost:3000">Página Inicial</a>
+                  <a class="nav-link menu-link" aria-current="page" href="index.html">Página Inicial</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link menu-link" href="http://localhost:3000/carteirinha">Seu Cartão</a>
+                  <a class="nav-link menu-link" href="Faça-sua-Carteirinha.html">Seu Cartão</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link menu-link" href="http://localhost:3000/recarregar">Recarga</a>
+                  <a class="nav-link menu-link" href="recarga-cartao.html">Recarga</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link menu-link" href="http://localhost:3000/sobre">Sobre Nós</a>
+                  <a class="nav-link menu-link" href="Sobre-nos.html">Sobre Nós</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link menu-link" href="http://localhost:3000/atendimento">Atendimento</a>
+                  <a class="nav-link menu-link" href="Atendimento.html">Atendimento</a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
-      </header>
+    </header>
 
-      <main>
+
+
+    <main>
         <section class="pagina-esqueci-senha">
             <div class="imagem-login">
-                <img src="../img/Imagem Login.png" alt="">
+                <img src="/images/Imagem Login.png" alt="">
             </div>
 
             <div class="esqueci-senha-forms">
@@ -85,59 +86,16 @@
             </div>
         </section>
     </main>
-   
-
-    <footer>
-        <div class="container-footer">
-            <div class="row-footer">
-    
-                <!--coluna 1-->
-                <div class="footer-col">
-                    <h4>Produtos</h4>
-                    <ul>
-                        <li><a href="#">Conta Digital</a></li>
-                        <li><a href="#">Cartão de transporte</a></li>
-                        <li><a href="#">Recarga</li>
-                    </ul>
-                </div>
-                <!--fim da coluna 1-->
-    
-                <!--coluna 2-->
-                <div class="footer-col">
-                    <h4>Atendimento</h4>
-                    <ul>
-                        <li><a href="#">Atendimento whatsaap</a></li>
-                        <li><a href="#">Duvidas Frequentes</a></li>
-                        <li><a href="#">Contato institucional</a></li>
-                        <!--<li><a href="#">sadasfaf@gmail.com</a></li>-->
-                    </ul>
-                </div>
-                <!--fim da coluna 2-->
-    
-                <!--coluna 4-->
-                <div class="footer-col">
-                    <h4>Nos siga nas redes socias</h4>
-                    <div class="rede-social">
-                        <img src="/images/instagram.png" alt="">
-                        <img src="/images/twitter.png" alt="">
-                        <img src="/images/facebook.png" alt="">
-    
-    
-    
-    
-                    </div>
-                </div>
-                <!--fim da coluna 4-->
-            </div>
-        </div>
-    </footer>
 
 
 
-
-       
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
+
+
+

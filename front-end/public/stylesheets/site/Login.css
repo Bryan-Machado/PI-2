@@ -78,9 +78,6 @@
     background-color: #0D116B; 
     border-radius: 5px; 
     padding: 7px 10px;
-    position: absolute;
-    top: 0px;
-    z-index: 1;
 }
 
 .menu-flex{

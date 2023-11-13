@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page. */
 // http://localhost:3000     OU     http://localhost:3000/
 router.get('/', function(req, res, next) {
-  res.render('site/pages/index');
+  res.render('pages/index');
 });
 
 // router.get('/atendimento', function(req, res, next) {
