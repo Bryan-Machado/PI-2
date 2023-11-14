@@ -158,10 +158,10 @@
                                     <form class="" action="" id="form" method="post" enctype="multipart/form-data" novalidate>
 
                                         <div class="container-foto">
-                                            <label class="foto" for="foto-input">
+                                            <label class="foto" for="fotoInput">
                                                 <span class="foto-texto" id="foto-texto"></span>
                                             </label>
-                                            <input class="foto-input" type="file" accept="image/*" id="foto-input" name="foto"> <!-- nome "foto" que vai ficar no banco -->
+                                            <input class="foto-input" type="file" accept="image/*" id="fotoInput" name="fotoInput"> <!-- nome "foto" que vai ficar no banco -->
                                         </div>
 
                                         <div class="field item form-group">
@@ -174,7 +174,7 @@
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">CPF<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" data-validate-length-range="6" id="CPF" data-validate-words="1" name="cpf" required="required" />
+                                                <input class="form-control" data-validate-length-range="6" id="cpf" data-validate-words="1" name="cpf" required="required" />
                                             </div>
                                         </div>
 
@@ -293,7 +293,7 @@
     <script src="/build/js/custom.min.js"></script>
 
     <script>
-        const foto = document.querySelector('#foto-input');
+        const foto = document.querySelector('#fotoInput');
         const imagem = document.querySelector('#foto-texto');
         const imagemTxt = 'Escolha uma foto de perfil';
         imagem.innerHTML = imagemTxt;
@@ -325,7 +325,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/javascripts/admin/flashMenssage.js"></script>
-    <script src="/javascripts/admin/cadastrar-motorista.js"></script>
+    <!-- <script src="/javascripts/admin/cadastrar-motorista.js"></script> -->
+    <script src="/javascripts/admin/cadastrar-motorista-upload.js"></script>
 
 </body>
 

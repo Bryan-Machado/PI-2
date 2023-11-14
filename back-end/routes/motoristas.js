@@ -69,13 +69,22 @@ router.post('/cadastrar', async (req, res) => {
   try {
 
     const dados = req.body
+    const upload = req.upload || null;
+    if (upload) {
+      console.log(upload); // Exibe o objeto upload no terminal.
+      dados.image = upload.customPath; // Acrescenta o caminho para salvar no banco de dados.
+    }
 
     const motorista = await prisma.motorista.create({
       data: dados
     })
-    res.status(200).json(motorista)
+
+    const baseUrl = `${req.protocol}://${req.headers.host}`; // Obtém o base URL do servidor.
+    motorista.image = `${baseUrl}/${motorista.image}`;
+    res.status(201).json(motorista)
 
   } catch (exception) {
+    console.log(exception)
     let error = exceptionHandler(exception)
     res.status(error.code).json({
       error: error.message
