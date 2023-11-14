@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form method="post" id="form">
+      Email: <input type="text" name="email" id="email"> <br />
+      Senha: <input type="password" name="password" id="password"> <br />
+      <input type="submit" value="Entrar">
+    </form>
+
+    <form enctype="multipart/form-data" method="post" id="form_upload">
+      <h1>Cadastrar usuário com foto</h1>
+      Email: <input type="text" name="email" id="email"> <br />
+      Senha: <input type="password" name="password" id="password"> <br />
+      Foto: <input type="file" name="uploaded_file">  <br />
+      <input type="submit" value="Cadastrar">     
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js" integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/javascripts/manager.js"></script>
+    <script src="/javascripts/login.js"></script>
+    <script src="/javascripts/user_create.js"></script>
+  </body>
+</html>

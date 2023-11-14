@@ -46,6 +46,7 @@ model motorista {
   email        String   @db.VarChar(100)
   nascimento   DateTime @db.Date
   numeroTel    String   @db.VarChar(20)
+  fotoInput    String   @db.VarChar(200)
 }
 
 model motorista_onibus {
