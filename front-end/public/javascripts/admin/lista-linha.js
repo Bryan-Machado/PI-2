@@ -91,9 +91,9 @@ $(document).ready(function() {
       {
         "data": "ações",
         "render": function(data, type, row, meta) {
-          return '<a href="http://localhost:3000/linhas/exibir/' + row.id + '">Visualizar</a> / ' +
-            '<a href="http://localhost:3000/linhas/editar/' + row.id + '">Editar</a> / ' +
-            '<a href="http://localhost:3000/linhas/excluir/' + row.id + '">Excluir</a>';
+          return '<a href="http://localhost:3000/admin/vizualizar-linha/' + row.id + '">Visualizar</a> / ' +
+            '<a href="http://localhost:3000/admin/editar-linha/' + row.id + '">Editar</a> / ' +
+            '<a href="http://localhost:3000/admin/deletar-linha/' + row.id + '">Excluir</a>';
         }
       }
     ],

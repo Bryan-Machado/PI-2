@@ -37,7 +37,7 @@
 
 
 $(document).ready(function() {
-  $('#table-motoristas').DataTable({
+  $('#table-motorista').DataTable({
     "ajax": {
       "url": "http://localhost:5000/api/motoristas",
       "dataSrc": ""
