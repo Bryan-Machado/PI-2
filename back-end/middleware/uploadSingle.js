@@ -15,12 +15,12 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage }); // Criar uma instância do multer para gerenciar o upload.
-const allowedTypes = ['image/jpeg', 'image/png']; // Lista de MIME types permitidos.
+const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg']; // Lista de MIME types permitidos.
 const maxSize = 5 * 1024 * 1024; // 5MB tamanho máximo permitido para o arquivo.
 const errors = []; // array para registrar os erros.
 
 const uploadSingle = (req, res, next) => { // Implementa o middleware para o upload.
-  upload.single('uploaded_file')(req, res, (err) => {  // Processa o upload usando a instância do multer.
+  upload.single('fotoInput')(req, res, (err) => {  // Processa o upload usando a instância do multer.
     if (err) {
       return res.status(400).json({ error: err.message });
     }
