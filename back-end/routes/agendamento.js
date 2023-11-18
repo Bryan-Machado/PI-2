@@ -25,7 +25,11 @@ router.get("/", async (req, res) => {
   try {
 
     const agendamento = await prisma.agendamento.findMany({
-      where: {},
+      where: {
+        dia: { 
+          gte: new Date(),
+        }
+      },
       distinct: ['dia'],
     });
 
@@ -41,13 +45,18 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/agendar", async (req, res) => {
+router.patch("/agendar/:id", async (req, res) => {
   try {
     const dados = req.body;
+    const id = req.params.id
     console.log(req.body);
 
-    const agendamento = await prisma.agendamento.create({
+    const agendamento = await prisma.agendamento.update({
       data: dados,
+
+      where: { 
+        id: parseInt(id)
+      }
     });
     console.log(agendamento);
     res.status(200).json(agendamento);
@@ -63,12 +72,11 @@ router.post("/agendar", async (req, res) => {
 
 router.get("/horario/:diaEscolhido", async (req, res) => {
   try {
-    const diaEscolhido = req.params.diaEscolhido
+    let diaEscolhido = req.params.diaEscolhido
+    diaEscolhido =  `${diaEscolhido}T00:00:00.000Z`
     const agendamento = await prisma.agendamento.findMany({
       where: { nomCompleto: null, 
-        dia: { 
-          gte: new Date(),
-        }, 
+        dia: diaEscolhido 
       },
 
     });

@@ -6,9 +6,10 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
 
       const dia =  document.querySelector("#dia")
+        
         response.data.forEach((agendamento) =>{
           var option = document.createElement("option")
-            option.innerHTML = `<option id="diaId" value="${agendamento.dia.split("T")[0]}">${agendamento.dia.split("T")[0]}</option>`
+            option.innerHTML = `<option id="${agendamento.id}" value="${agendamento.dia.split("T")[0]}">${agendamento.dia.split("T")[0]}</option>`
             dia.appendChild(option)
         })
       

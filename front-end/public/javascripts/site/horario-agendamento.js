@@ -12,25 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     const dia = document.querySelector("#dia");
-
+   
     dia.addEventListener("change", async (event) =>{
         event.preventDefault();
-        
-        
 
         const diaEscolhido = dia.value
 
-        
-
         try {
             const response = await axios.get(`http://localhost:5000/api/agendamento/horario/${diaEscolhido}`);
-      
-      
-            const horario =  document.querySelector("#horario")
+            
+            
+            const hora =  document.querySelector("#hora")
+            hora.innerHTML = ``
               response.data.forEach((agendamento) =>{
+                console.log(agendamento);
                 var option = document.createElement("option")
-                  option.innerHTML = `<option value="${formatarHorario(agendamento.horario)}">${formatarHorario(agendamento.horario)}</option>`
-                  dia.appendChild(option)
+                  option.innerHTML = `<option data-id="${agendamento.id}" value="${formatarHorario(agendamento.hora)}">${formatarHorario(agendamento.hora)}</option>`
+                  console.log(option);
+                  hora.appendChild(option)
               })
 
             } catch (error) {
