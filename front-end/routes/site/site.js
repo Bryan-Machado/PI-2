@@ -20,7 +20,8 @@ router.get('/esquecisenha', function(req, res, next) {
 
 // http://localhost:3000/carteirinha
 router.get('/carteirinha', function(req, res, next) {
-  res.render('pages/Faça-sua-carteirinha');
+  res.render('pages/Faça-sua-carteirinha')
+  res.render('site/agendamento');
 });
 
 // http://localhost:3000/logar
