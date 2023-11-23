@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
-function generateAccessToken( dados, options={expiresIn: '1800s'}){
-    return jwt.sign(dados, process.env.SECRET_KEY, options);
+function generateAccessToken(data, options={ expiresIn: '1800s' }){
+    return jwt.sign(data, process.env.SECRET_KEY, options);
 }
 
 function authenticateToken(req, res, next) {

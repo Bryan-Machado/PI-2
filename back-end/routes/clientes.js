@@ -3,6 +3,8 @@ var router = express.Router();
 
 const { PrismaClient, Prisma } = require('@prisma/client');
 const prisma = new PrismaClient({errorFormat: 'minimal'});
+const bcrypt = require('bcryptjs');
+const { generateAccessToken, authenticateToken } = require('../auth');
 
 
 
@@ -78,6 +80,12 @@ router.post('/cadastrar', async (req, res) => {
 
     const dados = req.body
     console.log(req.body)
+    if (!dados.senha || dados.senha.length < 8) {
+      return res.status(400).json({
+        error: "A senha é obrigatória e deve conter no mínimo 8 caracteres!"
+      });
+    }
+    dados.senha = await bcrypt.hash(dados.senha, 10);
 
     const cliente = await prisma.cliente.create({
       data: dados
@@ -100,9 +108,9 @@ router.post('/cadastrar', async (req, res) => {
 router.post('/login', async(req, res) => {
   try {
     const dados = req.body;
-    if (!'senha' in dados || !'email' in dados) {
+    if (!'senha' in dados || !'cpf' in dados) {
       return res.status(401).json({
-        error: "Usuário e senha são obrigatórios"
+        error: "CPF e senha são obrigatórios"
       });
     }
     const cliente = await prisma.cliente.findUniqueOrThrow({
@@ -115,10 +123,10 @@ router.post('/login', async(req, res) => {
     );
     if (!passwordCheck) {
       return res.status(401).json({
-        error: "Usuário e/ou senha incorreto(s)"
+        error: "CPF e/ou senha incorreto(s)"
       });
     }
-    delete cliente.password;
+    delete cliente.senha;
     const jwt = generateAccessToken(cliente);
     cliente.accessToken = jwt;
     res.json(cliente);
@@ -132,7 +140,7 @@ router.post('/login', async(req, res) => {
 });
 
 /* PUT api/clientes/atualizar/5 => atualiza TODOS OS DADOS do cliente de id 5 */
-router.patch('/atualizar/:id', async (req, res) => {
+router.patch('/atualizar/:id', authenticateToken, async (req, res) => {
   
   try {
     const id = parseInt(req.params.id)
@@ -154,6 +162,32 @@ router.patch('/atualizar/:id', async (req, res) => {
   }
 
 });
+
+router.patch('/recarregar/:idcliente', authenticateToken, async (req, res) => {
+  const id = parseInt(req.params.idcliente)
+  const dados = req.body
+
+  const velhoCliente = await prisma.cliente.findUnique({
+    select: {
+      saldo: true
+    },
+    where: {
+      id: id
+    }
+  })
+  const novoSaldo = velhoCliente.saldo + dados.valor
+
+  const cliente = await prisma.cliente.update({
+    data: {
+      saldo: novoSaldo
+    },
+    where: {
+      id: id
+    }
+  })
+
+  res.json(cliente)
+})
 
 /* delete api/clientes/deletar/6 => deleta o cliente de id 6 */
 router.delete('/deletar/:id', async (req, res) => {
