@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
   
       if (form.checkValidity()) {
-        const email = document.querySelector("#email").value;
+        const cpf = document.querySelector("#email").value;
         const password = document.querySelector("#password").value;
   
         const data = { email, password };
   
         try {
-          const response = await axios.post("http://localhost:5000/api/users/login", data);
+          const response = await axios.post("http://localhost:5000/api/clientes/login", data);
   
           const token = response.data.accessToken;
           setCookie('token', token);

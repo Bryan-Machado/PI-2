@@ -45,6 +45,11 @@ const decodeToken = (token) => {
     }
 }
 
+
+document.addEventListener("DOMContentLoaded", async (event) => {
+    const tokenDaSessao = getCookie('token');
+})
+
 // Exemplo de uso:
 // setCookie("token", "valor");
 // Decodificar um JWT:
