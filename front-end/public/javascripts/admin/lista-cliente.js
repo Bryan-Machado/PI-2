@@ -12,7 +12,20 @@ $(document).ready(function() {
         "data": "email"
       },
       {
-        "data": "nascimento"
+        "data": "nascimento",
+        "render": function(data) {
+
+          var nascimentoformatado = data.split("T")[0]
+
+          var ano = nascimentoformatado.split("-")[0]
+          var mes = nascimentoformatado.split("-")[1]
+          var dia = nascimentoformatado.split("-")[2]
+
+          var datacerta = `${dia}/${mes}/${ano}`
+
+
+          return  datacerta;
+        },
       },
       {
         "data": "numeroTel"

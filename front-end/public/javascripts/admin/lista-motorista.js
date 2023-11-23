@@ -42,14 +42,39 @@ $(document).ready(function() {
       "url": "http://localhost:5000/api/motoristas",
       "dataSrc": ""
     },
-    "columns": [{
+    "columns": [
+      {
+        "data": "fotoInput",
+        "render": function(data, type, row, meta) {
+
+          var data = data
+
+          var link = `<div class="image view" style="max-width: 75px; max-height: 75px"><img style="width: 100%; height: 100%; display: block; justify-content: center"  src="http://localhost:5000/${data}" alt="image"></div>`
+
+          return link;
+        }
+      },
+      {
         "data": "nomeCompleto"
       },
       {
         "data": "email"
       },
       {
-        "data": "nascimento"
+        "data": "nascimento",
+        "render": function(data) {
+
+          var nascimentoformatado = data.split("T")[0]
+
+          var ano = nascimentoformatado.split("-")[0]
+          var mes = nascimentoformatado.split("-")[1]
+          var dia = nascimentoformatado.split("-")[2]
+
+          var datacerta = `${dia}/${mes}/${ano}`
+
+
+          return  datacerta;
+        },
       },
       {
         "data": "numeroTel"
@@ -57,9 +82,9 @@ $(document).ready(function() {
       {
         "data": "ações",
         "render": function(data, type, row, meta) {
-          return '<a href="http://localhost:3000/linhas/exibir/' + row.id + '">Visualizar</a> / ' +
-            '<a href="http://localhost:3000/linhas/editar/' + row.id + '">Editar</a> / ' +
-            '<a href="http://localhost:3000/linhas/excluir/' + row.id + '">Excluir</a>';
+          return '<a href="http://localhost:3000/admin/vizualizar-motorista/' + row.id + '">Visualizar</a> / ' +
+            '<a href="http://localhost:3000/admin/editar-motorista/' + row.id + '">Editar</a> / ' +
+            '<a href="http://localhost:3000/admin/deletar-motorista/' + row.id + '">Excluir</a>';
         }
       }
     ],

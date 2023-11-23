@@ -60,5 +60,19 @@ router.get("/editar-linha/:id", function (req, res, next) {
   res.render("admin/editar_linha");
 });
 
+// http://localhost:3000/admin/vizualizar-motorista/:id
+router.get("/vizualizar-motorista/:id", function (req, res, next) {
+  res.render("admin/vizualizar_motorista");
+});
+
+// http://localhost:3000/admin/deletar-motorista/:id
+router.get("/deletar-motorista/:id", function (req, res, next) {
+  res.render("admin/deletar_motorista");
+});
+
+// http://localhost:3000/admin/editar-motorista/:id
+router.get("/editar-motorista/:id", function (req, res, next) {
+  res.render("admin/editar_motorista");
+});
 
 module.exports = router;

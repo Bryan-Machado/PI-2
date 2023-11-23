@@ -51,7 +51,9 @@ router.get('/:id', async (req, res) => {
         nomeCompleto: true,
         email: true,
         nascimento: true,
-        numeroTel: true
+        numeroTel: true,
+        cpf: true,
+        fotoInput: true
       }
     });
     res.status(200).json(motorista)
@@ -96,7 +98,7 @@ router.post('/cadastrar', uploadSingle, async (req, res) => {
 });
 
 /* PUT api/motoristas/atualizar/5 => atualiza TODOS OS DADOS do motorista de id 5 */
-router.patch('/atualizar/:id', async (req, res) => {
+router.patch('/atualizar/:id', uploadSingle, async (req, res) => {
   
   try {
     const id = parseInt(req.params.id)

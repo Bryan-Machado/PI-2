@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       document.querySelector("#localSaida").value = linha.localSaida;
       document.querySelector("#localDestino").value = linha.localDestino;
       document.querySelector("#horaSaida").value = formatarHorario(linha.horaSaida);
-    //   document.querySelector("#senha").value = linha.senha;
       document.querySelector("#horaChegada").value = formatarHorario(linha.horaChegada);
     } catch (error) {
       triggerFlashMessage("danger", error.message);
