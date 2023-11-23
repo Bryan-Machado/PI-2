@@ -178,7 +178,9 @@ router.patch('/recarregar/:idcliente', authenticateToken, async (req, res) => {
   const novoSaldo = velhoCliente.saldo + dados.valor
 
   const cliente = await prisma.cliente.update({
-    data: novoSaldo,
+    data: {
+      saldo: novoSaldo
+    },
     where: {
       id: id
     }

@@ -28,5 +28,5 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
     const formPatch = document.querySelector('#formulario-recarregar');
 
-    const
+    const valor = document.querySelector('#Valor'); //aqui nois devemos pegar os dados do formulario que vamos enviar para recarregar
 })
