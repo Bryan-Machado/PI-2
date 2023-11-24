@@ -103,6 +103,11 @@ router.patch('/atualizar/:id', uploadSingle, async (req, res) => {
   try {
     const id = parseInt(req.params.id)
     const dados = req.body
+    const upload = req.upload || null;
+    if (upload) {
+      console.log(upload); // Exibe o objeto upload no terminal.
+      dados.fotoInput = upload.customPath; // Acrescenta o caminho para salvar no banco de dados.
+    }
 
     const motorista = await prisma.motorista.update({
       data: dados,
