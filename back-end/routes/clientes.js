@@ -141,7 +141,7 @@ router.post('/login', async(req, res) => {
 });
 
 /* PUT api/clientes/atualizar/5 => atualiza TODOS OS DADOS do cliente de id 5 */
-router.patch('/atualizar/:id', authenticateToken, async (req, res) => {
+router.patch('/atualizar/:id', /*authenticateToken,*/ async (req, res) => {
   
   try {
     const id = parseInt(req.params.id)
@@ -156,6 +156,7 @@ router.patch('/atualizar/:id', authenticateToken, async (req, res) => {
     res.status(200).json(cliente)
 
   } catch (exception) {
+    console.log(exception)
     let error = exceptionHandler(exception)
     res.status(error.code).json({
       error: error.message
@@ -164,7 +165,7 @@ router.patch('/atualizar/:id', authenticateToken, async (req, res) => {
 
 });
 
-router.patch('/recarregar/:idcliente', authenticateToken, async (req, res) => {
+router.patch('/recarregar/:idcliente', /*authenticateToken,*/ async (req, res) => {
   const id = parseInt(req.params.idcliente)
   const dados = req.body
 
