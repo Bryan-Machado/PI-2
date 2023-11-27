@@ -132,6 +132,7 @@ router.post('/login', async(req, res) => {
     res.json(cliente);
   }
   catch (exception) {
+    console.log(exception)
     let error = exceptionHandler(exception);
     return res.status(error.code).json({
       error: error.message

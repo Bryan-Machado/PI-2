@@ -6,25 +6,41 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         }
     
     const tokenDecodificado = decodeToken(tokenDaSessao)
-    conbsole.log(tokenDecodificado)
+    console.log(tokenDecodificado)
 
-    const formGet = document.querySelector('#seus-dados'); // formulario que recebera dados do banco preenchidos
+    const campoNome = document.querySelector('#nome');
+    const campoCPF = document.querySelector('#cpf');
+    const botaoSaldo = document.querySelector('#button-saldo');
 
-    const nomeGet = document.querySelector('#Nome'); // campo ainda não preenchido, devemos preencher com os dados da response e também desabilitar o campo
-    const ciGet = document.querySelector('#CI'); // campo de CI, seja lá oque isso seja
+    var saldoCliente, cpfCliente, nomeCliente;
 
     try {
         const response = await axios.get(`http://localhost:5000/api/clientes/${tokenDecodificado.id}`);
 
-        // nomeGet.value = response.data.nomeCompleto;                     Isso é o que eu assumo que voce quer fazer com este formulario.
-        // ciGet.value = response.data.id;
+        saldoCliente = response.data.saldo;
+        cpfCliente = response.data.cpf;
+        nomeCliente = response.data.nomeCompleto;
 
-        // nomeGet.disabled = true                                          desabilitando os campos pro usuario não mexer
-        // ciGet.disabled = true
         
     } catch (error) {
         alert(error.message)
     }
+
+    botaoSaldo.setAttribute('clicado', 'nao')
+
+    botaoSaldo.addEventListener('click', (event) => {
+        if (botaoSaldo.attributes.clicado.value == 'nao'){
+            botaoSaldo.innerHTML = `R$${saldoCliente}`
+            botaoSaldo.attributes.clicado.value = 'sim'
+        } else {
+            botaoSaldo.innerHTML = "******"
+            botaoSaldo.attributes.clicado.value = 'nao'
+        }
+    })
+
+    campoNome.value = nomeCliente;
+    campoCPF.value = cpfCliente;
+    
 
     const formPatch = document.querySelector('#formulario-recarregar');
 
