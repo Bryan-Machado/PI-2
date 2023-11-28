@@ -48,6 +48,38 @@ const decodeToken = (token) => {
 
 document.addEventListener("DOMContentLoaded", async (event) => {
     const tokenDaSessao = getCookie('token');
+    let loginCheck;
+    let token;
+    try {
+        token = decodeToken(tokenDaSessao);
+        loginCheck = true;
+    } catch (error) {
+        console.log('Você não logou ou não forneceu um token de login válido. Por favor, faça seu login!')
+    }
+
+    if (loginCheck){
+        const element = document.querySelector('.header-botoes');
+        element.innerHTML = '';
+        let mensagem = `Bem vindo, ${token.nomeCompleto}`;
+        element.innerHTML = `
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #0D116B;">
+                    ${mensagem}
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" id="botao-logout">Log out</a></li>
+                </ul>
+            </div>
+        `
+        const botaoLogout = document.querySelector('#botao-logout')
+        botaoLogout.addEventListener('click', (event) => {
+            deleteCookie('token');
+
+            window.location.href = 'http://localhost:3000/logar'
+        })
+
+    }
+
 })
 
 // Exemplo de uso:
