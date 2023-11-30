@@ -108,7 +108,7 @@
 .imagem-login img{
     width: 100%;
     height: 92vh;
-    z-index: 0;
+    z-index: 1;
 }
 
 .login-forms{
@@ -121,7 +121,7 @@
 .pagina-login{
     display: flex;
     position: relative;
-    z-index: 0;
+    z-index: 1;
 }
 
 .formulario-login{

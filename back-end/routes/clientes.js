@@ -109,6 +109,7 @@ router.post('/login', async(req, res) => {
   try {
     const dados = req.body;
     if (!'senha' in dados || !'cpf' in dados) {
+      console.log('erro senha cpf')
       return res.status(401).json({
         error: "CPF e senha são obrigatórios"
       });
@@ -122,6 +123,7 @@ router.post('/login', async(req, res) => {
       dados.senha, cliente.senha
     );
     if (!passwordCheck) {
+      console.log('password check')
       return res.status(401).json({
         error: "CPF e/ou senha incorreto(s)"
       });
@@ -215,6 +217,8 @@ router.delete('/deletar/:id', async (req, res) => {
 
 // GET /api/clientes/2/viagens => pega todas as viagens que o cliente de id 2 já embarcou
 router.get('/:id/viagens', async (req, res) => {
+
+
   try {
     const id = parseInt(req.params.id)
 
@@ -232,6 +236,36 @@ router.get('/:id/viagens', async (req, res) => {
     })
   }
 })
+
+
+router.patch('/novasenha', async (req, res) =>{
+  
+
+  
+  try {
+    const cpf = req.body.cpf
+    var novasenha = req.body.novasenha
+
+    novasenha = await bcrypt.hash(novasenha, 10);
+
+    const cliente = await prisma.cliente.update({
+      data: {
+        senha : novasenha
+      },
+      where: {
+        cpf : cpf
+      }
+    })
+
+    res.json(cliente)
+    
+  } catch (exception) {
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+  })
 
 // resposta pra rotas nao existentes
 router.all('*', (req, res) => { 

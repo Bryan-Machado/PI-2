@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* cores usadas no figma: 
+        background-color: #1A226F;    AZUL
+        background-color: #F15249;    VERMELHO
+        background-color: #54C147;    VERDE
+
+
+    O padrão de margin e padding usados são de 80px
+
+    o font-size do h1 presente é de 34px, assim como no figma
+*/
+
+body{
+    display: flex;
+    align-items: center;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1A226F;
+    width: 768px;
+    max-height: 1024px;
+    padding: 80px 0px;
+    margin: auto auto;
+}
+
+.logo img{
+    margin-bottom: 80px;
+    border: black solid 2px;
+}
+
+
+figure{
+    display: flex;
+    justify-content: center;
+}
+
+.cartao-icon img{
+    border-radius: 50%;
+}
+
+section  h1{
+    color: white;
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.seta{
+    margin-bottom: 80px;
+}

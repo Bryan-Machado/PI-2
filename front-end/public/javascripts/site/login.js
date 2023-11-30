@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log(tokenInfo);
 
           // redireciona se necessário.
-          // window.location.href = `http://localhost:3000/`;
+          window.location.href = `http://localhost:3000/`;
         } catch (error) {
           // tratar em caso de erro: mensagens, redireciona, etc.
           console.log(error.message);
