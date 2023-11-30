@@ -29,12 +29,12 @@ function exceptionHandler(e) {
 router.post('/login', async(req, res) => {
     try {
       const dados = req.body;
-      if (!'senha' in dados || !'cpf' in dados) {
+      if (!'senha' in dados || !'email' in dados) {
         return res.status(401).json({
-          error: "CPF e senha são obrigatórios"
+          error: "Email e senha são obrigatórios"
         });
       }
-      const admin = await prisma.cliente.findUniqueOrThrow({
+      const admin = await prisma.admin.findUniqueOrThrow({
         where: {
           cpf: dados.cpf
         }
@@ -44,7 +44,7 @@ router.post('/login', async(req, res) => {
       );
       if (!passwordCheck) {
         return res.status(401).json({
-          error: "CPF e/ou senha incorreto(s)"
+          error: "Email e/ou senha incorreto(s)"
         });
       }
       delete admin.senha;
