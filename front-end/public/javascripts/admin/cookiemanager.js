@@ -45,6 +45,37 @@ const decodeToken = (token) => {
     }
 }
 
+document.addEventListener("DOMContentLoaded", async (event) => {
+    const tokenDaSessao = getCookie('token');
+    let loginCheck;
+    let token;
+    try {
+        token = decodeToken(tokenDaSessao);
+        loginCheck = true;
+    } catch (error) {
+        console.log('Você não logou ou não forneceu um token de login válido. Por favor, faça seu login!')
+    }
+
+    if (loginCheck){
+        const elementNome = document.querySelector('#nome-usuario');
+        const elementoNomeLogout = document.querySelector('#nome-usuario-logout');
+        let nomeUsuario = token.nomeCompleto;
+        nomeUsuario = nomeUsuario.split(' ');
+        nomeUsuario = `${nomeUsuario[0]} ${nomeUsuario[1]}`;
+        elementNome.innerHTML = nomeUsuario;
+        elementoNomeLogout.innerHTML = nomeUsuario;
+        
+        const botaoLogout = document.querySelector('#botao-logout')
+        botaoLogout.addEventListener('click', (event) => {
+            deleteCookie('token');
+
+            window.location.href = 'http://localhost:3000/admin/login'
+        })
+
+    }
+
+})
+
 // Exemplo de uso:
 // setCookie("token", "valor");
 // Decodificar um JWT:
