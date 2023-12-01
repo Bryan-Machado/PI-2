@@ -29,6 +29,7 @@ body{
     max-height: 1024px;
     padding: 80px 0px;
     margin: auto auto;
+    text-align: center;
 }
 
 .logo img{

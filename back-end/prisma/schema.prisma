@@ -12,6 +12,7 @@ model admin {
   nome  String @db.VarChar(200)
   email String @db.VarChar(200)
   senha String @db.VarChar(100)
+  token String @db.VarChar(100)
 }
 
 model cliente {
@@ -26,6 +27,7 @@ model cliente {
   senha           String   @db.VarChar(100)
   numeroTel       String   @db.VarChar(20)
   tipoCarteirinha String   @db.VarChar(45)
+  codCartao       String   @unique(map: "codCartao_UNIQUE") @db.VarChar(45)
   saldo           Decimal? @default(0.00) @db.Decimal(10, 2)
 }
 

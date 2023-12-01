@@ -267,6 +267,57 @@ router.patch('/novasenha', async (req, res) =>{
   }
   })
 
+  
+
+  router.patch('/onibusComum' , async (req, res) =>{
+    const codCartao = req.body.codCartao
+    const tarifa = req.body.tarifa
+
+
+
+    try {
+
+      
+      
+      if (!saldo) {
+          window.location.href = "onibus/reprovado"
+      }
+
+      if (saldo < tarifa ) {
+        window.location.href = "onibus/reprovado"
+      }
+
+      if (saldo >= tarifa) {
+        const soma = await prisma.cliente.aggregate({
+          sum:{
+              saldo: true,
+
+          }
+        })
+      }
+      const saldonovo = soma.sum.saldo - tarifa
+
+      const cliente = await prisma.cliente.update({
+        data: {
+          saldo : saldonovo
+        },
+        where: {
+          codCartao: codCartao
+        }
+      })
+
+      res.json(cliente)
+      
+    } catch (exception) {
+      console.log(exception)
+      let error = exceptionHandler(exception)
+      res.status(error.code).json({
+        error: error.message
+        
+      })
+    }
+  })
+
 // resposta pra rotas nao existentes
 router.all('*', (req, res) => { 
   res.status(501).end()                     // codigo 501 = rota nao implementada

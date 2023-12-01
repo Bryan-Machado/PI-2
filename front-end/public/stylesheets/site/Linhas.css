@@ -99,8 +99,9 @@
     margin-top: 100px;
     margin-bottom: 150px;
     background-color: #2429A61F;
-    padding: 5%;
+    padding: 3%;
     width: 90%;
+    border-radius: 15px;
 }
 
 .form-control{
@@ -119,7 +120,7 @@
 
 
 footer {
-    background: #96979c;
+    background: #0D116B;
     padding: 50px 0;
 }
 

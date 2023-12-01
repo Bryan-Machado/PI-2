@@ -9,7 +9,11 @@
 
 </head>
 <body>
+    <form action="" id="form" onsubmit="return false;">
+        <input id="leitor" name="leitor" type="text" oninput="enviarFormulario()">
+    </form>
     <div class="wrapper">
+        <div id="data-e-hora"></div>
         <!-- dimensoes de tablet, ou seja, tudo em 768 x 1024       o altura de 1024 talvez seja opcional -->
         <figure class="logo"><img src="/images/logo-onibus.png" alt=""></figure> <!-- logo da empresa, esta imagem é temporária, trocar depois -->
         
@@ -22,6 +26,37 @@
             
             <figure class="cartao-icon"><img src="/images/aproxime-cartao.png" alt=""></figure> <!-- foto de teste, trocar depois -->
         </section>
+
+        <script>
+            function mostrarDataHora() {
+                const elementoDataHora = document.getElementById("data-e-hora");
+                elementoDataHora.style.color = "rgb(255, 255, 255)";
+                elementoDataHora.style.fontFamily = "Inria Sans, sans-serif";
+                elementoDataHora.style.fontWeight = "bold"
+                elementoDataHora.style.fontSize = "35px"
+                elementoDataHora.style.marginBottom = "20px"
+                function atualizarDataHora() {
+                    const data = new Date();
+                    const dataFormatada = data.toLocaleDateString();
+                    const horaFormatada = data.toLocaleTimeString();
+                    elementoDataHora.textContent = `Data: ${dataFormatada} - Hora: ${horaFormatada}`
+                }
+                setInterval(atualizarDataHora, 1000)
+                atualizarDataHora()
+            }
+            mostrarDataHora()
+
+            document.addEventListener("DomContentLoaded", function (){
+                const leitor = document.querySelector("#leitor")
+                leitor.focus()
+            })
+
+
+            
+        </script>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="/javascripts/onibus/onibus-pagina.js"></script>
 </body>
 </html>

@@ -16,9 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
       nascimento = `${nascimento}T00:00:00Z`;
       const senha = document.querySelector("#senha").value;
       const numeroTel = document.querySelector("#numeroTel").value; console.log(numeroTel);
+      const codCartao = document.querySelector("#codCartao").value;
       const tipoCarteirinha = document.querySelector('#tipoCarteirinha').value;
       //forma de guarda-los em um array
-      const data = { nomeCompleto, cpf, email, nascimento, senha, numeroTel, tipoCarteirinha };
+      const data = { nomeCompleto, cpf, email, nascimento, senha, numeroTel, codCartao, tipoCarteirinha };
       console.log(data)
       try {
         console.log("quase laaaa")
