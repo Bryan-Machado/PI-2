@@ -36,12 +36,13 @@ router.post('/login', async(req, res) => {
       }
       const admin = await prisma.admin.findUniqueOrThrow({
         where: {
-          cpf: dados.cpf
+          email: dados.email
         }
       });
-      const passwordCheck = await bcrypt.compare(
-        dados.senha, admin.senha
-      );
+      // const passwordCheck = await bcrypt.compare(
+      //   dados.senha, admin.senha
+      // );
+      const passwordCheck = dados.senha == admin.senha
       if (!passwordCheck) {
         return res.status(401).json({
           error: "Email e/ou senha incorreto(s)"

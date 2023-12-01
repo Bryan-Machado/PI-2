@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         token = decodeToken(tokenDaSessao);
         loginCheck = true;
     } catch (error) {
-        console.log('Você não logou ou não forneceu um token de login válido. Por favor, faça seu login!')
+        window.location.href = 'http://localhost:3000/admin/login';
     }
 
     if (loginCheck){
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         botaoLogout.addEventListener('click', (event) => {
             deleteCookie('token');
 
-            window.location.href = 'http://localhost:3000/admin/login'
+            window.location.href = 'http://localhost:3000/admin/login';
         })
 
     }
