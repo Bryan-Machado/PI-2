@@ -1,0 +1,405 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+    cores usadas no figma:
+
+    background-color: #0D116B;          AZUL ESCURO
+    background-color: #2429A6;          AZUL MAIS CLARO
+*/
+
+/* botoes */
+
+.botao {
+    background-color: #0D116B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+.botao a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.inscrever {
+    margin-right: -45px;
+}
+
+.inscrever {
+    color: #F2F2F2;
+    font-weight: bolder;
+}
+
+/* botoes */
+
+.linha-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imagens-botoes{
+    padding: 0px 10%;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.separador-menu{
+    width: 100%;
+    border-top: #0D116B solid 0.5px;
+}
+
+.separador{
+    width: 90%;
+    margin: auto;
+    border-top: #0D116B solid 0.5px;
+}
+
+.header-botoes{
+    position: relative;
+    right: 5px;
+}
+
+.menu-container{
+    width: 90%; 
+    margin: auto;
+}
+
+.menu-navbar{
+    background-color: #0D116B; 
+    border-radius: 5px; 
+    padding: 7px 10px;
+}
+
+.menu-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-link{
+    color: #fff;
+    margin-right: 80px;
+}
+
+.menu-hamburguer{
+    color: #fff;
+    border: #fff solid 1px;
+}
+
+.container {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    background-color: #2429A61F;
+    padding: 5%;
+    width: 90%;
+}
+
+.form-control{
+    background-color: white;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+.tabela {
+    margin-top: 150px;
+}
+
+
+footer {
+    background: #96979c;
+    padding: 50px 0;
+}
+
+
+.container-footer {
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.footer-col {
+    padding: 0 15px;
+    width: 25%;
+
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+    margin: 0px 0px 0px -33px;
+
+}
+
+.footer-col ul li {
+    margin: 10px 0;
+
+}
+
+.footer-col ul li a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #6e6c6c;
+    padding-left: 10px;
+
+}
+
+.footer-col .rede-social {
+    margin-top: 30px;
+}
+
+.footer-col .rede-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.footer-col .rede-social a:hover {
+    color: navy;
+    background-color: white;
+}
+
+.footer-col img {
+    height: 30px;
+    width: 30px;
+    margin: 17px;
+    filter: invert();
+
+
+}
+
+@media (max-width: 1024px) {
+    .texto-img{
+        font-size: 50px;
+        left: 10%;
+    }
+}
+
+
+@media (max-width: 846px) {
+
+.texto-atendimento h2 {
+    font-size: x-large;
+}
+
+.texto-atendimento h3 {
+    font-size: large;
+}
+
+.texto-atendimento p {
+    font-size: small;
+}
+
+@media (max-width: 768px) {
+    .texto-img{
+        display: none;
+    }
+
+    .alternative-500px {
+        display: inline;
+        text-align: center;
+    }
+
+    .alternative-500px h1 {
+        margin-top: 4%;
+    }
+}
+
+}
+
+@media (max-width: 690px) {
+    .celular-img{
+        margin-right: 50%;
+    }
+
+    .texto-atendimento h2 {
+        font-size: x-large;
+    }
+
+    .texto-atendimento h3 {
+        font-size: large;
+    }
+
+    .texto-atendimento p {
+        font-size: small;
+    }
+
+    .linha-atendimento {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .celular-img img {
+        width: 150px;
+        margin-right: 100%;
+        margin-left: 0;
+    }
+
+        .texto-atendimento h2 {
+            font-size: larger;
+        }
+    
+        .texto-atendimento h3 {
+            font-size: medium;
+        }
+    
+        .texto-atendimento p {
+            font-size: smaller;
+        }
+
+        .imagem-atendimento{
+            margin-top: 5%;
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .section-atendimento-whatsapp{
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .accordion{
+            width: 100%;
+            margin-left: 0;
+        }
+}
+                
+
+
+/* Responsividade do HEADER */
+
+@media (max-width: 991px) {      /* o hamburguer do bootstrap aparece nessa dimensao */
+    
+    .menu-flex{
+        display: block;
+    }
+
+}
+
+@media (max-width: 617px) {   /* era 425px */
+
+    #imagens-botoes{
+        padding: 0;
+    }
+
+    .botao{
+        margin-right: 20px;
+    }
+
+
+    .carrossel{
+        width: 100%;
+    }
+
+}   
+
+@media (max-width: 400px) {   
+
+    #imagens-botoes{
+        display: block;
+    }
+
+    #imagens-botoes .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-botoes{
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+
+    #inscrever-se{
+        margin-right: 0;
+    }
+
+}  
+
+@media (max-width:850px) {
+    .footer-col {
+        width: 50%;
+        margin: 20px;
+
+    }
+}
+
+@media (max-width:925px) {
+    .footer-col {
+        width: 100%;
+        margin-top: 20px;
+        padding: 50px;
+    }
+}
+
+@media (max-width:925px) {
+    .footer-col img {
+        margin: 5px;
+
+    }
+}
+
+
+@media (max-width:925px) {
+    .footer-col .rede-social {
+        margin-top: 30px;
+        display: inline-flex;
+    }
+
+
+}
+
+
+@media (min-width:768px) {
+
+    .row-footer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        margin-top: 100px;
+    }
+
+}
+
+/* Fim da responsividade do 

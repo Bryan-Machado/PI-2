@@ -38,6 +38,9 @@ router.get('/sobre', function(req, res, next) {
   res.render('pages/Sobre-nos');
 });
 
+router.get('/linhas', function(req, res, next) {
+  res.render('pages/Linhas');
+});
 
 
 module.exports = router;
