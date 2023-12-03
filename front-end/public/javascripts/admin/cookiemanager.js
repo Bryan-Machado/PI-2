@@ -53,7 +53,10 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         token = decodeToken(tokenDaSessao);
         loginCheck = true;
     } catch (error) {
-        window.location.href = 'http://localhost:3000/admin/login';
+        if (window.location.href != 'http://localhost:3000/admin/login'){
+            window.location.href = 'http://localhost:3000/admin/login';
+        }
+        
     }
 
     if (loginCheck){

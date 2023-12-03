@@ -6,6 +6,10 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('admin/index', { title: 'Express' });
 });
+// http://localhost:3000/admin/login
+router.get('/login', function(req, res, next) {
+  res.render('admin/login');
+});
 // http://localhost:3000/admin/cadastrar-cliente
 router.get("/cadastrar-cliente", function (req, res, next) {
   res.render("admin/form_validation"); 

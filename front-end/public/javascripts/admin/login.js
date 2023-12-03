@@ -4,18 +4,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // const tokenInfo = decodeToken(token);
     console.log(token);
 
-    const form = document.querySelector("#form");
+    const form = document.querySelector("#formulario");
   
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
   
       if (form.checkValidity()) {
-        const cpf = document.querySelector("#cpf").value;
+        const email = document.querySelector("#email").value;
         const senha = document.querySelector("#senha").value;
-        const data = { cpf, senha };
+        const data = { email, senha };
   
         try {
-          const response = await axios.post("http://localhost:5000/api/clientes/login", data);
+          const response = await axios.post("http://localhost:5000/api/admin/login", data);
   
           const token = response.data.accessToken;
           setCookie('token', token);
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log(tokenInfo);
 
           // redireciona se necessário.
-          // window.location.href = `http://localhost:3000/`;
+          window.location.href = `http://localhost:3000/admin/`;
         } catch (error) {
           // tratar em caso de erro: mensagens, redireciona, etc.
           console.log(error.message);
