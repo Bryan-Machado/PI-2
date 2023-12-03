@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     if (loginCheck){
         const elementNome = document.querySelector('#nome-usuario');
         const elementoNomeLogout = document.querySelector('#nome-usuario-logout');
-        let nomeUsuario = token.nomeCompleto;
+        let nomeUsuario = token.nome;
         nomeUsuario = nomeUsuario.split(' ');
         nomeUsuario = `${nomeUsuario[0]} ${nomeUsuario[1]}`;
         elementNome.innerHTML = nomeUsuario;
