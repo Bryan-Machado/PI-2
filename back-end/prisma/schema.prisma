@@ -10,7 +10,7 @@ datasource db {
 model admin {
   id    Int    @id @default(autoincrement())
   nome  String @db.VarChar(200)
-  email String @unique(map: "email_UNIQUE") @db.VarChar(200)
+  email String @db.VarChar(200)
   senha String @db.VarChar(100)
   token String @db.VarChar(100)
 }
@@ -29,6 +29,7 @@ model cliente {
   tipoCarteirinha String   @db.VarChar(45)
   codCartao       String   @unique(map: "codCartao_UNIQUE") @db.VarChar(45)
   saldo           Decimal? @default(0.00) @db.Decimal(10, 2)
+  contador        Int?     @default(0)
 }
 
 model linha {

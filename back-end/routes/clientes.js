@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 const { PrismaClient, Prisma } = require('@prisma/client');
-const prisma = new PrismaClient({errorFormat: 'minimal'});
+const prisma = new PrismaClient({ errorFormat: 'minimal' });
 const bcrypt = require('bcryptjs');
 const { generateAccessToken, authenticateToken } = require('../auth');
 
@@ -13,7 +13,7 @@ function exceptionHandler(e) {
     code: 500,
     message: 'internal server error'
   }
-  
+
   if (
     e instanceof Prisma.PrismaClientKnownRequestError ||
     e instanceof Prisma.PrismaClientValidationError
@@ -28,7 +28,7 @@ function exceptionHandler(e) {
 /* GET api/clientes => lista todos os clientes */
 router.get('/', async (req, res) => {
   try {
-    
+
     const clientes = await prisma.cliente.findMany();
     res.status(200).json(clientes)
 
@@ -45,7 +45,7 @@ router.get('/', async (req, res) => {
 /* GET api/clientes/3 => mostra apenas o cliente de id 3 */
 router.get('/:id', async (req, res) => {
   try {
-    
+
     const id = parseInt(req.params.id)
 
     const cliente = await prisma.cliente.findUnique({
@@ -101,11 +101,11 @@ router.post('/cadastrar', async (req, res) => {
       error: error.message
     })
   }
-  
+
 });
 
 // POST /api/clientes/login
-router.post('/login', async(req, res) => {
+router.post('/login', async (req, res) => {
   try {
     const dados = req.body;
     if (!'senha' in dados || !'cpf' in dados) {
@@ -144,7 +144,7 @@ router.post('/login', async(req, res) => {
 
 /* PUT api/clientes/atualizar/5 => atualiza TODOS OS DADOS do cliente de id 5 */
 router.patch('/atualizar/:id', /*authenticateToken,*/ async (req, res) => {
-  
+
   try {
     const id = parseInt(req.params.id)
     const dados = req.body
@@ -238,10 +238,10 @@ router.get('/:id/viagens', async (req, res) => {
 })
 
 
-router.patch('/novasenha', async (req, res) =>{
-  
+router.patch('/novasenha', async (req, res) => {
 
-  
+
+
   try {
     const cpf = req.body.cpf
     var novasenha = req.body.novasenha
@@ -250,56 +250,94 @@ router.patch('/novasenha', async (req, res) =>{
 
     const cliente = await prisma.cliente.update({
       data: {
-        senha : novasenha
+        senha: novasenha
       },
       where: {
-        cpf : cpf
+        cpf: cpf
       }
     })
 
     res.json(cliente)
-    
+
   } catch (exception) {
     let error = exceptionHandler(exception)
     res.status(error.code).json({
       error: error.message
     })
   }
-  })
-
-  
-
-  router.patch('/onibusComum' , async (req, res) =>{
-    const codCartao = req.body.codCartao
-    const tarifa = req.body.tarifa
+})
 
 
 
-    try {
+router.patch('/onibusComum', async (req, res) => {
+  const codCartao = req.body.codCartao
+  let tarifa = parseFloat(req.body.tarifa)
 
-      
-      
-      if (!saldo) {
-          window.location.href = "onibus/reprovado"
+
+
+  try {
+
+    const infoclientes = await prisma.cliente.findUnique({
+      where: {
+        codCartao: codCartao
+      }
+    })
+
+    if (infoclientes.tipoCarteirinha == 'Empresas') {
+      tarifa = tarifa / 2
+    }
+
+    else if (infoclientes.tipoCarteirinha == 'PCD' || 'Idoso') {
+      tarifa = 0;
+      res.status(408).json
+    }
+
+    else if (infoclientes.tipoCarteirinha == 'Estudante') {
+      tarifa = 0;
+
+      const infocontador = await prisma.cliente.findUnique({
+        where: {
+          codCartao: codCartao
+        }
+      })
+
+      if (infocontador.contador >= 2) {
+        res.status(406).json
+      }
+      else {
+        res.status(407).json
       }
 
-      if (saldo < tarifa ) {
-        window.location.href = "onibus/reprovado"
-      }
+      const passagemcliente = await prisma.cliente.update({
+        data: {
+          contador: { increment: 1 }
+        },
+        where: {
+          codCartao: codCartao
+        }
 
-      if (saldo >= tarifa) {
-        const soma = await prisma.cliente.aggregate({
-          sum:{
-              saldo: true,
+      })
+    }
+    
+    if (infoclientes.saldo < tarifa) {
+      res.status(400).json({ message: 'Saldo insuficiente' })
+    }
 
-          }
-        })
-      }
-      const saldonovo = soma.sum.saldo - tarifa
+    else {
+
+      // if (infoclientes.saldo >= tarifa) {
+      //   const soma = await prisma.cliente.aggregate({
+      //     sum:{
+      //         saldo: true,
+
+      //     }
+      //   })
+      // }
+      // const saldonovo = soma.sum.saldo - tarifa
 
       const cliente = await prisma.cliente.update({
         data: {
-          saldo : saldonovo
+          saldo: { decrement: tarifa }
         },
         where: {
           codCartao: codCartao
@@ -307,19 +345,20 @@ router.patch('/novasenha', async (req, res) =>{
       })
 
       res.json(cliente)
-      
-    } catch (exception) {
-      console.log(exception)
-      let error = exceptionHandler(exception)
-      res.status(error.code).json({
-        error: error.message
-        
-      })
     }
-  })
+  }
+  catch (exception) {
+    console.log(exception)
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+
+    })
+  }
+})
 
 // resposta pra rotas nao existentes
-router.all('*', (req, res) => { 
+router.all('*', (req, res) => {
   res.status(501).end()                     // codigo 501 = rota nao implementada
 });
 

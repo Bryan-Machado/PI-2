@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.enviarFormulario = enviarFormulario;
     
-
+    
+      
+    
      function enviarFormulario() {
 
         const form = document.querySelector("#form");
@@ -25,18 +27,40 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = { codCartao, tarifa };
         try {
           const response = await axios.patch("http://localhost:5000/api/clientes/onibusComum", data);
-  
+          
+          const resposta = response.data
+
+          
+          window.location.href = "http://localhost:3000/onibus/aprovado"
+         
           
         } catch (error) {
-            alert(error.message);
+            console.log(error)
+            if (error.response && error.response.status === 400) {
+              window.location.href = "http://localhost:3000/onibus/recusado"
+            }
+            else if (error.response && error.response.status === 406) {
+              window.location.href = "http://localhost:3000/onibus/recusado/estudante"
+            }
+            else if (error.response && error.response.status === 407) {
+              window.location.href = "http://localhost:3000/onibus/aprovado/estudante"
+            }
+            else if (error.response && error.response.status === 408) {
+              window.location.href = "http://localhost:3000/onibus/aprovado/deficiente"
+            }
+            // else{
+            //   window.location.href = "http://localhost:3000/onibus/aprovado"
+            // }
         }
       }
+    
+      
       
       form.classList.add("was-validated");
       
     });
   }
 
-  
+
   
 });
