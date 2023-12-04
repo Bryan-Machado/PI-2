@@ -20,37 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
       if (form.checkValidity()) {
         const codCartao = document.querySelector("#leitor").value
         //forma de guarda-los em um array
-        
-        let tarifa = 5
-        
 
-        const data = { codCartao, tarifa };
+        const data = { codCartao };
+        let id;
         try {
           const response = await axios.patch("http://localhost:5000/api/clientes/onibusComum", data);
           
           const resposta = response.data
+          id = response.data.id
 
           
-          window.location.href = "http://localhost:3000/onibus/aprovado"
+          window.location.href = `http://localhost:3000/onibus/aprovado/${id}`
          
           
         } catch (error) {
             console.log(error)
-            if (error.response && error.response.status === 400) {
-              window.location.href = "http://localhost:3000/onibus/recusado"
+            id = error.response.data.id
+            if (error.response.data.error == 'Limite de passagens atingido'){
+              window.location.href = `http://localhost:3000/onibus/recusado/estudante/${id}`
+            } else if (error.response.data.error == '') {
+              console.log('nada')
             }
-            else if (error.response && error.response.status === 406) {
-              window.location.href = "http://localhost:3000/onibus/recusado/estudante"
-            }
-            else if (error.response && error.response.status === 407) {
-              window.location.href = "http://localhost:3000/onibus/aprovado/estudante"
-            }
-            else if (error.response && error.response.status === 408) {
-              window.location.href = "http://localhost:3000/onibus/aprovado/deficiente"
-            }
-            // else{
-            //   window.location.href = "http://localhost:3000/onibus/aprovado"
-            // }
         }
       }
     

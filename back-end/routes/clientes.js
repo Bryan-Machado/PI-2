@@ -271,88 +271,53 @@ router.patch('/novasenha', async (req, res) => {
 
 router.patch('/onibusComum', async (req, res) => {
   const codCartao = req.body.codCartao
-  let tarifa = parseFloat(req.body.tarifa)
-
-
-
+  let tarifa = 5
+  
   try {
-
-    const infoclientes = await prisma.cliente.findUnique({
+    const cliente = await prisma.cliente.findUnique({
       where: {
         codCartao: codCartao
       }
-    })
+    });
 
-    if (infoclientes.tipoCarteirinha == 'Empresas') {
-      tarifa = tarifa / 2
+    if (cliente.tipoCarteirinha == 'Estudante' || cliente.tipoCarteirinha == 'PCD' || cliente.tipoCarteirinha == 'Idoso'){
+      tarifa = 0
+    } else if (cliente.tipoCarteirinha == 'Empresas') {                                    // Alteração da tarifa baseando-se no tipo do cartão
+      tarifa = tarifa/2
     }
 
-    else if (infoclientes.tipoCarteirinha == 'PCD' || 'Idoso') {
-      tarifa = 0;
-      res.status(408).json
+    if (cliente.saldo < tarifa){
+      return res.status(400).json({
+        error: "Saldo insuficiente",                                 // Se saldo for menor que a tarifa fornecida, um erro aparece
+        id: cliente.id
+      });
     }
 
-    else if (infoclientes.tipoCarteirinha == 'Estudante') {
-      tarifa = 0;
+    if (cliente.tipoCarteirinha == 'Estudante' && cliente.contador >= 2){
+      return res.status(400).json({
+        error: "Limite de passagens atingido",                       // aqui, caso o cliente seja um estudante E já tenha 2 passagens, ele será barrado
+        id: cliente.id
+      });
+    }
 
-      const infocontador = await prisma.cliente.findUnique({
-        where: {
-          codCartao: codCartao
-        }
-      })
-
-      if (infocontador.contador >= 2) {
-        res.status(406).json
+    const novoCliente = await prisma.cliente.update({
+      data: {
+        saldo: { decrement: tarifa},
+        contador: { increment: 1}                               //não importa o cliente, podemos sempre aumentar o contador, já que só olharemos esta coluna quando conveniente
+      },
+      where: {
+        codCartao: codCartao
       }
-      else {
-        res.status(407).json
-      }
+    });
 
-      const passagemcliente = await prisma.cliente.update({
-        data: {
-          contador: { increment: 1 }
-        },
-        where: {
-          codCartao: codCartao
-        }
-
-      })
-    }
+    delete novoCliente.senha  //deletando senha por motivos de segurança
+    res.json(novoCliente)
     
-    if (infoclientes.saldo < tarifa) {
-      res.status(400).json({ message: 'Saldo insuficiente' })
-    }
-
-    else {
-
-      // if (infoclientes.saldo >= tarifa) {
-      //   const soma = await prisma.cliente.aggregate({
-      //     sum:{
-      //         saldo: true,
-
-      //     }
-      //   })
-      // }
-      // const saldonovo = soma.sum.saldo - tarifa
-
-      const cliente = await prisma.cliente.update({
-        data: {
-          saldo: { decrement: tarifa }
-        },
-        where: {
-          codCartao: codCartao
-        }
-      })
-
-      res.json(cliente)
-    }
-  }
-  catch (exception) {
+  } catch (exception) {
     console.log(exception)
     let error = exceptionHandler(exception)
     res.status(error.code).json({
       error: error.message
-
     })
   }
 })
