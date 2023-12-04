@@ -9,9 +9,12 @@
 
 </head>
 <body>
-    <form action="" id="form" onsubmit="return false;">
-        <input id="leitor" name="leitor" type="text" oninput="enviarFormulario()">
+    <form id="form" style="position: fixed; bottom: -500px;">
+        <label for="leitor">leitor</label>
+        <input id="leitor" name="leitor" type="text" autofocus/>
+        <button type="submit">submit</button>
     </form>
+
     <div class="wrapper">
         <div id="data-e-hora"></div>
         <!-- dimensoes de tablet, ou seja, tudo em 768 x 1024       o altura de 1024 talvez seja opcional -->
@@ -28,6 +31,9 @@
         </section>
 
         <script>
+
+            
+
             function mostrarDataHora() {
                 const elementoDataHora = document.getElementById("data-e-hora");
                 elementoDataHora.style.color = "rgb(255, 255, 255)";
@@ -47,9 +53,11 @@
             mostrarDataHora()
 
             document.addEventListener("DomContentLoaded", function (){
-                const leitor = document.querySelector("#leitor")
+                const leitor = document.getElementById("leitor")
                 leitor.focus()
             })
+
+
 
 
             

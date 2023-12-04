@@ -335,6 +335,8 @@ router.patch('/onibusComum', async (req, res) => {
       }
     });
 
+    console.log(tarifa)
+
     delete novoCliente.senha  //deletando senha por motivos de segurança
     res.json(novoCliente)
 
