@@ -272,7 +272,7 @@ router.patch('/novasenha', async (req, res) => {
 router.patch('/onibusComum', async (req, res) => {
   const codCartao = req.body.codCartao
   let tarifa = 5
-  
+
   try {
     const cliente = await prisma.cliente.findUnique({
       where: {
@@ -280,20 +280,54 @@ router.patch('/onibusComum', async (req, res) => {
       }
     });
 
-    if (cliente.tipoCarteirinha == 'Estudante' || cliente.tipoCarteirinha == 'PCD' || cliente.tipoCarteirinha == 'Idoso'){
+    if (cliente.tipoCarteirinha == 'Estudante' && cliente.contador < 2 || cliente.tipoCarteirinha == 'PCD' || cliente.tipoCarteirinha == 'Idoso') {
       tarifa = 0
-    } else if (cliente.tipoCarteirinha == 'Empresas') {                                    // Alteração da tarifa baseando-se no tipo do cartão
-      tarifa = tarifa/2
+
+      const novoCliente = await prisma.cliente.update({
+        data: {
+          contador: { increment: 1 },
+          saldo: { decrement: tarifa }
+          //não importa o cliente, podemos sempre aumentar o contador, já que só olharemos esta coluna quando conveniente
+        },
+        where: {
+          codCartao: codCartao
+        }
+      });
+      return res.status(200).json({
+        message: "Prossiga",
+        tipoCarteirinha: cliente.tipoCarteirinha,
+        id: cliente.id
+      })
+
+    } else if (cliente.tipoCarteirinha == 'Empresas' && cliente.saldo > tarifa / 2) {                                    // Alteração da tarifa baseando-se no tipo do cartão
+      tarifa = tarifa / 2
+
+      const novoCliente = await prisma.cliente.update({
+        data: {
+          contador: { increment: 1 },
+          saldo: { decrement: tarifa }
+          //não importa o cliente, podemos sempre aumentar o contador, já que só olharemos esta coluna quando conveniente
+        },
+        where: {
+          codCartao: codCartao
+        }
+      });
+
+      return res.status(200).json({
+        message: "Prossiga",
+        tipoCarteirinha: cliente.tipoCarteirinha,
+        id: cliente.id
+      })
     }
 
-    if (cliente.saldo < tarifa){
+    if (cliente.saldo < tarifa / 2 && cliente.tipoCarteirinha == 'Empresas'|| cliente.saldo < tarifa && cliente.tipoCarteirinha == 'Comum' ) {
       return res.status(400).json({
         error: "Saldo insuficiente",                                 // Se saldo for menor que a tarifa fornecida, um erro aparece
         id: cliente.id
       });
     }
 
-    if (cliente.tipoCarteirinha == 'Estudante' && cliente.contador >= 2){
+    if (cliente.tipoCarteirinha == 'Estudante' && cliente.contador >= 2) {
       return res.status(400).json({
         error: "Limite de passagens atingido",                       // aqui, caso o cliente seja um estudante E já tenha 2 passagens, ele será barrado
         id: cliente.id
@@ -302,8 +336,9 @@ router.patch('/onibusComum', async (req, res) => {
 
     const novoCliente = await prisma.cliente.update({
       data: {
-        saldo: { decrement: tarifa},
-        contador: { increment: 1}                               //não importa o cliente, podemos sempre aumentar o contador, já que só olharemos esta coluna quando conveniente
+        contador: { increment: 1 },
+        saldo: { decrement: tarifa }
+        //não importa o cliente, podemos sempre aumentar o contador, já que só olharemos esta coluna quando conveniente
       },
       where: {
         codCartao: codCartao
@@ -312,7 +347,7 @@ router.patch('/onibusComum', async (req, res) => {
 
     delete novoCliente.senha  //deletando senha por motivos de segurança
     res.json(novoCliente)
-    
+
   } catch (exception) {
     console.log(exception)
     let error = exceptionHandler(exception)

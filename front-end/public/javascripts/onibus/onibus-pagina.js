@@ -28,9 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
           
           const resposta = response.data
           id = response.data.id
+          tipoCarteirinha = response.data.tipoCarteirinha
 
+          if (tipoCarteirinha == "Estudante") {
+            window.location.href = `http://localhost:3000/onibus/aprovado/estudante/${id}`
+          }
+          else if ( tipoCarteirinha == "Comum" || tipoCarteirinha == "Empresas"){
+            window.location.href = `http://localhost:3000/onibus/aprovado/${id}`
+          }
+          else if (tipoCarteirinha == "PCD" || tipoCarteirinha == "Idoso"){
+            window.location.href = `http://localhost:3000/onibus/aprovado/deficiente/${id}`
+          }
           
-          window.location.href = `http://localhost:3000/onibus/aprovado/${id}`
+          
          
           
         } catch (error) {
@@ -38,6 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
             id = error.response.data.id
             if (error.response.data.error == 'Limite de passagens atingido'){
               window.location.href = `http://localhost:3000/onibus/recusado/estudante/${id}`
+            }
+            else if (error.response.data.error == 'Saldo insuficiente'){
+              window.location.href = `http://localhost:3000/onibus/recusado/${id}`
             } else if (error.response.data.error == '') {
               console.log('nada')
             }
