@@ -34,6 +34,16 @@ $(document).ready(function() {
         "data": "tipoCarteirinha"
       },
       {
+        "data": "saldo",
+        "render": function(data) {
+
+          var saldoformatado = `R$${data},00`
+
+
+          return  saldoformatado;
+        },
+      },
+      {
         "data": "ações",
         "render": function(data, type, row, meta) {
           return '<a href="http://localhost:3000/admin/vizualizar-cliente/' + row.id + '">Visualizar</a> / ' +
