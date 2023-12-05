@@ -171,19 +171,9 @@ router.patch('/recarregar/:idcliente', /*authenticateToken,*/ async (req, res) =
   const id = parseInt(req.params.idcliente)
   const dados = req.body
 
-  const velhoCliente = await prisma.cliente.findUnique({
-    select: {
-      saldo: true
-    },
-    where: {
-      id: id
-    }
-  })
-  const novoSaldo = velhoCliente.saldo + dados.valor
-
   const cliente = await prisma.cliente.update({
     data: {
-      saldo: novoSaldo
+      saldo: {increment: dados.valor}
     },
     where: {
       id: id

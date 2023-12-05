@@ -44,5 +44,20 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
     const formPatch = document.querySelector('#formulario-recarregar');
 
-    const valor = document.querySelector('#Valor'); //aqui nois devemos pegar os dados do formulario que vamos enviar para recarregar
+    const valor = document.querySelector('#recarga-valor').value; //aqui nois devemos pegar os dados do formulario que vamos enviar para recarregar
+    formPatch.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        try {
+            const response = await axios.patch(`http://localhost:5000/api/clientes/recarregar/${tokenDecodificado.id}`, valor);
+
+            alert(`Sucesso! novo saldo: ${saldoCliente + valor}`);
+
+            window.location.reload();
+    
+            
+        } catch (error) {
+            alert(error.message)
+        }
+    })
 })
