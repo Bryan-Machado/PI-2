@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         try {
             const response = await axios.patch(`http://localhost:5000/api/clientes/recarregar/${tokenDecodificado.id}`, dados);
 
-            alert(`Sucesso! novo saldo: ${saldoCliente + valor}`);
+            alert(`Sucesso! novo saldo: ${parseFloat(saldoCliente) + parseFloat(valor)}`);
 
             window.location.reload();
     
