@@ -21,6 +21,22 @@ function exceptionHandler(e) {
   return error;
 }
 
+router.get('/tabela', async (req, res) => {
+  try {
+
+    const agendamentos = await prisma.agendamento.findMany();
+    res.status(200).json(agendamentos)
+
+  } catch (exception) {
+    console.log(exception.message)
+    console.log(exception)
+    let error = exceptionHandler(exception)
+    res.status(error.code).json({
+      error: error.message
+    })
+  }
+});
+
 router.get("/", async (req, res) => {
   try {
 

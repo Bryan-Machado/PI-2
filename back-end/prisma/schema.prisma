@@ -10,7 +10,7 @@ datasource db {
 model admin {
   id    Int    @id @default(autoincrement())
   nome  String @db.VarChar(200)
-  email String @unique(map: "email_UNIQUE") @db.VarChar(200)
+  email String @db.VarChar(200)
   senha String @db.VarChar(100)
   token String @db.VarChar(100)
 }
@@ -90,4 +90,13 @@ model viagem_has_cliente {
 
   @@index([cliente_id], map: "fk_viagem_has_cliente_cliente1_idx")
   @@index([viagem_id], map: "fk_viagem_has_cliente_viagem1_idx")
+}
+
+model agendamento {
+  id              Int       @id @default(autoincrement())
+  cidade          String?   @db.VarChar(45)
+  tipoCarteirinha String?   @db.VarChar(45)
+  nomeCompleto    String?   @db.VarChar(45)
+  dia             DateTime? @db.Date
+  hora            DateTime? @db.Time(0)
 }
