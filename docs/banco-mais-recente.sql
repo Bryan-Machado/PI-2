@@ -18,6 +18,21 @@ CREATE SCHEMA IF NOT EXISTS `stpsp` DEFAULT CHARACTER SET utf8 ;
 USE `stpsp` ;
 
 -- -----------------------------------------------------
+-- Table `stpsp`.`agendamento`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `stpsp`.`agendamento` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cidade` VARCHAR(45) NULL,
+  `tipoCarteirinha` VARCHAR(45) NULL,
+  `nomeCompleto` VARCHAR(45) NULL,
+  `dia` DATE NULL,
+  `hora` TIME NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+USE `stpsp` ;
+
+-- -----------------------------------------------------
 -- Table `stpsp`.`admin`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `stpsp`.`admin` (
@@ -46,9 +61,12 @@ CREATE TABLE IF NOT EXISTS `stpsp`.`cliente` (
   `senha` VARCHAR(100) NOT NULL,
   `numeroTel` VARCHAR(20) NOT NULL,
   `tipoCarteirinha` VARCHAR(45) NOT NULL,
+  `codCartao` VARCHAR(45) NOT NULL,
   `saldo` DECIMAL(10,2) NULL DEFAULT 0.00,
+  `contador` INT(11) NULL DEFAULT 0,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC))
+  UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC),
+  UNIQUE INDEX `codCartao_UNIQUE` (`codCartao` ASC))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
