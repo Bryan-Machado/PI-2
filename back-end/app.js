@@ -12,6 +12,7 @@ const linhasRouter = require('./routes/linhas');
 const onibusRouter = require('./routes/onibus');
 const viagemRouter = require('./routes/viagem');
 const agendamentoRouter = require('./routes/agendamento');
+const countRouter = require('./routes/count')
 
 const dotenv = require('dotenv');
 dotenv.config({ path: './.env' });
@@ -39,7 +40,8 @@ app.use('/api/motoristas', motoristaRouter);
 app.use('/api/linhas', linhasRouter);
 app.use('/api/onibus', onibusRouter);
 app.use('/api/viagens', viagemRouter);
-app.use('/api/agendamento', agendamentoRouter)               
+app.use('/api/agendamento', agendamentoRouter)  
+app.use('/api/count', countRouter)
 //os relacionamentos ficam dentro do próprios arquivos => exemplo: todos os clientes que uma viagem possui etá em viagem.js
 
 // catch 404 and forward to error handler
