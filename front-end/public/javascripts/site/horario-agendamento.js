@@ -16,7 +16,25 @@ document.addEventListener("DOMContentLoaded", () => {
     dia.addEventListener("change", async (event) =>{
         event.preventDefault();
 
-        const diaEscolhido = dia.value
+        function formatardatainverso(data) {
+
+
+
+          var dia = data.split("/")[0]
+          var mes = data.split("/")[1]
+          var ano = data.split("/")[2]
+
+          var datacerta = `${ano}-${mes}-${dia}`
+
+
+          return  datacerta;
+        }
+
+        var diacerto = formatardatainverso(dia.value)
+
+        const diaEscolhido = diacerto
+
+
 
         try {
             const response = await axios.get(`http://localhost:5000/api/agendamento/horario/${diaEscolhido}`);

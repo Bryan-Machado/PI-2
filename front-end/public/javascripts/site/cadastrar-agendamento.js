@@ -1,17 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+
+
+  
+
+        
     const form = document.querySelector("#form");
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-      event.stopPropagation();  
+      event.stopPropagation();
+      
+      function formatardatainverso(data) {
+
+
+
+          var dia = data.split("/")[0]
+          var mes = data.split("/")[1]
+          var ano = data.split("/")[2]
+
+          var datacerta = `${ano}-${mes}-${dia}`
+
+
+          return  datacerta;
+        }
+        
+
+        var diacerto = formatardatainverso(dia.value)
       //coleta dos dados do form
       if (form.checkValidity()) {
         const cidade = document.querySelector("#cidade").value;
         const tipoCarteirinha = document.querySelector("#tipoCarteirinha").value;
-        const nomCompleto = document.querySelector("#nomeCompleto").value;
+        const nomeCompleto = document.querySelector("#nomeCompleto").value;
         let dia = document.querySelector("#dia").value;
-        dia = `${dia}T00:00:00Z`;
+        dia = `${diacerto}T00:00:00Z`;
         let hora = document.querySelector("#hora").value;
         hora = `0001-01-01T${hora}:00.000Z`
 
@@ -24,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
 
         //forma de guarda-los em um array
-        const data = { cidade, tipoCarteirinha, nomCompleto, dia, hora };
+        const data = { cidade, tipoCarteirinha, nomeCompleto, dia, hora };
 
         try {
             console.log(data)

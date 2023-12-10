@@ -24,7 +24,11 @@ function exceptionHandler(e) {
 router.get('/tabela', async (req, res) => {
   try {
 
-    const agendamentos = await prisma.agendamento.findMany();
+    const agendamentos = await prisma.agendamento.findMany({
+      where: {
+        nomeCompleto: {not: null}
+      }
+    });
     res.status(200).json(agendamentos)
 
   } catch (exception) {
@@ -91,7 +95,7 @@ router.get("/horario/:diaEscolhido", async (req, res) => {
     let diaEscolhido = req.params.diaEscolhido
     diaEscolhido =  `${diaEscolhido}T00:00:00.000Z`
     const agendamento = await prisma.agendamento.findMany({
-      where: { nomCompleto: null, 
+      where: { nomeCompleto: null, 
         dia: diaEscolhido 
       },
 
