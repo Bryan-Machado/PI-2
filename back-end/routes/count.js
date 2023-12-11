@@ -34,8 +34,12 @@ router.get('/', async (req, res) => {
         };
     
         res.json(dados);
-    } catch (error) {
-        
+    } catch (exception) {
+      console.log(exception)
+      let error = exceptionHandler(exception);
+      return res.status(error.code).json({
+        error: error.message
+      })
     }
 })
 
