@@ -1,0 +1,66 @@
+insert into linha (nome, localSaida, localDestino, horaSaida, horaChegada) values 
+('Linha 100', 'Terminal Central', 'Praça da Sé', '07:30:00', '18:30:00');
+
+-- Linha 2
+insert into linha (nome, localSaida, localDestino, horaSaida, horaChegada) values 
+('Linha 101', 'Rua das Palmeiras', 'Avenida Beira-Mar', '08:15:00', '19:45:00');
+
+-- Linha 3
+insert into linha (nome, localSaida, localDestino, horaSaida, horaChegada) values 
+('Linha 102', 'Parque dos Esportes', 'Campo de Jogos', '09:00:00', '20:30:00');
+
+-- Linha 4
+insert into linha (nome, localSaida, localDestino, horaSaida, horaChegada) values 
+('Linha 103', 'Teatro Municipal', 'Biblioteca Pública', '10:45:00', '22:00:00');
+
+-- Linha 5
+insert into linha (nome, localSaida, localDestino, horaSaida, horaChegada) values 
+('Linha 104', 'Escola Principal', 'Universidade', '11:30:00', '23:15:00');
+
+
+
+-- Motorista 1
+insert into motorista (cpf, nomeCompleto, nascimento, numeroTel, fotoInput, email) values 
+('123.456.789-12', 'Leon Barbeni', '2001-07-18', '99123-1234', 'uploads/69c9b535-8331-4897-92c4-9c74ebe491d2.jpg', 'leon@gmail.com');
+
+-- Motorista 2
+insert into motorista (cpf, nomeCompleto, nascimento, numeroTel, fotoInput, email) values 
+('987.654.321-98', 'Mariana Oliveira', '1990-04-25', '98765-4321', 'uploads/6c117e5e-b1e9-4ace-82b9-da4724177641.png', 'mariana.oliveira@gmail.com');
+
+-- Motorista 3
+insert into motorista (cpf, nomeCompleto, nascimento, numeroTel, fotoInput, email) values 
+('111.222.333-44', 'Rodrigo Silva', '1985-12-10', '99999-8888', 'uploads/209d982f-20e9-4380-8101-879e24655e86.jpg', 'rodrigo.silva@gmail.com');
+
+-- Motorista 4
+insert into motorista (cpf, nomeCompleto, nascimento, numeroTel, fotoInput, email) values 
+('555.666.777-88', 'Camila Costa', '1992-09-03', '87654-3210', 'uploads/500925ad-744f-427c-9fdd-0816e970a7ed.jpg', 'camila.costa@gmail.com');
+
+-- Motorista 5
+insert into motorista (cpf, nomeCompleto, nascimento, numeroTel, fotoInput, email) values 
+('222.333.444-55', 'Lucas Pereira', '1987-06-15', '76543-2109', 'uploads/c8d13d2f-dcfe-4abd-a07c-c45dc15d5925.jpg', 'lucas.pereira@gmail.com');
+
+
+
+
+
+insert into cliente (cpf, nomeCompleto, email, nascimento, senha, numeroTel, tipoCarteirinha, codCartao) values 
+('123.456.789-12', 'Leon Barbeni', 'leon@gmail.com', '2001-07-18', 'senha123', '99123-1234', 'PCD', '00011015'),
+('987.654.321-98', 'Maria Silva', 'maria@gmail.com', '1995-04-25', 'senha123', '98765-4321', 'Estudante', '00022030'),
+('111.222.333-44', 'José Oliveira', 'jose@gmail.com', '1980-12-10', 'senha123', '99999-8888', 'Idoso', '00033045'),
+('555.666.777-88', 'Ana Santos', 'ana@gmail.com', '1992-09-03', 'senha123', '87654-3210', 'Comum', '00044060'),
+('222.333.444-55', 'Carlos Pereira', 'carlos@gmail.com', '1985-06-15', 'senha123', '76543-2109', 'Empresas', '00055075'),
+('777.888.999-00', 'Fernanda Oliveira', 'fernanda@gmail.com', '1998-03-28', 'senha123', '65432-1098', 'PCD', '00066090'),
+('444.555.666-77', 'Ricardo Lima', 'ricardo@gmail.com', '1987-11-20', 'senha123', '54321-0987', 'Estudante', '00077105'),
+('000.111.222-33', 'Juliana Costa', 'juliana@gmail.com', '1990-08-05', 'senha123', '43210-9876', 'Idoso', '00088120'),
+('999.000.111-22', 'Paulo Martins', 'paulo@gmail.com', '1993-05-18', 'senha123', '32109-8765', 'Comum', '00099135'),
+('666.777.888-99', 'Amanda Silva', 'amanda@gmail.com', '1982-02-12', 'senha123', '21098-7654', 'Empresas', '00110150'),
+('123.111.222-33', 'Gabriel Oliveira', 'gabriel@gmail.com', '1996-10-07', 'senha123', '10987-6543', 'PCD', '00121165'),
+('987.000.111-22', 'Carolina Lima', 'carolina@gmail.com', '1989-07-22', 'senha123', '09876-5432', 'Estudante', '00132180'),
+('111.555.666-77', 'Lucas Pereira', 'lucas@gmail.com', '1984-04-14', 'senha123', '98765-4321', 'Idoso', '00143295'),
+('555.999.000-11', 'Mariana Santos', 'mariana@gmail.com', '1997-01-29', 'senha123', '87654-3210', 'Comum', '00154310'),
+('222.444.555-66', 'Roberto Oliveira', 'roberto@gmail.com', '1988-09-23', 'senha123', '76543-2109', 'Empresas', '00165325'),
+('777.111.222-33', 'Isabela Lima', 'isabela@gmail.com', '1991-06-06', 'senha123', '65432-1098', 'PCD', '00176340'),
+('444.666.777-88', 'Daniel Costa', 'daniel@gmail.com', '1994-03-17', 'senha123', '54321-0987', 'Estudante', '00187355'),
+('000.222.333-44', 'Fátima Martins', 'fatima@gmail.com', '1986-12-02', 'senha123', '43210-9876', 'Idoso', '00198370'),
+('999.111.222-33', 'Renato Silva', 'renato@gmail.com', '1981-08-15', 'senha123', '32109-8765', 'Comum', '00209385'),
+('666.888.999-00', 'Larissa Oliveira', 'larissa@gmail.com', '1999-05-28', 'senha123', '21098-7654', 'Empresas', '00220400');
