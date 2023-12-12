@@ -64,3 +64,6 @@ insert into cliente (cpf, nomeCompleto, email, nascimento, senha, numeroTel, tip
 ('000.222.333-44', 'Fátima Martins', 'fatima@gmail.com', '1986-12-02', 'senha123', '43210-9876', 'Idoso', '00198370'),
 ('999.111.222-33', 'Renato Silva', 'renato@gmail.com', '1981-08-15', 'senha123', '32109-8765', 'Comum', '00209385'),
 ('666.888.999-00', 'Larissa Oliveira', 'larissa@gmail.com', '1999-05-28', 'senha123', '21098-7654', 'Empresas', '00220400');
+
+insert into admin (nome, email, senha) values
+('Carlos Ferreira', 'admin@gmail.com', 'admin123')

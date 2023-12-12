@@ -52,7 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(data)
           const response = await axios.patch(`http://localhost:5000/api/agendamento/agendar/${idyyutyuytuytuyt}`, data)
 
-  
+          alert("Seu pedido foi agendado")
+
+          window.location.reload();
+
+
           const id = response.data.id;
         } catch (error) {
           alert(error.message)
