@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         let mensagem = `Bem vindo, ${token.nomeCompleto}`;
         element.innerHTML = `
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #0D116B;">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #0D116B; min-width: 235px;">
                     ${mensagem}
                 </button>
                 <ul class="dropdown-menu">
